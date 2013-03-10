@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDX Food</title>
+	<meta charset="utf-8">
+	<style>
+	body
+	{
+		padding: 40px 20px 40px 20px;
+		font-family: Open Sans, sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	a {
+		text-decoration: none;
+		color: rgb(125, 180, 0);
+	}
+	
+	section {
+		max-width: 700px;
+		margin: 0px auto;
+	}
+	
+	h1
+	{
+		margin-top: 0px;
+		margin-bottom: 30px;
+		padding: 0px 20px;
+	}
+	h2
+	{
+		font-weight: 700;
+		margin-bottom: 0px;
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	
+	hr
+	{
+		height: 1px;
+		border: none;
+		border-bottom: 1px solid rgba(0,0,0,.5);
+		margin: 50px 0;
+	}
+	
+	article
+	{
+		padding: 15px 20px;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		margin-bottom: 10px;
+	}
+	article.selected
+	{
+		background: #ecf7ff;
+		border-color: #84bdd7;
+	}
+	article.selected h2 a
+	{
+		color: rgba(88,160,0,1);
+	}
+	
+	p
+	{
+		margin: 0;
+	}
+	p.badges
+	{
+		margin-top: 5px;
+		line-height: 18px;
+/* 		margin-bottom: 30px; */
+	}
+	
+	.busy, .cost, .kids, .large, .location, .noise
+	{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin-right: 5px;
+	}
+	.busy  { color: #ff6f15; }
+	.cost  { color: #52cbd3; letter-spacing: 1px; }
+	.kids  { color: #387cda; }
+	.large { color: #9734b5; }
+	.location { color: rgb(125, 180, 0); }
+	
+	.short p
+	{
+		margin-bottom: 10px;
+	}
+	
+	/* Mobile */
+
+	@media only screen and (max-device-width: 480px)
+	{
+		body
+		{
+			padding: 20px 10px;
+		}
+		
+		hr
+		{
+			margin: 30px 0;
+		}
+		
+		h1
+		{
+			margin-bottom: 10px;
+			padding: 0px 10px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		
+		section
+		{
+			max-width: 600px;
+		}
+		
+		article
+		{
+			padding: 10px 10px;
+		}
+	}
+	
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+	
+	<script>
+	
+	function selectArticle(article)
+	{
+		deselectAll();
+		article.className = 'selected';
+	}
+	
+	function deselectAll()
+	{
+		allArticles = document.getElementsByTagName("article");
+		for (i = 0; i < allArticles.length; i++)
+		{
+			allArticles[i].className = '';
+		}
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+
+<section>
+<h1>Oliver Taylor's Los Angeles Food Recommendations</h1>
+</section>
+
+<section>
+<p>Los Angeles is quite large, which is why these recommendations are broken down by neighborhood.</p>
+</section>
+
+<section>
+<h2>The Valley</h2>
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Name</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Name</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+</section>
+
+
+<section>
+<h2>The West Side</h2>
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Name</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Name</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+</section>
+
+
+
+<hr />
+<section class="short">
+<p><b>Carts?</b> There are carts in LA</p>
+<p><b>Fancy?</b> </p>
+<p><b>Coffee</b> </p>
+<p><b>Bars?</b> </p>
+</section>
+
+<hr />
+
+<section>
+The idea for this page, and all the code, was directly stolen from <a href="http://mrgan.com/pdxfood/">Neven Mrgan's PDX Food Recommendations</a>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A Better Pair of Tongs</title>
+<meta name="viewport" content="width = device-width" />
+<style type="text/css" media="screen">
+
+body {
+	font-family: "Lucida Grande", "Lucida Sans", Lucida, sans-serif;
+	font-size: .8em;
+	line-height: 1.3;
+	max-width:640px;
+	padding: 2em;
+	margin: 0 auto;
+}
+h1 {
+	margin-top: 0;
+	line-height: 1.4;
+	font-weight: normal;
+	margin-bottom: 0;
+	font-size: 2em;
+}
+p.sub {
+	color: gray;
+	margin-top: 0;
+	font-size: 1.2em;
+	font-style: italic;
+}
+hr {
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+p.download {
+	background: #eee;
+	padding: 1.4em;
+	border: 1px solid #ddd;
+	width: 18em;
+	float: right;
+	margin: 0 0 1em 1em;
+}
+div#table div {
+	margin-top: 4em;
+	border-bottom: 1px solid #ddd;
+}
+div#table p {
+	border-top: 1px solid #ddd;
+	padding: 0; margin: 0;
+	padding: .5em 1em;
+	position: relative;
+}
+span.shortcut {
+	display: inline-block;
+	width: 4em;
+	text-align: right;
+	position: absolute;
+}
+span.descrip {
+	margin-left: 6em;
+	display: inline-block;
+}
+p.oliver span.descrip {
+	color: red;
+}
+p.mac span.descrip {
+	color: green;
+}
+
+span.script {
+	background: #f8f8f8;
+	border: 1px solid #ddd;
+	display: block;
+	margin: 1em 1em 1em 6em;
+	padding: 1em;
+	font-family: consolas, menlo, monaco;
+	white-space: pre-wrap;
+	line-height: 1.3;
+}
+
+span.green {color:green;}
+span.black {color:inherit}
+span.red   {color:red;}
+.gray {color:gray;}
+
+header p {
+	margin-top: 0;
+}
+
+
+@media screen and (max-device-width: 480px){
+	p.download {
+		float: none;
+		margin-left: none;
+	}
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<p><a href="/">← Home</a></p>
+</header>
+
+<article>
+
+<h1>A Better Pair of Tongs</h1>
+
+<p class="sub">BBEdit Cursor Movement &amp; Selection Shortcuts</p>
+
+
+<p class="gray">9 August 2012</p>
+
+<p class="download"><a href="https://github.com/olivertaylor/BetterTongs.bbpackage/archive/master.zip">Download BBEdit Cursor Movement &amp; Selection Shortcuts</a>
+<br />
+<br />
+All scripts/clippings in <span class="red">red</span> below are included in this package.</p>
+
+
+<p>I recently became obsessed with cursor movement and selection shortcuts in BBEdit. I spend an enormous amount of time restructuring and rephrasing prose sentences - writing is rewriting after all. Sadly, our digital tools for this are cruelly limiting. In fact, we only have one tool: the insertion point. You can move it or expand it, and there are some shortcuts for this, but we are bound by its up/down left/right more/less limits. I fear my arrow keys will wear out. In an age of automation, it is an appallingly manual process. At times it feels like building a house with kitchen tongs.</p>
+
+<p>We cannot choose a more advanced alternative, but we can build a better pair of tongs.</p>
+
+<p>While BBEdit has many great tools for prose writers, its cursor movement and selection shortcuts do not compare impressively with its own coding shortcuts, or with certain <a href="http://vim.org">other editors</a>. This package of scripts aims to substantially improve your movement and selection abilities when writing prose in BBEdit.</p>
+
+<hr />
+
+<h2>Support/Questions:</h2>
+
+<p>For support please fine me at <a href="http://twitter.com/olivertaylor">@olivertaylor</a>.</p>
+
+<p>This project is hosted on <a href="https://github.com/olivertaylor/BetterTongs.bbpackage">GitHub</a>.</p>
+
+<p>It should be noted that I am not the author of a number of these scripts. Many are stolen from various like-minded people (I've tried, sometimes unsuccessfully, to credit the authors), and from the very generous members of <a href="https://groups.google.com/forum/?fromgroups#!forum/bbedit">BBEdit's Mailing List</a>.</p>
+
+<p>It should also be noted that I am not an AppleScript master by many measure; suggestions and corrections are welcome on <a href="http://twitter.com/olivertaylor">on twitter</a> or on <a href="https://groups.google.com/forum/?fromgroups#!forum/bbedit">BBEdit's Mailing List</a>.</p>
+
+<hr />
+
+<h2>Updates</h2>
+
+<p><b>13 Aug 2012:</b> Updated with new regex for "Go to Beginning of Line After Whitespace" to account for a bug in lines ending with a period.</p>
+<p><b>23 Aug 2012:</b> Updated "Go to Next Word, End" (<a href="https://groups.google.com/d/msg/bbedit/svJeLJFt7zw/3jpI5e8RTn0J">more info</a>).</p>
+<p><b>31 Aug 2012:</b>
+	<ul>
+	<li>This package is now a real BBEdit package.</li>
+	<li>I've mirrored it on <a href="https://github.com/olivertaylor/BetterTongs.bbpackage">GitHub</a></li>
+	<li>Includes missing clippings, and a few bug-fixes</li>
+	<li>Now includes a "Transpose Around Delimeter" text-filter</li>
+	</ul>
+</p>
+<p><b>09 Dec 2012:</b>
+<ul>
+<li>Updated for BBEdit 10.5, removed line-movement and deletion</li>
+<li>How BBEdit handles clippings has changed in 10.5, it is now impossible to create a package that attaches clippings to the "Universal Items" clipping set, only one clipping set can be active at a time, as part of a package or not. Thus the clippings have been removed.</li>
+<li>Added a script that moves the cursor to the line number under the cursor. So if your cursor is parked on the number 241 in your document, this script will take you to line 241. I find it useful for referencing other parts of a document.</li>
+</ul>
+</p>
+
+<hr />
+
+<h2>Shortcuts</h2>
+
+<p>The keyboard shortcuts described below reflect my customized mapping, not their default values. Some of these may be superseeded by other shortcuts in your installation.</p>
+
+<p>
+<span class="green">Green = OS X system-wide    </span><br />
+<span class="black">Black = BBEdit built-in     </span><br />
+<span class="red">Red = Custom script/clipping</span>
+</p>
+
+<div id="table">
+
+<div>
+<p><span class="shortcut">⌃⇥</span><span class="descrip">Switch between "View Reigons"</span></p>
+<p><span class="shortcut">⌃⇧↓</span><span class="descrip">Scroll Window Down One Line</span></p>
+<p><span class="shortcut">⌃⇧↑</span><span class="descrip">Scroll Window Up One Link</span></p>
+<p><span class="shortcut">⌃⌥↑</span><span class="descrip">Scroll Window Up Three Lines</span></p>
+<p><span class="shortcut">⌃⌥↓</span><span class="descrip">Scroll Window Down Three Lines</span></p>
+<p><span class="shortcut">⌃⌥⌘↑</span><span class="descrip">Scroll Window Up Six Lines</span></p>
+<p><span class="shortcut">⌃⌥⌘↓</span><span class="descrip">Scroll Window Down Six Lines</span></p>
+</div>
+
+<div>
+<p class="mac"><span class="shortcut">⌘↑</span><span class="descrip">Go to Beginning of Document</span></p>
+<p class="mac"><span class="shortcut">⌘↓</span><span class="descrip">Go to End of Document</span></p>
+<p><span class="shortcut">⌥↑</span><span class="descrip">Go to Top of Text Within Window</span></p>
+<p><span class="shortcut">⌥↓</span><span class="descrip">Go to Bottom of Text Within Window</span></p>
+</div>
+
+<div>
+<p class="mac"><span class="shortcut">⌥→</span><span class="descrip">Go to Next Word</span></p>
+<p class="mac"><span class="shortcut">⌥←</span><span class="descrip">Go to Previous Word</span></p>
+<p><span class="shortcut">⌃→</span><span class="descrip">Go to Next camelCase Word</span></p>
+<p><span class="shortcut">⌃←</span><span class="descrip">Go to Previous camelCase Word</span></p>
+<p class="oliver"><span class="shortcut">⌃⌥←</span><span class="descrip">Go to Previous Word, Beginning (ignoring punctuation)</span></p>
+<p class="oliver"><span class="shortcut">⌃⌥→</span><span class="descrip">Go to Next Word, End (ignoring punctuation)</span></p>
+<p class="oliver"><span class="shortcut">⌃←</span><span class="descrip">Delete Previous Word</span></p>
+</div>
+
+<div>
+<p class="mac"><span class="shortcut">⌃A</span><span class="descrip">Go to Beginning of Line</span></p>
+<p class="oliver"><span class="shortcut">⌃⇧A</span><span class="descrip">Go to Beginning of Line After Whitespace</span></p>
+<p class="mac"><span class="shortcut">⌃E </span><span class="descrip">Go to End of Line</span></p>
+<p class="mac"><span class="shortcut">⌘← </span><span class="descrip">Go to Beginning of Screen-Line</span></p>
+<p class="mac"><span class="shortcut">⌘→ </span><span class="descrip">Go to End of Screen-Line</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘↓ </span><span class="descrip">Go to Next Paragraph, Beginning</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘↑ </span><span class="descrip">Go to Previous Paragraph, End</span></p>
+</div>
+
+<div>
+<p class="oliver"><span class="shortcut">⌘↩</span><span class="descrip">New Line Below Current Line</span></p>
+<p class="oliver"><span class="shortcut">⇧⌘↩</span><span class="descrip">New Line Above Current Line</span></p>
+<p class="mac"><span class="shortcut">⌃o</span><span class="descrip">New Line After Insertion Point</span></p>
+<p><span class="shortcut">⌃↓</span><span class="descrip">Move Line Down</span></p>
+<p><span class="shortcut">⌃↑</span><span class="descrip">Move Line Up</span></p>
+<p><span class="shortcut">⌃⇧⌫</span><span class="descrip">Delete Line</span></p>
+<p class="oliver"><span class="shortcut">⌘⇧D</span><span class="descrip">Duplicate Lines</span></p>
+<p class="oliver"><span class="shortcut">⌃⇧\</span><span class="descrip">Join With Next Line</span></p>
+</div>
+
+<div>
+<p class="oliver"><span class="shortcut">⇧⌘L</span><span class="descrip">Select Word</span></p>
+<p><span class="shortcut">⌘L</span><span class="descrip">Select Line</span></p>
+<p><span class="shortcut">⌥⌘L</span><span class="descrip">Select (hard-wrapped) Paragraph</span></p>
+<p class="oliver"><span class="shortcut">⌃⌘L</span><span class="descrip">Select Line Without Leading Whitespace</span></p>
+</div>
+
+<div>
+<p class="oliver"><span class="shortcut">⌥⌘←</span><span class="descrip">Go to Previous Sentence</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘→</span><span class="descrip">Go to Next Sentence</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘⇧←</span><span class="descrip">Select to Beginning of Sentence</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘⇧→</span><span class="descrip">Select to End of Sentence</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘⌫</span><span class="descrip">Delete to Beginning of Sentence</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘⌦</span><span class="descrip">Delete to End of Sentence</span></p>
+</div>
+
+<div>
+<p><span class="shortcut">⌃S</span><span class="descrip">Live Search Forward</span></p>
+<p><span class="shortcut">⌃R</span><span class="descrip">Live Search Backward (when invoked after ⌃S)</span></p>
+<p class="oliver"><span class="shortcut">⇧⌃S</span><span class="descrip">Quick Search Backward</span></p>
+<p class="oliver"><span class="shortcut">⌃⌥S</span><span class="descrip">Quick Search Forward</span></p>
+<p class="oliver"><span class="shortcut">⌃⌘S</span><span class="descrip">Quick Grep Search Forward</span></p>
+</div>
+
+<div>
+<p><span class="shortcut">⌃L</span><span class="descrip">Reveal Insertion Point</span></p>
+<p class="oliver"><span class="shortcut">⌃⇧L</span><span class="descrip">Go to line number under cursor</span></p>
+<p><span class="shortcut">⌘J</span><span class="descrip">Go to Line...</span></p>
+<p><span class="shortcut">⇧⌘J</span><span class="descrip">Go to Center Line</span></p>
+<p><span class="shortcut">⌃⇧J</span><span class="descrip">Set Jump Mark</span></p>
+<p><span class="shortcut">⌃⇧F</span><span class="descrip">Jump Forward</span></p>
+<p><span class="shortcut">⌃⇧B</span><span class="descrip">Jump Back</span></p>
+</div>
+
+<div>
+<p class="oliver"><span class="shortcut">⌃⌘B</span><span class="descrip">Writer’s Balance (like Balance for prose)</span></p>
+<p class="oliver"><span class="shortcut">⌥⌘↩</span><span class="descrip">Smart New Line</span></p>
+<p class="oliver"><span class="shortcut">⌃⇧U</span><span class="descrip">Capitalize Selection or Word</span></p>
+<p class="oliver"><span class="shortcut">⌃⌥U</span><span class="descrip">Lowercase Selection or Word</span></p>
+<p class="oliver"><span class="shortcut">⌃⌥⇧U</span><span class="descrip">Uppercase Selection or Word</span></p>
+</div>
+
+<div>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Make Abbreviation</span></p>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Make Selection Bulleted List</span></p>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Make Selection Numbered List</span></p>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Replace comma space with newlines</span></p>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Replace newlines with comma space</span></p>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Replace spaces with Dashes</span></p>
+<p class="oliver"><span class="shortcut"></span><span class="descrip">Transpose Around Delimiter</span></p>
+</div>
+
+
+</div>
+</article>
+
+</body>
+</html>

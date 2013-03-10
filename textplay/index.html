@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Textplay @ OliverTaylor.net</title>
+<link href="/style.css" rel="stylesheet"/>
+<meta name="viewport" content="width = device-width" />
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body id="textplay">
+
+<nav><p><a href="/">Home</a> › Textplay</p></nav>
+
+<article>
+
+<h2>Textplay</h2>
+
+<p><i>Download</i>: <a href="https://github.com/olivertaylor/Textplay/archive/master.zip">Textplay</a> — from github</p>
+
+<section>
+<p>Textplay is a simple ruby-script (one file, no dependancies) that converts screenplays written in Fountain formatted plain-text to a variety of useful formats: HTML, FDX (Final Draft), or PDF (<a href="http://princexml.com">PrinceXML</a> required).</p>
+
+<p class="red"><i>Textplay has been rigorously tested against fountain documents, but it is not perfect, if you encounter a problem please let me know: <a href="http://twitter.com/olivertaylor">@olivertaylor</a>.</i></p>
+
+<p>Textplay is also <a href="https://github.com/olivertaylor/Textplay">hosted on GitHub</a>.</p>
+
+</section>
+<section>
+
+<h3>Command-line interface</h3>
+
+<p>Textplay was built using Mac OS 10.6-8 and Ruby 1.8.7. I have only tested it in this environment, if you want to run Textplay in another environment (such as Windows) you may have to modify the code.</p>
+
+<p>Calling Textplay from the command-line is simple:</p>
+
+<p><code>textplay [options] [input-path] [output-path]</code></p>
+
+<ul>
+<li>The first argument is always an input-path.</li>
+<li>The second argument is always an output-path.</li>
+<li>If there's no output-path textplay prints to <code>STDOUT</code> (PDFs go to <code>/temp</code>).</li>
+<li>If there's no input-path textplay reads from <code>STDIN</code>.</li>
+</ul>
+
+<p>Textplay has three options you can call in the command line. <code>--help</code>, <code>--fdx</code>, and <code>--pdf</code> (<code>-h</code>, <code>-f</code>, and <code>-p</code>respectively).</p>
+
+<ul>
+<li><code>--help</code> does what you think it does.</li>
+<li><code>--fdx</code> converts the file to FDX instead of HTML.</li>
+<li><code>--pdf</code> converts the file to PDF (<a href="http://princexml.com">PrinceXML</a> must be installed on your system).</li>
+</ul>
+
+</section>
+<section>
+
+<h3>HTML Snippets</h3>
+
+<p><code>textplaysnip</code> is an alternate script that converts inputted text to HTML equivalent. It does not include anything but the marked-up text. This is useful for things like <a href="http://bbeditextras.org/wiki/index.php?title=Text_Filters">BBEdit Text filters</a> or <a href="http://markedapp.com">Marked.app</a>. <code>textplay.css</code> is also included should you need it.</p>
+
+</section>
+<section>
+<h3>Support for the Fountain Format</h3>
+
+<p><b>Q. How does Textplay interpret text differently from the Fountain spec?</b></p>
+
+<ol>
+	<li>Textplay is smart about what constitutes a transition. Usually, there's no need to escape transitions, but you can.</li>
+	<li>An action line that contains no lower-case letters is converted to a slugline.</li>
+	<li>Lines that begin with <code>//</code> are interpreted as notes. This was done to provide backward-compatibility with Textplay/Screenbundle documents.</li>
+	<li>In some cases Textplay does not assume that every whitespace character you type (newlines, spaces, and tabs) is intentional. For example, if you type one space on the line immediately below an all-caps line, Fountain assumes you'd like a Character saying “ ”. Textplay assumes you accidentally typed a space.</li>
+</ol>
+
+<p><b>Q. What parts of the Fountain spec are not supported?</b></p>
+
+<ul>
+	<li>Scene Numbers.</li>
+	<li>Dual Dialog blocks.</li>
+	<li>Title Pages.</li>
+	<li>Empty lines inside <code>[[notes]]</code>.</li>
+</ul>
+
+<p><b>Q. Why aren't they?</b></p>
+
+<p>A. I'm not a good enough programmer.</p>
+</section>
+
+</article>
+
+<footer>
+<hr />
+<p id="heart">&#10070;</p>
+</footer>
+
+</body>
+</html>

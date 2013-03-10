@@ -1,0 +1,170 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu+Mono|Open+Sans:800');
+
+/* Typography
+-------------------------------------------------------- */
+body {
+	font: 1em 'Georgia', serif;
+	color: #333;
+	line-height: 1.5;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+h1 {
+	margin-top: 0;
+	font-size: 4.8em;
+	text-transform: uppercase;
+	letter-spacing: -.05em;
+	text-align: center;
+	line-height: .8;
+	}
+h1 span {
+	letter-spacing: -.1em;
+}
+h2 {
+	font-size: 2em;
+	text-transform: uppercase;
+	margin-top: 0;
+	}
+h3 {
+	margin-top:3em;
+	}
+h4 {
+	font-style: italic;
+	font-weight: normal;
+	margin: 1.7em 0;
+}
+p {
+	margin-top:0;
+	-webkit-hypens:auto;
+	-moz-hypens:auto;
+	hyphens:auto;
+	}
+ul {
+	list-style: square;
+	padding-left:1.2em;
+	}
+ol {
+	padding-left:1.2em;
+	}
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+	}
+code {
+	font-family: "Ubuntu Mono", "Consolas", monospace;
+	}
+a {
+	color: #2484c1;
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: underline;
+	}
+a img {
+	border:none;
+	}
+h1 a, h1 a:hover {
+	color: #333;
+	text-decoration: none;
+	}
+hr {
+	color : #ddd;
+	height : 1px;
+	margin: 2em 0;
+	border-top : solid 1px #ddd;
+	border-bottom : none;
+	border-left: 0;
+	border-right: 0;
+	}
+p#heart{
+	font-size: 2em;
+	line-height: 1;
+	text-align: center;
+	color: #ccc;
+	}
+.red {
+	color:#B50000;
+	}
+
+/* Misc Layout
+-------------------------------------------------------- */
+
+article {
+	margin-bottom: 4em;
+	min-height: 400px;
+	padding-top: 2em;
+}
+footer {
+	margin-bottom:50px;
+}
+nav {
+	border-bottom: 1px solid #ddd;
+}
+nav p {margin: 0;padding: 1em 0;}
+
+
+/* Home Page
+--------------------------- */
+
+body#index li {
+	margin-bottom: 1em;
+}
+
+/* Main Layout
+-------------------------------------------------------- */
+
+html, body {
+	padding: 0;
+	margin:0;
+}
+body {
+	padding: 0 20px;
+}
+header, nav, article, footer {
+	margin:0 auto;
+}
+
+/* anything larger than iPad Portrait */
+@media only screen
+and (min-width: 771px){
+	body {
+		font-size: 1em;
+	}
+	header, nav, article, footer {
+		width: 750px;
+	}
+}
+
+/* iPad */
+@media only screen
+and (max-width: 770px)
+and (min-width: 321px){
+	body {
+		font-size: 1.2em;
+	}
+	h1 {
+		font-size: 4em;
+	}
+	h2 {
+		line-height: 1.2
+	}
+}
+
+/* iPhone */
+@media only screen
+and (max-width: 320px)
+and (min-width: 1px){
+	body {
+		font-size: 1.1em;
+		line-height: 1.4;
+	}
+	h1 {
+		font-size: 2.1em;
+		margin-top: .5em;
+	}
+	h2 {line-height: 1}
+}
+
