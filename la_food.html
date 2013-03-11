@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDX Food</title>
+	<meta charset="utf-8">
+	<style>
+	body
+	{
+		padding: 40px 20px 40px 20px;
+		font-family: Open Sans, sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	a {
+		text-decoration: none;
+		color: rgb(125, 180, 0);
+	}
+	
+	section {
+		max-width: 700px;
+		margin: 0px auto;
+	}
+	
+	section.header {
+		margin-bottom: 3em;
+	}
+	
+	h1
+	{
+		margin-top: 0px;
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+	h2
+	{
+		font-weight: 700;
+		margin-bottom: 0px;
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	
+	hr
+	{
+		height: 1px;
+		border: none;
+		border-bottom: 1px solid rgba(0,0,0,.5);
+		margin: 50px 0;
+	}
+	
+	article
+	{
+		padding: 15px 20px;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		margin-bottom: 10px;
+	}
+	article.selected
+	{
+		background: #ecf7ff;
+		border-color: #84bdd7;
+	}
+	article h2 {
+		margin-top:0;
+	}
+	article h2 a span {
+		font-weight: normal;
+		color:#aaa;
+		margin-left: 1em;
+	}
+	article.selected h2 a
+	{
+		color: rgba(88,160,0,1);
+	}
+	
+	p
+	{
+		margin: 0;
+	}
+	p.badges
+	{
+		margin-top: 5px;
+		line-height: 18px;
+/* 		margin-bottom: 30px; */
+	}
+	
+	.busy, .cost, .kids, .large, .location, .noise
+	{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin-right: 5px;
+	}
+	.busy  { color: #ff6f15; }
+	.cost  { color: #52cbd3; letter-spacing: 1px; }
+	.kids  { color: #387cda; }
+	.large { color: #9734b5; }
+	.location { color: rgb(125, 180, 0); }
+	
+	.short p
+	{
+		margin-bottom: 10px;
+	}
+	
+	/* Mobile */
+
+	@media only screen and (max-device-width: 480px)
+	{
+		body
+		{
+			padding: 20px 10px;
+		}
+		
+		hr
+		{
+			margin: 30px 0;
+		}
+		
+		h1
+		{
+			margin-bottom: 10px;
+			padding: 0px 10px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		
+		section
+		{
+			max-width: 600px;
+		}
+		
+		article
+		{
+			padding: 10px 10px;
+		}
+	}
+	
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+	
+	<script>
+	
+	function selectArticle(article)
+	{
+		deselectAll();
+		article.className = 'selected';
+	}
+	
+	function deselectAll()
+	{
+		allArticles = document.getElementsByTagName("article");
+		for (i = 0; i < allArticles.length; i++)
+		{
+			allArticles[i].className = '';
+		}
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+<section class="header">
+<h1>Oliver's Favorite L.A. Restuarants</h1>
+<p>Here in Los Angeles you can get some of the best food in the world, and no matter where you are in the city there are thousands of wonderful restaurants near you. This guide is a list of my favorite places (I’ve been to all of them), organized by neighborhood.</p>
+</section>
+<section>
+
+
+
+<h2>Burbank / The Valley</h2>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://www.portosbakery.com">Porto's Bakery</a></h2>
+<p>They call themselves a cuban bakery, but this place is great for breakfast, lunch, and a coffee break. Sandwiches, soups, baked-goods, and deserts. Try the Cubano sandwich, the potato balls, and any of their deserts. I'm here maybe 3 times a week.</p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$</span>
+<a class="location" href="http://goo.gl/maps/9O9Fr">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://www.therusticspoon.info">The Rustic Spoon</a></h2>
+<p>A tiny little Thai-fusion place hardly anyone knows about. Great food.</p>
+<p class="badges">
+<span class="busy">Not Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="http://goo.gl/maps/RUVFu">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://burbanktomosushi.com">Tomo Sushi</a></h2>
+<p>I haven't been to too many of the truly fancy sushi places in LA, but this is (so far) my favorite sushi place.</p>
+<p class="badges">
+<span class="busy">Not Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="http://goo.gl/maps/jn5D2">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://www.oliveandthyme.com">Olive & Thyme</a></h2>
+<p>Not only a great breakfast and lunch place, but also serves the best coffe this side of the hill. A little on the pricy side, but worth it for the great food and the wonderful atmosphere. My wife says "it's like an Anthropology in here!"</p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$$$</span>
+<a class="location" href="http://goo.gl/maps/R78ng">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://joesfalafel.net">Joe's Falafel</a></h2>
+<p>A new favorite of mine. Consistently wonderful Mediterranean food; falafel, shawarma, hummus, (baked to order) <a href="http://en.wikipedia.org/wiki/Taboon_bread" class="title">laffa bread</a>.</p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$</span>
+<a class="location" href="http://goo.gl/maps/FKQ3G">Map it ➔</a>
+</p>
+</article>
+
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://jinya-ramenbar.com">Jinya Ramen Bar</a></h2>
+<p>There are many ramen spots in LA, and the best are on the West Side, which means I don't get to eat at them very often. This gem serves some of my favorite ramen, is always packed, and is now a staple in my diet. With each bowl of ramen they'll ask if you want skinny or fat noodles, get the fat.</p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="http://goo.gl/maps/GdVn6">Map it ➔</a>
+</p>
+</article>
+
+
+</section>
+<section>
+
+
+<h2>Atwater / Silverlake</h2>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Proof Bakery</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">The Village Cafe</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Mother Dough</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy-ish</span>
+<span class="cost">$$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Storefront Deli</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Tomato Pie</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+</section>
+<section>
+
+
+<h2>Hollywood</h2>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Stout</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Umami Burger</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy-ish</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Tender Greens</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Village Pizzaria</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Joe's Pizza</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not Busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Star of India</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Palms Thai</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy-ish</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Mao’s Kitchen</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Terroni</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Mozza Pizzaria</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">The Bowrey</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy-ish</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Franklin and Company</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Little Dom's</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Grub</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+
+</section>
+<section>
+
+
+<h2>Westside</h2>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Tatsu Ramen</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy-ish</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Bay Cities</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Joe's Pizza</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not too busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Milo & Olive</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+
+</section>
+<section>
+
+
+<h2>Downtown</h2>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Wurstkuche</a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+
+</section>
+<section>
+
+
+<h2>Inland / Other</h2>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">La Cabanita <span>Montrose</span></a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy-ish</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Din Tai Fung <span>San Gabriel</span></a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Luscious Dumplings <span>San Gabriel</span></a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Golden Deli <span>San Gabriel</span></a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">D'Angelo's Bread <span>Santa Barbara</span></a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Not busy</span>
+<span class="cost">$$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+<article onclick="selectArticle(this)">
+<h2><a href="http://link.com">Solvang Restaurant <span>Solvang</span></a></h2>
+<p></p>
+<p class="badges">
+<span class="busy">Busy</span>
+<span class="cost">$</span>
+<a class="location" href="https://maps.google.com/">Map it ➔</a>
+</p>
+</article>
+
+
+
+</section>
+<hr />
+<section>
+The idea for this page, and all the code, was directly stolen from <a href="http://mrgan.com/pdxfood/">Neven Mrgan's PDX Food Recommendations</a>
+</section>
+
+</body>
+</html>
