@@ -1,0 +1,15 @@
+Git Repo Setup
+==============
+
+  2013-03-11
+
+The setup has 3 branches
+
+1. master (staging, local only) - this is the staging branch,
+   were everything is prepped for deployment to the:
+
+2. gh-pages (production) - this is the live site.
+
+3. dev branches - this is where changes are made.
+   Once a change is complete it is pushed to the
+   Master/Staging branch in prep for deployment.
