@@ -1,7 +1,7 @@
 /* Typography
 -------------------------------------------------------- */
 body {
-  font: 1.2em "myriad-pro", sans-serif;
+  font: 1.1em "myriad-pro", sans-serif;
   color: #333;
   line-height: 1.4;
   font-weight:400;
@@ -9,6 +9,7 @@ body {
   }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  color:#000;
   }
 h1 {
   margin: .5em 0 .5em 0;
@@ -78,10 +79,12 @@ hr {
   border-right: 0;
   }
 p#heart{
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: 100;
   line-height: 1;
   text-align: center;
-  color: #ccc;
+  color: #B50000;
+  margin:2em 0;
   }
 .red {
   color:#B50000;
