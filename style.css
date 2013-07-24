@@ -1,14 +1,14 @@
 /* Typography
 -------------------------------------------------------- */
 body {
-  font: 1.1em "myriad-pro", sans-serif;
+  font: 1.2em "myriad-pro", sans-serif;
   color: #333;
   line-height: 1.4;
-  font-weight:400;
+  font-weight:300;
   /* Typekit embedded weights: 300, 400, 600 */
   }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 400;
   color:#000;
   }
 h1 {
@@ -50,13 +50,13 @@ ol {
 blockquote {
   margin-left: 1em;
   padding-left: 1em;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid rgb(178, 178, 178);
   }
 code {
   font-family: "Ubuntu Mono", "Consolas", monospace;
   }
 a {
-  color: rgb(0, 136, 204);
+  color: rgb(0, 122, 255);
   text-decoration: none;
   }
 a:hover {
@@ -70,24 +70,24 @@ h1 a, h1 a:hover {
   text-decoration: none;
   }
 hr {
-  color : #ddd;
-  height : 1px;
+  color: rgb(178, 178, 178);
+  height: 1px;
   margin: 2em 0;
-  border-top : solid 1px #ddd;
+  border-top : solid 1px rgb(178, 178, 178);
   border-bottom : none;
   border-left: 0;
   border-right: 0;
   }
 p#heart{
-  font-size: 2.5em;
-  font-weight: 100;
+  font-size: 3em;
+  font-weight: 400;
   line-height: 1;
   text-align: center;
-  color: #FC2225;
+  color: rgb(255, 59, 48);
   margin:2em 0;
   }
 .red {
-  color:#FC2225;
+  color: rgb(255, 59, 48);
   }
 
 /* Misc Layout
@@ -101,12 +101,18 @@ article {
 footer {
   margin-bottom:50px;
   }
-nav {
-  border-bottom: 1px solid #ddd;
+div#nav-wrap {
+  width:100%;
+  background: rgb(247,247,247);
+  border-bottom: 1px solid rgb(178, 178, 178);
   }
 nav p {
   margin: 0;
   padding: 1em 0;
+  }
+.back-arrow {
+  height: 1.1em;
+  margin: 0 .25em -0.25em 0;
   }
 
 
@@ -125,15 +131,21 @@ html, body {
   margin:0;
   }
 body {
-  padding: 0 20px;
+  padding: 0 0px;
   }
 header, nav, article, footer {
   margin:0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   }
   
 
 /* LA Food
 -------------------------------------------------------- */
+
+body#food ul#neighborhoods {
+  margin:2em 0;
+  }
 
 body#food section h2 {
   margin-top:2em;
@@ -147,7 +159,7 @@ body#food div.item h3 {
 
 body#food div.item h3 span {
   font-weight: normal;
-  color: #aaa;
+  color: rgb(178, 178, 178);
   font-style: italic;
   margin-left:1em;
   }
@@ -161,8 +173,13 @@ body#food div.item p.badges {
   }
 
 body#food .busy {
-  color: #FC2225;
+  color: rgb(255, 149, 0);
   }
+
+body#food .cost {
+  color: rgb(76, 217, 100);
+  }
+
 
 /* Error Page
 -------------------------------------------------------- */
@@ -173,6 +190,9 @@ body#error h2 {
   margin: 2em 0;
   }
 body#error p { text-align: center;}
+
+
+
 
 
 /* anything larger than iPad Portrait */
