@@ -1,14 +1,14 @@
 /* Typography
 -------------------------------------------------------- */
 body {
-  font: 1.2em "myriad-pro", sans-serif;
+  font: 1em "myriad-pro", sans-serif;
   color: #333;
   line-height: 1.4;
-  font-weight:300;
+  font-weight:400;
   /* Typekit embedded weights: 300, 400, 600 */
   }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 300;
   color:#000;
   }
 h1 {
@@ -108,11 +108,11 @@ div#nav-wrap {
   }
 nav p {
   margin: 0;
-  padding: 1em 0;
+  padding: .75em 0;
   }
 .back-arrow {
-  height: 1.1em;
-  margin: 0 .25em -0.25em 0;
+  height: 1em;
+  margin: 0 .25em -0.2em 0;
   }
 
 
