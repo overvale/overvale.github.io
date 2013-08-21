@@ -94,9 +94,7 @@ p#heart{
 -------------------------------------------------------- */
 
 article {
-  margin-bottom: 4em;
-  min-height: 400px;
-  padding-top: 2em;
+  margin-top: 5em;
   }
 footer {
   margin-bottom:50px;
@@ -119,10 +117,14 @@ nav p {
 /* Home Page
 --------------------------- */
 
-body#index li {
-  margin-bottom: 1em;
+#top h1 {
+  margin-bottom:0;
   }
 
+#twitter {
+  text-align: center;
+  font-style: italic;
+  }
 /* Main Layout
 -------------------------------------------------------- */
 
@@ -134,7 +136,8 @@ body {
   padding: 0 0px;
   }
 header, nav, article, footer {
-  margin:0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
   }
