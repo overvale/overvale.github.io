@@ -1,7 +1,7 @@
 /* Typography
 -------------------------------------------------------- */
 body {
-  font: 1em "myriad-pro", sans-serif;
+  font: 1em "ff-tisa-web-pro", Georgia, serif;
   color: #333;
   line-height: 1.4;
   font-weight:400;
@@ -17,9 +17,6 @@ h1 {
   font-style: italic;
   text-transform: lowercase;
   text-align: center;
-  }
-h1 span {
-  /* letter-spacing: -.1em; */
   }
 h2 {
   font-size: 2em;
@@ -64,10 +61,6 @@ a:hover {
   }
 a img {
   border:none;
-  }
-h1 a, h1 a:hover {
-  color: #333;
-  text-decoration: none;
   }
 hr {
   color: rgb(178, 178, 178);
