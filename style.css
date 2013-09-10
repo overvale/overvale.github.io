@@ -1,7 +1,7 @@
 /* Typography
 -------------------------------------------------------- */
 body {
-  font: 1em "ff-tisa-web-pro", Georgia, serif;
+  font: 105% "ff-tisa-web-pro", Georgia, serif;
   color: #333;
   line-height: 1.4;
   font-weight:400;
@@ -112,6 +112,7 @@ nav p {
 
 #top h1 {
   margin-bottom:0;
+  font-size: 2em;
   }
 
 #twitter {
