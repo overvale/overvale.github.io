@@ -119,6 +119,19 @@ nav p {
   text-align: center;
   font-style: italic;
   }
+
+#top img {
+    width: 128px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img#tree_img {
+    width: 100%;
+    margin: 5em 0;
+}
+
 /* Main Layout
 -------------------------------------------------------- */
 
