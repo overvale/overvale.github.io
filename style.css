@@ -239,7 +239,14 @@ and (min-width: 1px){
   }
   h1 {
     margin-top: .5em;
+    font-size: 2.5em;
   }
   h2 {line-height: 1}
+  body#food article {
+      margin-top: 0;
+  }
+  body#food article h1 {
+  line-height: 1;
+  }
 }
 
