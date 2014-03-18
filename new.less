@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+
+@text-color: #333;
+@link-color: rgb(0, 122, 255);
+@border-color: rgb(225, 225, 225);
+
+/* Layout
+-------------------------------------------------------- */
+body {
+  padding: 1em 1em 10em 1em;
+  background-color: rgb(250, 250, 250);
+  }
+div#wrapper {
+  max-width:700px;
+  margin:0 auto;
+  }
+article {
+  border-top:1px solid @border-color;
+  }
+
+/* Typography
+-------------------------------------------------------- */
+body {
+  font: 14pt "Lora", Georgia, serif;
+  color: @text-color;
+  line-height: 1.5;
+  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  }
+p {
+  -webkit-hypens:auto;
+  -moz-hypens:auto;
+  hyphens:auto;
+  }
+ul {
+  list-style: square;
+  padding-left:1.5em;
+  }
+ol {
+  padding-left:1.5em;
+  }
+blockquote {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid @border-color;
+  }
+code {
+  font-family: "Ubuntu Mono", "Consolas", monospace;
+  white-space: pre-wrap;
+  }
+
+/* Links
+-------------------------------------------------------- */
+a { color: @link-color; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a img { border:none; }
+
