@@ -9,12 +9,10 @@
 body {
   padding: 1em 1em 10em 1em;
   background-color: rgb(250, 250, 250);
-  }
-div#wrapper {
   max-width:700px;
   margin:0 auto;
   }
-article {
+article, div.item {
   border-top:1px solid @border-color;
   }
 
@@ -56,3 +54,16 @@ a { color: @link-color; text-decoration: none; }
 a:hover { text-decoration: underline; }
 a img { border:none; }
 
+
+/* Exceptions
+-------------------------------------------------------- */
+article#intro {
+  font-style:italic;
+}
+body#food h2 {
+  margin-top:3em;
+}
+
+body#food p.badges {
+  font-style: italic;
+}
