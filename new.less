@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic,700italic|Fira+Mono);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro|Source+Serif+Pro);
 
 @text-color: #333;
 @link-color: rgb(0, 122, 255);
@@ -19,12 +19,13 @@ article, div.item {
 /* Typography
 -------------------------------------------------------- */
 body {
-  font: 14pt "Fira Sans", Georgia, serif;
+  font: 11pt "Source Sans Pro", Helvetica, sans-serif;
   color: @text-color;
   line-height: 1.5;
   }
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  font-family: "Source Serif Pro", Georgia;
   }
 p {
   -webkit-hypens:auto;
@@ -44,7 +45,8 @@ blockquote {
   border-left: 1px solid @border-color;
   }
 code {
-  font-family: "Fira Mono", "Consolas", monospace;
+  /* font-size: 98%; */
+  font-family: "Source Code Pro", monospace;
   white-space: pre-wrap;
   }
 
