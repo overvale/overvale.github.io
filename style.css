@@ -1,55 +1,25 @@
-/* Layout
--------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(/reset.css);
+
 body {
-  padding: 1em 1em 10em 1em;
-  background-color: #fff;
+  padding: 0em 1em 10em 1em;
   max-width:700px;
   margin:0 auto;
-  }
-article, div.item {
-  border-top:1px solid #ddd;
-  }
-
-/* Typography
--------------------------------------------------------- */
-body {
-  font: 12pt "Georgia";
-  color: #333;
-  line-height: 1.3;
-  }
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-style: italic;
-  }
-p {
-  -webkit-hypens:auto;
-  -moz-hypens:auto;
-  hyphens:auto;
-  }
-ul {
-  list-style: square;
-  padding-left:1.5em;
-  }
-ol {
-  padding-left:1.5em;
-  }
-blockquote {
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: 1px solid #ddd;
-  }
-code {
-  font-size: 90%;
-  font-family: "Menlo", monospace;
-  white-space: pre-wrap;
-  }
-a {
+  font: 11pt "Source Code Pro";
   color:#333;
-  }
-a:hover {
-  color:rgb(0, 122, 255);
-  text-decoration: underline; 
-  }
-a img {
-  border:none;
-  }
+  white-space:pre-wrap;
+}
+ol {
+  list-style:decimal-leading-zero;
+  margin-left:32pt;
+  text-indent: -6pt;
+}
+ul, ol       { margin-bottom:-11pt; }
+ul li:before { content:'* '; }
+a            { color:#333; }
+a:hover,
+a:before, 
+a:after      { color:rgb(0, 122, 255); }
+a:before     { content: '<'; }
+a:after      { content: '>'; }
+a, a:hover   { text-decoration:none; }
