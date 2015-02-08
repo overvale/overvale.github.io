@@ -14,7 +14,8 @@ ol {
   margin-left:32pt;
   text-indent: -6pt;
 }
-ul, ol       { margin-bottom:-11pt; }
+li {margin: -1em 0 0 0;}
+ul, ol       { margin:0em 0 -2em 0; }
 ul li:before { content:'* '; }
 a            { color:#333; }
 a:hover,
@@ -23,3 +24,4 @@ a:after      { color:rgb(0, 122, 255); }
 a:before     { content: '<'; }
 a:after      { content: '>'; }
 a, a:hover   { text-decoration:none; }
+
