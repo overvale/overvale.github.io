@@ -1,11 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 @import url(/reset.css);
+
+@font-face {
+    font-family: "Fira Mono";
+    src: url("FiraMono-Regular.otf"), format("opentype");
+}
 
 body {
   padding: 0em 1em 10em 1em;
   max-width:700px;
   margin:0 auto;
-  font: 11pt "Source Code Pro";
+  font: 10pt "Fira Mono", Menlo, "Consolas", monospace;
+  line-height:12pt;
   color:#333;
   white-space:pre-wrap;
 }
@@ -15,7 +20,7 @@ ol {
   text-indent: -6pt;
 }
 li {margin: -1em 0 0 0;}
-ul, ol       { margin:0em 0 -2em 0; }
+ul, ol       { margin:0em 0 -2em 12pt; }
 ul li:before { content:'* '; }
 a            { color:#333; }
 a:hover,
