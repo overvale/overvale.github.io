@@ -12,15 +12,15 @@ body {
   font: 10pt "Fira Mono", Menlo, "Consolas", monospace;
   line-height:12pt;
   color:#333;
-  white-space:pre-wrap;
 }
+dt,dd,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{white-space:pre-wrap;}
+dt,ul,ol,p,blockquote{margin: 1em 0;}
+h1,h2,h3,h4,h5,h6{margin: 2em 0 1em 0}
 ol {
   list-style:decimal-leading-zero;
   margin-left:32pt;
   text-indent: -6pt;
 }
-li {margin: -1em 0 0 0;}
-ul, ol       { margin:0em 0 -2em 12pt; }
 ul li:before { content:'* '; }
 a            { color:#333; }
 a:hover,
