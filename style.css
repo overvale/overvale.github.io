@@ -3,6 +3,13 @@
 @font-face {
     font-family: "Fira Mono";
     src: url("FiraMono-Regular.otf"), format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Fira Mono";
+    src: url("FiraMono-Bold.otf"), format("opentype");
+    font-weight: bold;
 }
 
 body {
