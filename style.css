@@ -28,7 +28,7 @@ ol {
   margin-left:32pt;
   text-indent: -6pt;
 }
-ul li:before { content:'* '; }
+ul li:before { content:'- '; }
 a            { color:#333; }
 a:hover,
 a:before, 
