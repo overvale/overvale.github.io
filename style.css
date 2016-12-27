@@ -22,13 +22,14 @@ body {
 }
 dt,dd,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{white-space:pre-wrap;}
 dt,ul,ol,p,blockquote{margin: 1em 0;}
-h1,h2,h3,h4,h5,h6{margin: 2em 0 1em 0}
+h1,h2,h3,h4,h5,h6{margin: 2em 0 1em 0; font-weight:bold;}
 ol {
   list-style:decimal-leading-zero;
   margin-left:32pt;
   text-indent: -6pt;
 }
 ul li:before { content:'- '; }
+blockquote { margin: 0 5em; }
 a            { color:#333; }
 a:hover,
 a:before, 
