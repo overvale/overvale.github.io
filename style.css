@@ -20,6 +20,7 @@ body {
   line-height:12pt;
   color:#333;
 }
+code { font: 10pt "Fira Mono"; }
 dt,dd,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{white-space:pre-wrap;}
 dt,ul,ol,p,blockquote{margin: 1em 0;}
 h1,h2,h3,h4,h5,h6{margin: 2em 0 1em 0; font-weight:bold;}
@@ -34,7 +35,6 @@ a            { color:#333; }
 a:hover,
 a:before, 
 a:after      { color:rgb(0, 122, 255); }
-a:before     { content: '<'; }
-a:after      { content: '>'; }
+a:after      { content: '◊'; }
 a, a:hover   { text-decoration:none; }
 
