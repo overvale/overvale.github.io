@@ -2,5 +2,5 @@
   +---------------------+
   | F K M   C P D   Y E |
 3 | H B I G Q R O S A Z |
-7 | L U T K N W V X     |
+7 | L U T J N W V X     |
   +---------------------+
