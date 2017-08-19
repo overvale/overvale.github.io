@@ -1,40 +1,38 @@
 @import url(/reset.css);
 
-@font-face {
-    font-family: "Fira Mono";
-    src: url("FiraMono-Regular.otf"), format("opentype");
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Fira Mono";
-    src: url("FiraMono-Bold.otf"), format("opentype");
-    font-weight: bold;
-}
+html { background: #FFFFEC; }
 
 body {
   padding: 0em 1em 10em 1em;
   max-width:700px;
   margin:0 auto;
-  font: 10pt "Fira Mono", Menlo, "Consolas", monospace;
-  line-height:12pt;
-  color:#333;
+  font: 11pt SFMono-Regular, Menlo, Consolas, monospace;
+  line-height:13pt;
+  color:#000;
 }
-code { font: 10pt "Fira Mono"; }
-dt,dd,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{white-space:pre-wrap;}
-dt,ul,ol,p,blockquote{margin: 1em 0;}
-h1,h2,h3,h4,h5,h6{margin: 2em 0 1em 0; font-weight:bold;}
+
+dt,dd,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td { white-space: pre-wrap; }
+
+dt,ul,ol,p,blockquote { margin: 1em 0; }
+
+h1,h2,h3,h4,h5,h6{
+  margin: 2em 0 1em 0;
+  font-weight:bold;
+}
+
 ol {
   list-style:decimal-leading-zero;
   margin-left:32pt;
   text-indent: -6pt;
 }
+
 ul li:before { content:'- '; }
+
 blockquote { margin: 0 5em; }
-a            { color:#333; }
+
+a            { color:#000; }
 a:hover,
 a:before, 
-a:after      { color:rgb(0, 122, 255); }
+a:after      { color:#2A8DC5 ; }
 a:after      { content: '◊'; }
 a, a:hover   { text-decoration:none; }
-
