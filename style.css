@@ -1,4 +1,5 @@
 @import url(/reset.css);
+@import url(IBM-Plex.css);
 
 html { background: #FFFFEC; }
 
@@ -8,6 +9,7 @@ body {
   margin:0 auto;
   font: 11pt SFMono-Regular, Menlo, Consolas, monospace;
   line-height:13pt;
+  font: 13pt "IBM Plex Sans";
   color:#000;
 }
 
