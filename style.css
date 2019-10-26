@@ -1,16 +1,11 @@
 @import url(reset.css);
-@import url(IBM-Plex.css);
-
-html {
-    background: #fff;
-}
-
+html { background: #fff; }
 body {
 	max-width:700px;
 	margin:2em auto 10em auto;
 	padding: 0 2em;
-	font: 12pt "IBM Plex Sans";
-	font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;	font-weight: 400;
+	font-size: 11pt;
 	line-height:1.4;
 	color:#000;
 }
@@ -20,24 +15,15 @@ h1,h2,h3,h4,h5,h6{
 	font-weight:700;
 }
 
-h1 {
-	font-size: 1.2em;
-	color: rgb(255,59,48);
-}
-
-h2 {
-    font-size: 1.2em;
-}
-
+h1 { font-size: 1.1em; color: rgb(255,59,48); }
+h2 { font-size: 1.1em; }
 h3 {
 	font-size: 1em;
 	font-weight: 600;
 	font-style: italic;
 }
 
-dt,ul,ol,p,blockquote {
-    margin: 1em 0;
-}
+dt,ul,ol,p,blockquote { margin: 1em 0; }
 
 ol {
 	list-style: decimal-leading-zero;
@@ -49,9 +35,7 @@ ul {
 	margin-left: 1em;
 }
 
-blockquote {
-    margin: 0 2em;
-}
+blockquote { margin: 0 2em; }
 
 a {
 	color:#000;
@@ -60,6 +44,4 @@ a {
 	text-decoration-color: rgb(90,200,250);
 }
 
-a:hover, a:before, a:after {
-    color: rgb(0,122,255);
-}
+a:hover, a:before, a:after { color: rgb(0,122,255); }
