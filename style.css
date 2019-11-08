@@ -5,7 +5,7 @@ body {
 	margin:2em auto 10em auto;
 	padding: 0 2em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;	font-weight: 400;
-	font-size: 11pt;
+	font-size: 12pt;
 	line-height:1.4;
 	color:#000;
 }
@@ -45,3 +45,13 @@ a {
 }
 
 a:hover, a:before, a:after { color: rgb(0,122,255); }
+
+@media (prefers-color-scheme: dark) {
+    html { background: rgb(29,31,33); }
+    body { color: #ddd; }
+    a {
+        color: #ddd;
+        -webkit-text-decoration-color: rgb(56,128,193);
+        text-decoration-color: rgb(56,128,193);
+    }
+}
