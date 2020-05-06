@@ -1,4 +1,4 @@
-// reset from http://yuilibrary.com/license/
+/* reset from http://yuilibrary.com */
 html{color:#000;background:#FFF}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -13,28 +13,38 @@ sup{vertical-align:text-top}
 sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
 legend{color:#000}
+/* ------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html { background: #fff; }
 body {
 	max-width:700px;
 	margin:2em auto 10em auto;
 	padding: 0 2em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;	font-weight: 400;
-	font-size: 12pt;
-	line-height:1.4;
-	color:#000;
+    font-family: 'Roboto Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	line-height: 1.5;
+	color:#333;
+    font-weight:400;
 }
 
 h1,h2,h3,h4,h5,h6{
-	margin: 2em 0 1em 0;
+	margin: 1em 0 1em 0;
 	font-weight:700;
 }
 
-h1 { font-size: 1.1em; color: rgb(255,59,48); }
-h2 { font-size: 1.1em; }
+h1, h2 { font-family: Roboto, sans-serif; }
+
+h1 { font-size: 1.6em; color: rgb(255,59,48); }
+h2 {
+    font-size: 1.4em;
+    border-top: 1px solid #ddd;
+    padding-top: 1em;
+}
 h3 {
-	font-size: 1em;
-	font-weight: 600;
+	font-size: 1.2em;
+	font-weight: 700;
 	font-style: italic;
 }
 
@@ -46,14 +56,27 @@ ol {
 }
 
 ul {
-	list-style-type: circle;
-	margin-left: 1em;
+    list-style-type: disc;
+	margin-left: 1.1em;
 }
+
+/* -- Notes List -- */
+ul li { clear: both; }
+li span.date {
+    color: #ccc;
+    padding-left: 1em;
+    float: right;
+}
+@media screen and (max-width: 500px) {
+    ul li {clear: none;}
+    li span.date {float: none;}
+}
+/* end notes list -- */
 
 blockquote { margin: 0 2em; }
 
 a {
-	color:#000;
+	color:#333;
 	text-decoration: underline;
 	-webkit-text-decoration-color: rgb(90,200,250);
 	text-decoration-color: rgb(90,200,250);
