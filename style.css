@@ -14,76 +14,60 @@ sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
 legend{color:#000}
 /* ------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://rsms.me/inter/inter.css');
 html { background: #fff; }
 body {
 	max-width:700px;
 	margin:2em auto 10em auto;
 	padding: 0 2em;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 1.5;
-	color:#333;
+	color:rgb(17,17,17);
     font-weight:400;
 }
-
+div#nav { margin-bottom: 1em; }
 h1,h2,h3,h4,h5,h6{
-	margin: 1em 0 1em 0;
+	margin: 0;
 	font-weight:700;
+    color:rgb(1,1,1);
 }
-
-h1, h2 { font-family: Roboto, sans-serif; }
-
-h1 { font-size: 1.6em; color: rgb(255,59,48); }
-h2 {
-    font-size: 1.4em;
-    border-top: 1px solid #ddd;
-    padding-top: 1em;
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; padding-top: 1em; }
 h3 {
 	font-size: 1.2em;
 	font-weight: 700;
-	font-style: italic;
+    margin: 1em 0;
 }
-
 dt,ul,ol,p,blockquote { margin: 1em 0; }
-
-ol {
-	list-style: decimal-leading-zero;
-	margin-left: 2em;
-}
-
-ul {
-    list-style-type: disc;
-	margin-left: 1.1em;
-}
-
+ol { list-style: decimal-leading-zero; margin-left: 2em; }
+ul { list-style-type: disc; margin-left: 1.1em; }
 /* -- Notes List -- */
-ul li { clear: both; }
-li span.date {
-    color: #ccc;
-    padding-left: 1em;
-    float: right;
-}
-@media screen and (max-width: 500px) {
-    ul li {clear: none;}
-    li span.date {float: none;}
-}
+    ul li { clear: both; }
+    li span.date {
+        color: #ccc;
+        padding-left: 1em;
+        float: right;
+    }
+    @media screen and (max-width: 500px) {
+        ul li {clear: none;}
+        li span.date {float: none;}
+    }
 /* end notes list -- */
-
-blockquote { margin: 0 2em; }
-
+blockquote {
+    margin: 0 1em;
+    padding-left: 1em;
+    color:rgb(75,75,75);
+    border-left: 1px solid rgb(225,225,225);
+}
 a {
-	color:#333;
+	color:rgb(1,1,1);
 	text-decoration: underline;
 	-webkit-text-decoration-color: rgb(90,200,250);
 	text-decoration-color: rgb(90,200,250);
 }
-
 a:hover, a:before, a:after { color: rgb(0,122,255); }
-
 @media (prefers-color-scheme: dark) {
     html { background: rgb(29,31,33); }
     body { color: #ddd; }
