@@ -17,14 +17,14 @@ legend{color:#000}
 @import url('https://rsms.me/inter/inter.css');
 html {
     background: #fff;
+	font-size: 14px;
 }
 body {
 	max-width:650px;
-	margin:2em auto 10em auto;
-	padding: 0 2em;
+	margin:2rem auto 10rem auto;
+	padding: 0 2rem;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
-	font-size: 14px;
 	line-height: 1.5;
 	color:rgb(17,17,17);
     font-weight:400;
@@ -34,32 +34,32 @@ h1,h2,h3,h4,h5,h6{
     color:rgb(1,1,1);
 }
 h1 {
-	font-size: 4em;
-	letter-spacing: -.02em;
+	font-size: 4rem;
+	letter-spacing: -.02rem;
 	line-height: 1;
-	margin: .5em 0;
+	margin: .5rem 0;
 }
 h2 {
-	font-size: 1.5em;
-	padding-top: 1em;
+	font-size: 1.5rem;
+	padding-top: 1rem;
 }
 h3 {
-	font-size: 1.2em;
-    margin: 2em 0 0 0;
+	font-size: 1.2rem;
+    margin: 2rem 0 0 0;
 }
 p, ul {
-	margin: 1em 0 0 0;
+	margin: 1rem 0 0 0;
 }
 p.date {
 	color: #bbb;
 }
-ol { list-style: decimal-leading-zero; margin-left: 2em; }
-ul { list-style-type: disc; margin-left: 1.1em; }
+ol { list-style: decimal-leading-zero; margin-left: 2rem; }
+ul { list-style-type: disc; margin-left: 1.1rem; }
 /* -- Notes List -- */
     ul li { clear: both; }
     li span.date {
         color: #bbb;
-        padding-left: 1em;
+        padding-left: 1rem;
         float: right;
     }
     @media screen and (max-width: 500px) {
@@ -68,8 +68,8 @@ ul { list-style-type: disc; margin-left: 1.1em; }
     }
 /* end notes list -- */
 blockquote {
-    margin: 0 1em;
-    padding-left: 1em;
+    margin: 0 1rem;
+    padding-left: 1rem;
     color:rgb(75,75,75);
     border-left: 1px solid rgb(225,225,225);
 }
