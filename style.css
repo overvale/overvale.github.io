@@ -17,7 +17,7 @@ legend{color:#000}
 @import url('https://rsms.me/inter/inter.css');
 html {
     background: #fff;
-	font-size: 14px;
+	font-size: 15px;
 }
 body {
 	max-width:650px;
@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6{
     color:rgb(1,1,1);
 }
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	letter-spacing: -.075rem;
 	line-height: 1;
 	margin: 3rem 0;
@@ -72,14 +72,13 @@ ul { list-style-type: disc; margin-left: 1.1rem; }
 blockquote {
     margin: 0 1rem;
     padding-left: 1rem;
-    color:rgb(75,75,75);
-    border-left: 1px solid rgb(225,225,225);
+    border-left: 1px solid #ccc;
 }
 a {
 	color:rgb(1,1,1);
 	text-decoration: underline;
-	-webkit-text-decoration-color: rgb(90,200,250);
-	text-decoration-color: rgb(90,200,250);
+	-webkit-text-decoration-color: #007AFC;
+	text-decoration-color: #007AFC;
 }
 a:hover, a:before, a:after {
 	text-decoration: none;
@@ -101,5 +100,4 @@ a:hover, a:before, a:after {
 	p.date {
 		color: #777;
 	}
-    blockquote { color: #bbb; }
 }
