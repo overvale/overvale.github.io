@@ -16,8 +16,9 @@ legend{color:#000}
 /* ------------------------ */
 @import url('https://rsms.me/inter/inter.css');
 html {
-    background: #fff;
 	font-size: 15px;
+    background: #fff;
+    color: #000;
 }
 body {
 	max-width:650px;
@@ -43,6 +44,9 @@ h1 {
 h2 {
 	font-size: 1.5rem;
     margin: 3rem 0 0 0;
+}
+body#index h2 {
+    margin-top: 2rem;
 }
 h3 {
 	font-size: 1.2rem;
