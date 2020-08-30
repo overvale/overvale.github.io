@@ -29,30 +29,28 @@ body {
     color:rgb(25,25,25);
     font-weight:400;
 }
-em { font-style: italic; }
+i, em { font-style: italic; }
+b, strong { font-weight: 600; }
 h1,h2,h3,h4,h5,h6{
-	font-weight:700;
+    font-weight:700;
     color:rgb(50,50,50);
 }
 h1 {
-	font-size: 2.5rem;
-	letter-spacing: -.075rem;
-	line-height: 1;
-	margin: 2.5rem 0;
+    font-size: 2.5rem;
+    letter-spacing: -.075rem;
+    line-height: 1;
+    margin: 2.5rem 0;
 }
 h2 {
-    font-size: 1.5rem;
-    margin: 1.5rem 0 0 0;
-}
-body#index h2 {
-    margin-top: 2rem;
+    font-size: 1.75rem;
+    margin: 3rem 0 0 0;
 }
 h3 {
     font-size: 1.2rem;
     margin: 1.2rem 0 0 0;
 }
 p, ul {
-	margin: 1rem 0 0 0;
+    margin: 1rem 0 0 0;
 }
 p.date {
 	color: #bbb;
@@ -77,16 +75,24 @@ blockquote {
     padding-left: 1rem;
     border-left: 1px solid #ccc;
 }
+code {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    font-size: .95rem;
+    color: #5A2B4D;
+    background: rgb(245,245,245);
+    border: 1px solid rgb(230,230,230);
+    padding: 0 1px;
+}
 a {
-	color:rgb(25,25,25);
-	text-decoration: underline;
-	-webkit-text-decoration-color: #007AFC;
-	text-decoration-color: #007AFC;
+    color:rgb(25,25,25);
+    text-decoration: underline;
+    -webkit-text-decoration-color: #007AFC;
+    text-decoration-color: #007AFC;
 }
 a:hover, a:before, a:after {
-	text-decoration: none;
-	background: #000;
-	color: #fff;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
 }
 @media (prefers-color-scheme: dark) {
     html { background: rgb(29,31,33); }
