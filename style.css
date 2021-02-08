@@ -65,7 +65,9 @@ p.date {
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
     font-size: .95rem;
 }
-h2 + p.date { margin-top: 0;}
+
+h1 + p.date, h2 + p.date { margin-top: 0;}
+body.note h1 { margin-bottom: 1.6rem; }
 
 ol {
     list-style: decimal;
@@ -139,8 +141,8 @@ body#index li span.date {
     h1,h2,h3,h4,h5,h6{ color:rgb(238, 238, 238); }
     code { background: rgb(39,41,43); color: rgb(255,255,255); border-color: rgb(69,71,73);}
     a { color: rgb(255,255,255);
-        -webkit-text-decoration-color: rgb(0, 122, 252);
-        text-decoration-color: rgb(0, 122, 252);
+        -webkit-text-decoration-color: rgb(90, 200, 250);
+        text-decoration-color: rgb(90, 200, 250);
     }
     a:hover, a:before, a:after {
 	    background: rgb(238, 238, 238);
