@@ -4,24 +4,20 @@
 
 =2021-03-24=
 
-In most text editors you simply set your preferred font and its size and
-you're done, the editor displays all text in the font of your choice. Whether
-for functional or aesthetic purposes it is nice to be able to mix [[https://en.wikipedia.org/wiki/Typeface#Proportion][proportional
-fonts]] with [[https://en.wikipedia.org/wiki/Monospaced_font][monospace fonts]] in the same document. For example, when writing
-prose in a proportional font you may want to include a table or code in a
-monospaced font.
+Whether for functional or aesthetic purposes it is nice to be able to mix
+[[https://en.wikipedia.org/wiki/Typeface#Proportion][proportional fonts]] with [[https://en.wikipedia.org/wiki/Monospaced_font][monospace fonts]] in the same document (this document
+for example does that). Since text editors edit and display raw plain text,
+they are usually configured to only display one font at a time, and leave the
+process of defining multiple fonts to other tools (like [[https://pandoc.org][Pandoc]]).
 
-When writing in a text editor, setting fonts is usually part of the
-typesetting or markup process, so you're almost always viewing editing
-documents in a single font. Emacs can in fact display more than one font at a
-time in a buffer. There are many ways of accomplishing this (naturally) but I
-use the [[https://protesilaos.com/modus-themes/][Modus Themes]] and generally don't have to think about it, the theme
-does the heavy lifting.
+Emacs can in fact display more than one font at a time in any given buffer.
+There are many ways of accomplishing this (naturally) but I use the [[https://protesilaos.com/modus-themes/][Modus
+Themes]] and generally don't have to think about it, the theme does the heavy
+lifting for me.
 
-The method recommended by Modus's author is to set three different fonts, a
-=default= font, a =variable-pitch= font, and a =fixed-pitch=. Instructions for doing
-this [[https://protesilaos.com/modus-themes/#h:defcf4fc-8fa8-4c29-b12e-7119582cc929][can be found in the themes' documentation]]. It recommends setting the
-three fonts like this:
+Getting this working requires defining three different fonts, a =default= font,
+a =variable-pitch= font, and a =fixed-pitch=. Instructions for doing this [[https://protesilaos.com/modus-themes/#h:defcf4fc-8fa8-4c29-b12e-7119582cc929][can be
+found in the themes' documentation]]. It recommends this:
 
 #+begin_src emacs-lisp
 ;; Main typeface
@@ -53,21 +49,18 @@ Can you sense the cryptic foreshadowing?
 * A Problem is Revealed
 
 I've used the above method to set fonts in Emacs for a long time, and it works
-great. But the more I use Emacs the more I notice a problem.
-
-The problem is this: most variable width fonts are /optically/ smaller (meaning
-they /look/ smaller) than their monospace counterparts, even those that are
-designed to be used together. Take, for example, this screenshot of an article
-from one of the RSS feeds I'm subscribed to (fonts are IBM Plex Mono and IBM
-Plex Serif):
+great. But the more I use Emacs the more I notice a problem. Most variable
+width fonts are /optically/ smaller (meaning they /look/ smaller) than their
+monospace counterparts, even those that are designed to be used together.
+Take, for example, this screenshot of an article from an RSS feeds I'm
+subscribed to (fonts are IBM Plex Mono and IBM Plex Serif):
 
 [[./img/elfeeed-mixed-font-sample.png]]
 
-Despite the two fonts being set to the same exact size, the text displayed in
-the monospace font appears to be larger than the text displayed in the
-proportional font.
+Despite the two fonts being set to the same exact size, the monospace font
+appears to be larger than the proportional font.
 
-How do we adjust the size of only the variable-pitch font so that it better
+So how do we adjust the size of only the variable-pitch font so that it better
 matches the optical size of the default/fixed-pitch font?
 
 If you're an arrogant copypasta dotfile hacker (me) you're probably thinking
@@ -93,7 +86,7 @@ your variable pitch font.
 #+end_src
 
 This will work great in variable pitch mode, but you'll find that
-=text-scale-adjust= doesn't actually resize your fixed width font.
+=text-scale-adjust= doesn't actually resize your fixed width font at all.
 
 * This Way Madness Lies
 
@@ -101,8 +94,8 @@ Be warned brave adventurer, this is a [[https://xkcd.com/456/][cautionary tale]]
 
 To understand why both of the above approaches fail you need to know a little
 bit about how [[https://git.savannah.gnu.org/cgit/emacs.git/tree/lisp/face-remap.el][the code]] for =variable-pitch-mode= and =text-scale-adjust= works.
-Both commands work the same way, they alter the "default" face in the current
-buffer. =variable-pitch-mode= (which is a wrapper around =buffer-face-mode=)
+Both commands work the same way, they alter the "default" face /in the current
+buffer/. =variable-pitch-mode= (which is a wrapper around =buffer-face-mode=)
 simply replaces the default face with the variable-pitch face. The function
 which actually does this looks like:
 
@@ -120,7 +113,7 @@ simplified version might look like this:
 #+end_src
 
 It is also important to understand that if you define a relative (floating
-point) value for font height /it is always based on the default font/. So when
+point) value for a font height /it is always based on the default font/. So when
 =buffer-face-mode= or =text-scale-adjust= changes the value of your default font
 your fixed-width font's inherited properties also change.
 
