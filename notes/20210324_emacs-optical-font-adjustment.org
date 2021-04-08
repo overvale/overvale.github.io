@@ -2,7 +2,7 @@
 #+AUTHOR: Oliver Taylor
 #+CATEGORY: Emacs
 
-=2021-03-24=
+=2021-04-08=
 
 Whether for functional or aesthetic purposes it is nice to be able to mix
 [[https://en.wikipedia.org/wiki/Typeface#Proportion][proportional fonts]] with [[https://en.wikipedia.org/wiki/Monospaced_font][monospace fonts]] in the same document (this document
@@ -185,17 +185,12 @@ Below is a working example that fulfills the following goals:
   but =variable-pitch-mode= is not used, for example in Elfeed and EWW)
 
 #+begin_src emacs-lisp
-;; Settings
-
-(setq oht-fonts-monospace "IBM Plex Mono")
-(setq oht-fonts-variable  "IBM Plex Serif")
-(setq oht-fonts-monospace-size 12)
-(setq oht-fonts-variable-size  14)
+;; First, define the variables you'll use.
 
 (defvar oht-fonts-monospace nil
   "Monospace font to be used for the default and fixed-pitch faces.")
 
-(defvar oht-fonts-variable 
+(defvar oht-fonts-variable nil
   "Variable font to to used for the variable-pitch face.")
 
 (defvar oht-fonts-monospace-size 12
@@ -211,17 +206,29 @@ This value will be used to determine a relative (float) size based on the defaul
 size. So if your default size is 12 and your variable size is 14 the derived
 relative size will be 1.16.")
 
+;; Set those variables to your desired values.
 
-;;; Set fonts and their sizes
+(setq oht-fonts-monospace "IBM Plex Mono")
+(setq oht-fonts-variable  "IBM Plex Serif")
+(setq oht-fonts-monospace-size 12)
+(setq oht-fonts-variable-size  14)
 
-(set-face-attribute 'default nil
-		    :family oht-fonts-monospace
-		    :height (* oht-fonts-monospace-size 10))
-(set-face-attribute 'fixed-pitch nil
-		    :family oht-fonts-monospace
-		    :height 1.0 )
-(set-face-attribute 'variable-pitch nil
-		    :family oht-fonts-variable :height 1.0)
+;; Set the faces using a function, so it can be called if you redefine the
+;; varibles elsewhere in your config.
+
+(defun oht-fonts-set ()
+  "Function for setting fonts."
+  (interactive)
+  (set-face-attribute 'default nil
+					  :family oht-fonts-monospace
+					  :height (* oht-fonts-monospace-size 10))
+  (set-face-attribute 'fixed-pitch nil
+					  :family oht-fonts-monospace
+					  :height 1.0 )
+  (set-face-attribute 'variable-pitch nil
+					  :family oht-fonts-variable :height 1.0))
+
+(oht-fonts-set)
 
 
 ;;; Larger Variable Pitch Mode
@@ -247,15 +254,15 @@ relative size will be 1.16.")
   (setq larger-variable-pitch-mode-status (not larger-variable-pitch-mode-status))
   (if larger-variable-pitch-mode-status
       (progn
-	(setq variable-pitch-remapping
-	      (face-remap-add-relative 'variable-pitch
-				       :height (/ (float oht-fonts-variable-size)
-						  (float oht-fonts-monospace-size))))
-	(setq fixed-pitch-remapping 
-	      (face-remap-add-relative 'fixed-pitch
-				       :height (/ (float oht-fonts-monospace-size)
-						  (float oht-fonts-variable-size))))
-	(force-window-update (current-buffer)))
+		(setq variable-pitch-remapping
+			  (face-remap-add-relative 'variable-pitch
+									   :height (/ (float oht-fonts-variable-size)
+												  (float oht-fonts-monospace-size))))
+		(setq fixed-pitch-remapping
+			  (face-remap-add-relative 'fixed-pitch
+									   :height (/ (float oht-fonts-monospace-size)
+												  (float oht-fonts-variable-size))))
+		(force-window-update (current-buffer)))
     (progn
       (face-remap-remove-relative variable-pitch-remapping)
       (face-remap-remove-relative fixed-pitch-remapping))))
@@ -271,7 +278,6 @@ relative size will be 1.16.")
   (if buffer-face-mode
       (larger-variable-pitch-mode 1)
     (larger-variable-pitch-mode -1)))
-
 
 ;; Make this mode the default whenever entering buffer-face-mode
 (add-hook 'buffer-face-mode-hook 'oht-fonts-buffer-face-hook)
