@@ -103,7 +103,7 @@ code {
 code.block {
     display: block;
     padding: .5rem .75rem;
-    overflow: scroll;
+    overflow: auto;
     font-size: .85rem;
     border-radius: 7px;
 }

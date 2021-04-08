@@ -6,8 +6,8 @@
 
 Whether for functional or aesthetic purposes it is nice to be able to mix
 [[https://en.wikipedia.org/wiki/Typeface#Proportion][proportional fonts]] with [[https://en.wikipedia.org/wiki/Monospaced_font][monospace fonts]] in the same document (this document
-for example does that). Since text editors edit and display raw plain text,
-they are usually configured to only display one font at a time, and leave the
+for example does that). Since text editors edit and display plain text, they
+are usually configured to only display one font at a time, and leave the
 process of defining multiple fonts to other tools (like [[https://pandoc.org][Pandoc]]).
 
 Emacs can in fact display more than one font at a time in any given buffer.
@@ -166,7 +166,7 @@ This solution is great because it applies only to the current buffer, can be
 called from a variable pitch mode hook, and works flawlessly with the text
 scale adjust commands.
 
-However, this should really be a minor mode. And while we're at is, wouldn't
+However, this should really be a minor mode. And while we're at it, wouldn't
 it be much simpler to just say "Hey, I want the monospace fonts to be this
 size and the variable-pitch font to be this size" and let Emacs figure out all
 the scaling for us? This is Emacs! Of course you can do that!
@@ -274,8 +274,10 @@ relative size will be 1.16.")
 
 
 ;; Make this mode the default whenever entering buffer-face-mode
-
 (add-hook 'buffer-face-mode-hook 'oht-fonts-buffer-face-hook)
+
+;; You may also want to add your own hooks for modes that use variable-width
+;; fonts but don't use buffer-face-mode (elfeed).
 #+end_src
 
 * Conclusion
