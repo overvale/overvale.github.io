@@ -15,9 +15,9 @@ There are many ways of accomplishing this (naturally) but I use the [[https://pr
 Themes]] and generally don't have to think about it, the theme does the heavy
 lifting for me.
 
-Getting this working requires defining three different fonts, a =default= font,
-a =variable-pitch= font, and a =fixed-pitch=. Instructions for doing this [[https://protesilaos.com/modus-themes/#h:defcf4fc-8fa8-4c29-b12e-7119582cc929][can be
-found in the themes' documentation]]. It recommends this:
+Getting this working requires defining three different 'faces' (fonts), a
+=default= face, a =variable-pitch= face, and a =fixed-pitch= face. Instructions for
+doing this [[https://protesilaos.com/modus-themes/#h:defcf4fc-8fa8-4c29-b12e-7119582cc929][can be found in the Modus theme's documentation]]. It recommends this:
 
 #+begin_src emacs-lisp
 ;; Main typeface
@@ -45,6 +45,10 @@ font size (i.e. the default face’s absolute height).
 
 Can you sense the cryptic foreshadowing?
 
+By the way, I should mention that I'm using the [[https://bitbucket.org/mituharu/emacs-mac/src/master/]["Mitsuharu Yamamoto" Emacs
+fork]]. If your distribution handles fonts in a different way your experience my
+vary.
+
 
 * A Problem is Revealed
 
@@ -52,13 +56,14 @@ I've used the above method to set fonts in Emacs for a long time, and it works
 great. But the more I use Emacs the more I notice a problem. Most variable
 width fonts are /optically/ smaller (meaning they /look/ smaller) than their
 monospace counterparts, even those that are designed to be used together.
-Take, for example, this screenshot of an article from an RSS feeds I'm
+Take, for example, this screenshot of an article from an RSS feed I'm
 subscribed to (fonts are IBM Plex Mono and IBM Plex Serif):
 
 [[./img/elfeeed-mixed-font-sample.png]]
 
-Despite the two fonts being set to the same exact size, the monospace font
-appears to be larger than the proportional font.
+Despite the two fonts being set to the same exact size, and having been
+designed as a pair, the monospace font is optically larger than the
+proportional font.
 
 So how do we adjust the size of only the variable-pitch font so that it better
 matches the optical size of the default/fixed-pitch font?
@@ -135,7 +140,12 @@ And this:
 (set-face-attribute 'fixed-pitch nil :family "IBM Plex Mono" :height 130)
 #+end_src
 
-Results in your fixed-width fonts not scaling at all when using =text-scale-adjust=.
+Results in your fixed-width fonts that do not scale at all when using
+=text-scale-adjust=.
+
+It is worth noting that it is possible to customize how the variable-pitch and
+fixed-pitch faces inherit their properties, for example they may not inherit
+them from the default face in some circumstances.
 
 -----
 
@@ -150,20 +160,20 @@ Once I read the source code for =variable-pitch-mode= and =text-scale-adjust= I
 found the solution was staring me in the face (note to self: when you're stuck
 /read the source code/). 
 
-Adjusting faces on a buffer-by-buffer basis is exactly that the function
+Adjusting faces on a buffer-by-buffer basis is exactly what the function
 =face-remap-add-relative= is designed to do. So the simplest working example of
 a function to do this might be:
 
 #+begin_src emacs-lisp
 (defun scale-up-variable-pitch-face ()
-  "In the current buffer, scale variable-pitch up, fixed-pitch down."
+  "In the current buffer, scale variable-pitch up and fixed-pitch down."
   (interactive)
   (face-remap-add-relative 'variable-pitch :height 1.1)
   (face-remap-add-relative 'fixed-pitch :height 0.9))
 #+end_src
 
 This solution is great because it applies only to the current buffer, can be
-called from a variable pitch mode hook, and works flawlessly with the text
+called from a variable-pitch mode hook, and works flawlessly with the text
 scale adjust commands.
 
 However, this should really be a minor mode. And while we're at it, wouldn't
@@ -282,8 +292,10 @@ relative size will be 1.16.")
 ;; Make this mode the default whenever entering buffer-face-mode
 (add-hook 'buffer-face-mode-hook 'oht-fonts-buffer-face-hook)
 
-;; You may also want to add your own hooks for modes that use variable-width
-;; fonts but don't use buffer-face-mode (elfeed).
+;; Additionally, if 'shr-use-fonts' is set to 't' (the default) some packages
+;; like Elfeed and EWW will use proportionally spaced fonts even when
+;; buffer-face-mode is not enabled. You may want to add hooks to those
+;; modes/packages.
 #+end_src
 
 * Conclusion
