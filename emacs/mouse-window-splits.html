@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width" />
+<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body class="note">
+
+<div id="nav">
+    <a href="/emacs">&leftarrow; Emacs</a>
+</div>
+
+<h1>Splitting Windows With the Mouse</h1>
+
+<p class="date">2021, Spring</p>
+
+<p>
+Did you know you can create and delete window splits with the mouse?
+Also, the mode-line has its own... keymap?
+</p>
+
+<code class="block">(global-set-key [mode-line S-mouse-1] 'mouse-delete-other-windows)
+(global-set-key [mode-line M-mouse-1] 'mouse-delete-window)
+(global-set-key [mode-line C-mouse-1] 'mouse-split-window-horizontally)
+</code>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width" />
+<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body class="note">
+
+<div id="nav">
+    <a href="/emacs">&leftarrow; Emacs</a>
+</div>
+
+<h1>Keymap Prompts</h1>
+
+<p class="date">2021, Summer</p>
+
+<p>
+  If you bind a key to a keymap, and not an interactive function, Emacs will display a useful
+  prompt in the echo area. Quite handy for rarely used keymaps with only a few bindings.
+</p>
+
+<p>
+  This is (of course) well documented in the Emacs info manuals, but my discovery of it should
+  be credited to <a href="https://old.reddit.com/r/emacs/comments/ch016m/how_to_tell_if_a_keymap_is_active/euz3rfs/?context=3">u/oantolin on reddit</a>.
+</p>
+
+<code class="block">(setq pkg-ops-map
+  (let ((map (make-sparse-keymap "Packages")))
+    (define-key map "h" '("describe" . describe-package))
+    (define-key map "a" '("autoremove" . package-autoremove))
+    (define-key map "d" '("delete" . package-delete))
+    (define-key map "i" '("install" . package-install))
+    (define-key map "s" '("selected" . package-install-selected-packages))
+    (define-key map "r" '("refresh" . package-refresh-contents))
+    (define-key map "l" '("list" . list-packages))
+    map))
+
+(global-set-key (kbd "C-c p") pkg-ops-map)
+</code>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = device-width" />
+<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body class="note emacs">
+
+<div id="nav">
+    <a href="/emacs">&leftarrow; Emacs</a>
+</div>
+
+<h1>Extending Emacs Bookmarks to Work With EWW</h1>
+
+<p class="date">2021-02-07</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Bookmarks.html">Emacs bookmarks</a> are pretty wonderful, you can bookmark almost anything: files,
+directories, info and help buffers, <a href="https://magit.vc">Magit</a> buffers, <a href="https://github.com/skeeto/elfeed#bookmarks">elfeed</a> searches and
+entries. And, naturally, you can extend Emacs to be able to bookmark almost
+anything you want.
+</p>
+
+<p>
+There's a basic web browser in Emacs called <a href="https://www.gnu.org/software/emacs/manual/html_mono/eww.html">EWW</a> which, by default, uses its
+own bookmarking system rather than Emacs's global one. This note demonstrates
+how to extend Emacs to make EWW use the standard bookmarks system.
+</p>
+
+<hr />
+
+<p>
+Let's start by taking a closer look at what a bookmark looks like under the
+hood. When you type <code>M-x bookmark-set</code> Emacs adds a 'record' to the
+<code>bookmark-alist</code>. This list is then saved to a file (defined in the variable
+<code>bookmark-default-file</code>) so you don't loose your bookmarks when you quit Emacs.
+An individual bookmark record looks like this:
+</p>
+
+<code class="block">(front-context-string . "13.8 Bookmarks\n=")
+(rear-context-string . " Up: Registers\n\n")
+(position . 251555)
+(filename . "/Users/oht/Applications/Emacs.app/Contents/Resources/info/emacs")
+(info-node . "Bookmarks")
+(handler . Info-bookmark-jump))
+</code>
+
+<p>
+Let's break that down piece-by-piece.
+</p>
+
+<ul class="org-ul">
+<li><code>(emacs) Bookmarks</code> is the name of the bookmark, and what gets displayed in
+the bookmark list.</li>
+<li><code>front-context-string</code> and <code>rear-context-string</code> help keep your bookmarks
+accurate when you edit a file after setting a bookmark. If you simply
+recorded the filename and line number subsequent edits to the file would
+quickly render your bookmarks inaccurate. Emacs uses the position and
+context to keep the bookmark accurate.</li>
+<li><code>position</code> is the point's position in the buffer.</li>
+<li><code>filename</code> is pretty self explanatory, as is <code>info-node</code> (which is specific to
+bookmarking the info manuals).</li>
+<li><code>handler</code> defines the function that <code>bookmark-jump</code> will use to go to that
+bookmark.</li>
+</ul>
+
+<p>
+Detailed information about how bookmark records can be found by describing the
+variable <code>bookmark-alist</code>.
+</p>
+
+<p>
+With a little imagination, one can envision a bookmark record for a webpage
+that looks something like this:
+</p>
+
+<code class=block>("Name of Webpage"
+(location . "https://example.com")
+(handler . eww-handler-function))
+</code>
+
+<p>
+Emacs refers to a function which creates these records as a "bookmark make
+record function". In this case that function would look like this:
+</p>
+
+<code class="block">(defun custom-make-record-function ()
+ `(,(name-bookmark-function)
+   (location . ,(get-url-function))
+   (handler . eww-handler-function)))
+</code>
+
+<p>
+Emacs uses different functions to create each kind of bookmark; one function
+for bookmarking files and another for bookmarking directories. Defining which
+function to use in which context is the job of the variable
+<code>bookmark-make-record-function</code>. In our case we want to set that variable, when
+using EWW, to the name of our custom make record function. Then, when you type
+<code>M-x bookmark-set</code> Emacs will call your make-record function and insert the
+record into the <code>bookmark-alist</code>.
+</p>
+
+<p>
+Now that we understand how it works, we can enumerate all the pieces we'll
+need.
+</p>
+
+<ol class="org-ol">
+<li>We need to write a function which creates a properly formatted bookmark
+record.</li>
+<li>We need a way to open the URL from the bookmark list, a 'handler' function.</li>
+<li>We need to set the variable <code>bookmark-make-record-function</code> locally when EWW
+buffers are created.</li>
+</ol>
+
+<p>
+First, the make-record function. You can grab the url from EWW with the
+function <code>eww-current-url</code> but EWW provides no such function for getting the
+page's title. You can, however, grab the page title with a little lisp:
+<code>(plist-get eww-data :title)</code>. All together the complete make-record function
+looks like this:
+</p>
+
+<code class="block">(defun oht-eww-bookmark-make-record ()
+ "Make a bookmark record for the current eww buffer."
+ `(,(plist-get eww-data :title)
+   ((location . ,(eww-current-url))
+    (handler . oht-eww-bookmark-handler)
+    (defaults . (,(plist-get eww-data :title))))))
+</code>
+
+<p>
+(It's not clear <i>to me</i> why the <code>defaults</code> part of this is needed but without it
+EWW will not properly update the <code>:title</code> when browsing pages. This fix was
+<a href="https://lists.gnu.org/archive/html/emacs-humanities/2021-02/msg00014.html">suggested by Joe Corneli</a>.)
+</p>
+
+<p>
+Second, the handler function for jumping to the URL:
+</p>
+
+<code class="block">(defun oht-eww-bookmark-handler (record)
+ "Jump to a bookmark's url with bookmarked location."
+ (eww (bookmark-prop-get record 'location)))
+</code>
+
+<p>
+Third, we need to set the buffer-local variable <code>bookmark-make-record-function</code>
+to the name of our custom make-record function when using EWW. We do this by
+first defining a function which sets the local variable, then adding a hook to
+<code>eww-mode</code> which calls that function. Like this:
+</p>
+
+<code class="block">(defun oht-eww-set-bookmark-handler ()
+ "Assigns `bookmark-make-record-function' to a custom function."
+ (set (make-local-variable 'bookmark-make-record-function)
+      #'oht-eww-bookmark-make-record))
+
+(add-hook 'eww-mode-hook 'oht-eww-set-bookmark-handler)
+</code>
+
+<hr />
+
+<p>
+Now, when visiting a page in EWW you can type <code>M-x bookmark-set</code> and a bookmark will
+be created, and jumping to that bookmark will open the URL in EWW.
+</p>
+
+<p>
+While this example is specific to the EWW browser, it should give you an idea
+of how you can extend Emacs's bookmarking system in other ways.
+</p>
+
+
+
+</body>
+</html>
