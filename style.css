@@ -1,6 +1,7 @@
 @import url('http://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
 
-/* reset from http://yuilibrary.com */
+reset from http://yuilibrary.com
 html{color:#000;background:#FFF}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -15,12 +16,6 @@ sup{vertical-align:text-top}
 sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
 legend{color:#000}
-/* ------------------------ */
-
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
 
 html {
     font-size: 15px;
