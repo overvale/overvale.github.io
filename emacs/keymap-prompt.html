@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>Keymap Prompts</h1>
 
-<p class="date">2021, Summer</p>
+<time>2021, Summer</time>
 
 <p>
   If you bind a key to a keymap Emacs will display a useful prompt in the echo
@@ -32,7 +32,7 @@
   supported.
 </p>
 
-<code class="block">(define-prefix-command 'pkg-ops-map nil "Packages")
+<pre><code>(define-prefix-command 'pkg-ops-map nil "Packages")
 
 (let ((map pkg-ops-map))
   (define-key map "h" '("describe" . describe-package))
@@ -43,7 +43,7 @@
   (define-key map "r" '("refresh" . package-refresh-contents))
   (define-key map "l" '("list" . list-packages)))
 
-(global-set-key (kbd "C-c p") 'pkg-ops-map)</code>
+(global-set-key (kbd "C-c p") 'pkg-ops-map)</code></pre>
 
 </body>
 </html>

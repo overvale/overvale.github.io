@@ -5,15 +5,13 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note emacs">
+<body>
 
-<div id="nav">
-    <a href="/emacs">&leftarrow; Emacs</a>
-</div>
+<nav><a href="/emacs">&leftarrow; Emacs</a></nav>
 
 <h1>Extending Emacs Bookmarks to Work With EWW</h1>
 
-<p class="date">2021-02-07</p>
+<time>2021-02-07</time>
 
 <p>
 <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Bookmarks.html">Emacs bookmarks</a> are pretty wonderful, you can bookmark almost anything: files,
@@ -41,19 +39,18 @@ hood. When you type <code>M-x bookmark-set</code> Emacs adds a 'record' to the
 An individual bookmark record looks like this:
 </p>
 
-<code class="block">(front-context-string . "13.8 Bookmarks\n=")
+<pre><code>(front-context-string . "13.8 Bookmarks\n=")
 (rear-context-string . " Up: Registers\n\n")
 (position . 251555)
 (filename . "/Users/oht/Applications/Emacs.app/Contents/Resources/info/emacs")
 (info-node . "Bookmarks")
-(handler . Info-bookmark-jump))
-</code>
+(handler . Info-bookmark-jump))</code></pre>
 
 <p>
 Let's break that down piece-by-piece.
 </p>
 
-<ul class="org-ul">
+<ul>
 <li><code>(emacs) Bookmarks</code> is the name of the bookmark, and what gets displayed in
 the bookmark list.</li>
 <li><code>front-context-string</code> and <code>rear-context-string</code> help keep your bookmarks
@@ -78,21 +75,19 @@ With a little imagination, one can envision a bookmark record for a webpage
 that looks something like this:
 </p>
 
-<code class=block>("Name of Webpage"
+<pre><code>("Name of Webpage"
 (location . "https://example.com")
-(handler . eww-handler-function))
-</code>
+(handler . eww-handler-function))</code></pre>
 
 <p>
 Emacs refers to a function which creates these records as a "bookmark make
 record function". In this case that function would look like this:
 </p>
 
-<code class="block">(defun custom-make-record-function ()
+<pre><code>(defun custom-make-record-function ()
  `(,(name-bookmark-function)
    (location . ,(get-url-function))
-   (handler . eww-handler-function)))
-</code>
+   (handler . eww-handler-function)))</code></pre>
 
 <p>
 Emacs uses different functions to create each kind of bookmark; one function
@@ -109,7 +104,7 @@ Now that we understand how it works, we can enumerate all the pieces we'll
 need.
 </p>
 
-<ol class="org-ol">
+<ol>
 <li>We need to write a function which creates a properly formatted bookmark
 record.</li>
 <li>We need a way to open the URL from the bookmark list, a 'handler' function.</li>
@@ -125,13 +120,12 @@ page's title. You can, however, grab the page title with a little lisp:
 looks like this:
 </p>
 
-<code class="block">(defun oht-eww-bookmark-make-record ()
+<pre><code>(defun oht-eww-bookmark-make-record ()
  "Make a bookmark record for the current eww buffer."
  `(,(plist-get eww-data :title)
    ((location . ,(eww-current-url))
     (handler . oht-eww-bookmark-handler)
-    (defaults . (,(plist-get eww-data :title))))))
-</code>
+    (defaults . (,(plist-get eww-data :title))))))</code></pre>
 
 <p>
 (It's not clear <i>to me</i> why the <code>defaults</code> part of this is needed but without it
@@ -143,10 +137,9 @@ EWW will not properly update the <code>:title</code> when browsing pages. This f
 Second, the handler function for jumping to the URL:
 </p>
 
-<code class="block">(defun oht-eww-bookmark-handler (record)
+<pre><code>(defun oht-eww-bookmark-handler (record)
  "Jump to a bookmark's url with bookmarked location."
- (eww (bookmark-prop-get record 'location)))
-</code>
+ (eww (bookmark-prop-get record 'location)))</code></pre>
 
 <p>
 Third, we need to set the buffer-local variable <code>bookmark-make-record-function</code>
@@ -155,13 +148,12 @@ first defining a function which sets the local variable, then adding a hook to
 <code>eww-mode</code> which calls that function. Like this:
 </p>
 
-<code class="block">(defun oht-eww-set-bookmark-handler ()
+<pre><code>(defun oht-eww-set-bookmark-handler ()
  "Assigns `bookmark-make-record-function' to a custom function."
  (set (make-local-variable 'bookmark-make-record-function)
       #'oht-eww-bookmark-make-record))
 
-(add-hook 'eww-mode-hook 'oht-eww-set-bookmark-handler)
-</code>
+(add-hook 'eww-mode-hook 'oht-eww-set-bookmark-handler)</code></pre>
 
 <hr />
 

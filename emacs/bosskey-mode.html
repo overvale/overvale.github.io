@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>Emacs Keybindings That Won't Get Overridden by Minor Modes</h1>
 
-<p class="date">2021, Summer</p>
+<time>2021, Summer</time>
 
 <p>
 Recently I've been making an effort to better understand what's happening
@@ -39,7 +39,7 @@ keymaps in that variable take priority over all other minor modes.
 The code is actually very simple:
 </p>
 
-<code class="block">;; First, create the keymap
+<pre><code>;; First, create the keymap
 (defvar bosskey-mode-map (make-keymap)
   "Keymap for bosskey-mode")
 
@@ -56,8 +56,7 @@ The code is actually very simple:
              `((bosskey-mode . ,bosskey-mode-map)))
 
 ;; Finally, bind your keys!
-(define-key bosskey-mode-map (kbd "C-&lt;return&gt;") 'execute-extended-command)
-</code>
+(define-key bosskey-mode-map (kbd "C-&lt;return&gt;") 'execute-extended-command)</code></pre>
 
 <p>
 Now, some people would argue that it's much simpler to just use the bind-key

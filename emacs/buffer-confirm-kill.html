@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>Confirm Killing Modified Buffers</h1>
 
-<p class="date">2021-09-04</p>
+<time>2021-09-04</time>
 
 <p>
   In Emacs, a file-visiting buffer is one where the buffer displays the
@@ -61,7 +61,7 @@
   This is what I have in my init file:
 </p>
 
-<code class="block">(defvar-local buffer-confirm-kill nil
+<pre><code>(defvar-local buffer-confirm-kill nil
   "Non-nil means confirm killing buffer when modified.
 Variable is checked by `buffer-confirm-kill-p'.")
 
@@ -74,8 +74,7 @@ This function is designed to be called from `kill-buffer-query-functions'."
        (format "Buffer %S is modified; kill anyway? " (buffer-name)))
     t))
 
-(add-hook 'kill-buffer-query-functions #'buffer-confirm-kill-p)
-</code>
+(add-hook 'kill-buffer-query-functions #'buffer-confirm-kill-p)</code></pre>
 
 <p>
   Now, one simply needs to set the variable <code>buffer-confirm-kill</code>
@@ -83,7 +82,7 @@ This function is designed to be called from `kill-buffer-query-functions'."
   be a function for creating a new buffer:
 </p>
 
-<code class="block">(defun new-buffer (name)
+<pre><code>(defun new-buffer (name)
   "Create a new buffer, prompting for NAME."
   (interactive
    (list (read-string
@@ -92,8 +91,7 @@ This function is designed to be called from `kill-buffer-query-functions'."
   (let ((buffer (generate-new-buffer name)))
     (switch-to-buffer buffer)
     (setq-local buffer-offer-save t)
-    (setq-local buffer-confirm-kill t)))
-</code>
+    (setq-local buffer-confirm-kill t)))</code></pre>
 
 <p>
   This new buffer is now protected from data-loss when the user attempts to

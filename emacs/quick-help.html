@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>Quick Help: Emacs as a Text Productivity Platform</h1>
 
-<p class="date">November 2021</p>
+<time>November 2021</time>
 
 <p>
 Reading blog posts about Emacs is fun,
@@ -62,7 +62,7 @@ but why not just do it with code?
 Example time. Try pasting the below in your Scratch buffer and evaluating it.
 </p>
 
-<code class="block">(let ((buffer-name "*Quick Help*"))
+<pre><code>(let ((buffer-name "*Quick Help*"))
   (with-current-buffer (get-buffer-create buffer-name)
     (insert "IT HOTLINE: 855-555-5555")
     (goto-char (point-min))
@@ -71,8 +71,7 @@ Example time. Try pasting the below in your Scratch buffer and evaluating it.
     (read-only-mode))
   (pop-to-buffer buffer-name '((display-buffer-below-selected)
                                (window-parameters . ((no-other-window . nil)))
-                               (window-height . fit-window-to-buffer))))
-</code>
+                               (window-height . fit-window-to-buffer))))</code></pre>
 
 <p>
   This will create a small window, below your current one, that displays the
@@ -85,7 +84,7 @@ Example time. Try pasting the below in your Scratch buffer and evaluating it.
   generated functions a nice set of bindings.
 </p>
 
-<code class="block">(defmacro quick-help (name buffer text)
+<pre><code>(defmacro quick-help (name buffer text)
   "Macro for creating callable functions that display help.
 Where NAME is name of function, BUFFER is name of buffer, and TEXT is displayed."
   (declare (indent defun))
@@ -139,7 +138,7 @@ A WETHER is just a castrated sheep.")
   (define-key map "w" '("Weather Whether Wether" . qh--wheather)))
 
 (global-set-key (kbd "C-c h") 'quick-help-prompt)
-</code>
+</code></pre>
 
 <p>
   Now, any time you need that reference material you can call it up directly

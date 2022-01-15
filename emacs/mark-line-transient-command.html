@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>Mark Line &amp; Marking Transient Command</h1>
 
-<p class="date">2021, Summer</p>
+<time>2021, Summer</time>
 
 <p>
   Emacs has a lot of commands for marking (selecting) things.
@@ -28,7 +28,7 @@
   Fortunately, the code for <code>mark-end-of-sentence</code> is really simple and easily adapted to mark lines.
 </p>
 
-<code class="block">(defun mark-line (arg)
+<pre><code>(defun mark-line (arg)
   "Put mark at end of line.
 ARG works as in `forward-line'.  If this command is repeated,
 it marks the next ARG lines after the ones already marked."
@@ -39,8 +39,7 @@ it marks the next ARG lines after the ones already marked."
      (goto-char (mark)))
      (forward-line arg)
      (point))
-   nil t))
-</code>
+   nil t))</code></pre>
 
 <p>
   Additionally I have <code>mark-end-of-sentence</code> aliased to <code>mark-sentence</code>
@@ -53,7 +52,7 @@ it marks the next ARG lines after the ones already marked."
   method you prefer.
 </p>
 
-<code class="block">(transient-define-prefix general-transient--mark ()
+<pre><code>(transient-define-prefix general-transient--mark ()
   "Transient for setting the mark."
   :transient-suffix 'transient--do-stay
   :transient-non-suffix 'transient--do-exit
@@ -67,8 +66,7 @@ it marks the next ARG lines after the ones already marked."
    [("&lt;" "Beginning of Buffer" mark-beginning-of-buffer)
     ("&gt;" "End of Buffer" mark-end-of-buffer)]
    [("x" "Exchange Point/Mark" exchange-point-and-mark :transient nil)
-    ("q" "Quit" transient-quit-all)]])
-</code>
+    ("q" "Quit" transient-quit-all)]])</code></pre>
 
 </body>
 </html>

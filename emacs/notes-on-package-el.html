@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>How Package.el Works with Use Package</h1>
 
-<p class="date">2021-04-31</p>
+<time>2021-04-31</time>
 
 <p>
   <i>I suppose the below could be framed simply as a complaint that
@@ -105,7 +105,7 @@ place <code>(setq package-enable-at-startup nil)</code> in your early init file.
   configured using package.el + Use Package:
 </p>
 
-<code class="block">(require 'package)
+<pre><code>(require 'package)
 
 ;; (package-initialize) is unnecessary since I have not disabled
 ;; package-enable-at-startup in early-init.
@@ -136,8 +136,7 @@ place <code>(setq package-enable-at-startup nil)</code> in your early init file.
   (completion-category-overrides '((file (styles . (partial-completion))))))
 
 (use-package vertico
-  :init (vertico-mode))
-</code>
+  :init (vertico-mode))</code></pre>
 
 <p>
 To install a new package, simply add it your package-selected-packages list

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
-<body class="note">
+<body>
 
 <div id="nav">
     <a href="/emacs">&leftarrow; Emacs</a>
@@ -13,7 +13,7 @@
 
 <h1>Custom Scratch Buffers</h1>
 
-<p class="date">2021, August</p>
+<time>2021, August</time>
 
 <p>
   It can be useful to create temporary scratch buffers in specific languages.
@@ -21,7 +21,7 @@
   I, however, prefer writing code over installing packages, so I came up with the following:
 </p>
 
-<code class="block">(defvar scratch-org-initial-message "# Org Mode Scratch Buffer\n\n"
+<pre><code>(defvar scratch-org-initial-message "# Org Mode Scratch Buffer\n\n"
   "Message to be inserted in org scratch buffer.")
 
 (defvar scratch-org-buffer "*scratch-org*"
@@ -40,7 +40,7 @@
           (setq-local buffer-confirm-kill t)
           (setq-local buffer-offer-save t)
           (insert scratch-org-initial-message)
-          (not-modified))))))</code>
+          (not-modified))))))</code></pre>
 
 <p>
   The above function sets the variable <code>buffer-confirm-kill</code>
