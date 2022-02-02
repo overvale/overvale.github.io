@@ -35,8 +35,8 @@ legend{color:#000}
     --white: rgb(255,255,255);
     --white1: rgb(245,245,245);
     --grey-light: rgb(200,200,200);
-    --grey-dark: ;
-    --link-blue: rgb(76, 176, 237);
+    --grey-dark: rgb(125,125,125);
+    --link-blue: rgb(76,176,237);
 }
 
 :root { --line:      1.5rem; }
