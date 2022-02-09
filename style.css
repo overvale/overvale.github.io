@@ -32,6 +32,7 @@ legend{color:#000}
     --black: rgb(0,0,0);
     --white: rgb(255,255,255);
     --white1: rgb(245,245,245);
+    --white2: rgb(240,240,240);
     --grey-light: rgb(200,200,200);
     --grey-dark: rgb(125,125,125);
     --link-blue: rgb(76,176,237);
@@ -47,8 +48,8 @@ html  { line-height: 1.5; }
 
 html {
     font-family: var(--sans-font);
-    font-feature-settings: 'cpsp' 1, 'tnum' 1, 'ss01' 1, 'ss02' 1;
-    font-size: 15px;
+    font-feature-settings: 'cpsp' 1, 'tnum' 1, 'zero' 1, 'ss01' 1, 'cv08' 1;
+    font-size: 14px;
     font-weight:400;
     background-color: var(--white);
     color: var(--black);
@@ -57,7 +58,7 @@ html {
 
 body {
     max-width:600px;
-    margin: var(--line) auto 10rem auto;
+    margin: var(--line) auto 10rem var(--line);
     padding: 0 var(--line);
 }
 
@@ -82,24 +83,22 @@ b, strong { font-weight: 700; }
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--sans-font);
     font-weight: 700;
-    font-feature-settings: 'cpsp' 1, 'tnum' 1, 'ss01' 1, 'ss02' 0;
 }
 
 h1 {
-    font-size: 1.85rem;
-    font-weight: 800;
+    font-size: 2rem;
     line-height: 1.25;
     margin: 3rem 0 .5rem 0;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-top: 3rem;
 }
 
 h3 {
     font-style: italic;
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-top: var(--line);
 }
 
@@ -124,7 +123,8 @@ hr {
 
 blockquote {
     font-family: var(--sans-font);
-    margin: 0 0 0 3rem;
+    padding-left: var(--line);
+    border-left: 1px solid var(--black);
     line-height: var(--line);
 }
 
@@ -134,14 +134,15 @@ code {
     white-space: pre;
     color: var(--black);
     padding: 0 .25rem;
-    background-color: var(--white1);
-    border-radius: 4px;
+    background-color: var(--white2);
+    border-radius: 6px;
 }
 
 pre code {
     display: block;
     overflow: auto;
-    line-height: 1.1rem;
+    line-height: 1.2rem;
+    background-color: var(--white1);
     padding: 1rem;
 }
 
