@@ -1,70 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>OliverTaylor.net</title>
-<meta name="description" content="The personal website of Oliver Taylor. Professional VFX executive, text-editor/code hobbyist.">
-<meta name="viewport" content="width = device-width" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body id="index">
+  <head>
+    <meta charset="utf-8">
+    <title>olivertaylor.net</title>
+    <meta name="description" content="The personal website of Oliver Taylor. Professional VFX executive, text-editor/code hobbyist.">
+    <meta name="viewport" content="width = device-width" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="index">
 
-<h1>Oliver Taylor</h1>
+    <h1>Hello!</h1>
 
-<p>Hi! 👋 Welcome to my corner of the internet. I have no idea how you got here but <b>I'm glad you made it</b>. This site has no clear reason for existing, but over the years I've found some amazing things by just stumbling on to <i>some random website</i>, so I hope you find something you like.</p>
+    <h2>About Me</h2>
 
-<ul>
-    <li><a href="https://pinboard.in/u:Oliver">Bookmarks on Pinboard</a></li>
-    <li><a href="https://github.com/olivertaylor">GitHub Repositories</a></li>
-</ul>
+    <p>
+      Hi! 👋
+      <b>I'm Oliver Taylor</b>, a VFX professional living in Los Angeles.
+      Welcome to my corner of the internet.
+      Mostly I work and take care of my kids but I love messing around with code.
+      This website is a random collection of things I've worked on
+      and some write-ups about things I find interesting.
+      You know, just your standard personal website.
+      I have no idea how you got here but I'm glad you made it.
+    </p>
 
-<h2>Code Adventures</h2>
+    <ul>
+      <li><a href="https://pinboard.in/u:Oliver">My bookmarks on Pinboard &nearr;</a></li>
+      <li><a href="https://github.com/olivertaylor">My GitHub Repositories &nearr;</a></li>
+      <li><a href="https://news.ycombinator.com/user?id=olivertaylor">My Hacker News profile &nearr;</a></li>
+    </ul>
 
-<p>My adventures with coding began long ago when I wondered if CSS could be used to layout a screenplay, the result was <a href="https://code.google.com/archive/p/screenbundle/">the Screenbundle</a> for <a href="https://macromates.com">Textmate</a> which allowed you to write screenplays in a <a href="https://www.markdownguide.org/getting-started/">Markdown</a>-inspired way (this was before the <a href="https://fountain.io">fountain markup syntax</a> and a very long time before <a href="https://quoteunquoteapps.com/highland-2/">Highland</a>). After a while the project morphed into a UNIX-style CLI program I called...</p>
+    <h2>Emacs!</h2>
 
-<h3>Textplay</h3>
-<p>Textplay is command-line utility that converts screenplays written in <a href="https://fountain.io">Fountain</a> formatted plain-text to HTML and FDX (<a href="http://kb.finaldraft.com/article/1001/325/">Final Draft</a>). The HTML is can be easily converted to a pagination-aware PDF with <a href="https://princexml.com">PrinceXML</a>.</p>
-<ul>
-<li><a href="https://git.io/textplay">Textplay on GitHub</a></li>
-</ul>
+    <p>
+      I love using <a href="https://www.gnu.org/software/emacs/">Emacs</a>,
+      customizing it, and learning about it. In fact, I
+      think that Emacs is my primary hobby at this point. There are a lot of
+      wonderful websites and blogs out there dedicated to Emacs. This section
+      of my website is my small contribution to the community. I've tried to
+      make it so each note describes a useful sample of code that you can
+      incorporate into your own configuration.
+    </p>
 
-<h3>Dotfiles</h3>
+    <p>
+      I hope you find something useful,
+      and if you find an error the best way to let me know is to open
+      <a href="https://github.com/olivertaylor/olivertaylor.github.io/issues">a GitHub issue</a> about it.
+    </p>
 
-<p>Creating the screenbundle plugin for Textmate opened my eyes to the world of <a href="https://en.wikipedia.org/wiki/Text_editor">text-editors</a> and it didn't take long for me to dive <i>all the way down the rabbit hole</i> and wind up using <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>, <a href="http://acme.cat-v.org">Acme</a>, and <a href="https://www.gnu.org/software/emacs/">Emacs</a>. Dotfiles are simply configuration files that tell each program how you want it to behave.</p>
-<ul>
-<li><a href="https://github.com/olivertaylor/dotfiles">My dotfiles on GitHub</a></li>
-</ul>
+    <ul>
+      <li><a href="/emacs/quick-help.html">Quick Help: Emacs as a Text Productivity Platform</a></li>
+      <li><a href="/emacs/buffer-confirm-kill.html">Confirm Killing Modified Buffers</a></li>
+      <li><a href="/emacs/custom-scratch-buffers.html">Custom Scratch Buffers</a></li>
+      <li><a href="/emacs/keymap-prompt.html">Keymap Prompts</a></li>
+      <li><a href="/emacs/mark-line-transient-command.html">Mark Line &amp; Marking Transient Command</a></li>
+      <li><a href="/emacs/kill-buffer-dwim.html">Kill Buffer DWIM</a></li>
+      <li><a href="/emacs/mouse-window-splits.html">Splitting Windows With the Mouse</a></li>
+      <li><a href="/emacs/bosskey-mode.html">Emacs Keybindings That Won't Get Overridden by Minor Modes</a></li>
+      <li><a href="/emacs/notes-on-package-el.html">How Package.el Works with Use Package</a></li>
+      <li><a href="/emacs/extending-emacs-bookmarks.html">Extending Emacs Bookmarks to Work With EWW</a></li>
+    </ul>
 
-<p>Some of the highlights are: <a href="https://github.com/olivertaylor/dotfiles/blob/master/bootstrap.org">how I setup my Mac</a> (including some tips on how to monitor your Mac for apps that use background processes), a rather lengthy <a href="https://github.com/olivertaylor/dotfiles/tree/master/emacs">emacs configuration</a>, a <a href="https://github.com/olivertaylor/dotfiles/tree/master/bin">collection of general-purpose shell scripts</a> (mostly for transforming text), <a href="https://github.com/olivertaylor/dotfiles/tree/master/acme/docs">a bunch of notes on the Acme editor and the Sam command language it uses</a>, and a <a href="https://github.com/olivertaylor/dotfiles/tree/master/hammerspoon">hammerspoon configuration</a> which I'd like to do a lot more documentation for.</p>
+    <h2>Misc Notes</h2>
 
-<h2>Emacs!</h2>
-
-<p>
-  I love finding bits of code that make my experience in
-  <a href="https://www.gnu.org/software/emacs/">Emacs</a> a little better.
-  I've collected a few useful "recipes", and written-up a few extended examples,
-  in an effort to make a small contribution to the cause.
-  I hope you find something useful.
-</p>
-
-<ul>
-  <li><a href="/emacs">My Emacs Notes</a></li>
-</ul>
-
-
-<h2>Misc Notes</h2>
-
-<ul>
-    <li><a href="notes/20200531_recommended_books.html">Recommended Books</a></li>
-    <li><a href="notes/20200330_worth_the_money.html">Worth The Money</a></li>
-    <li><a href="notes/20161218_software_love.html">Software I Love</a></li>
-    <li><a href="notes/20161218_harrison_ford_movies.html">Harrison Ford Movies</a></li>
-    <li><a href="notes/20161218_2007_movies.html">A Partial List of Movies Released in 2007</a></li>
-    <li><a href="notes/20130908_revelation_complex.html">The Revelation of the Complex</a></li>
-    <li><a href="notes/perfection.html">Perfection</a></li>
-    <li><a href="notes/writing_in_plain_text.html">Writing In Plain-Text</a></li>
-</ul>
+    <ul>
+      <li><a href="/notes/20200531_recommended_books.html">Recommended Books</a></li>
+      <li><a href="/notes/20200330_worth_the_money.html">Worth The Money</a></li>
+      <li><a href="/notes/20161218_software_love.html">Software I Love</a></li>
+      <li><a href="/notes/20161218_harrison_ford_movies.html">Harrison Ford Movies</a></li>
+      <li><a href="/notes/20161218_2007_movies.html">A Partial List of Movies Released in 2007</a></li>
+      <li><a href="/notes/20130908_revelation_complex.html">The Revelation of the Complex</a></li>
+      <li><a href="/notes/perfection.html">Perfection</a></li>
+      <li><a href="/notes/writing_in_plain_text.html">Writing In Plain-Text</a></li>
+    </ul>
 
 
-</body>
+    <h2>Code Adventures</h2>
+
+    <p>
+      My adventures with coding began long ago
+      when I wondered if CSS could be used to layout a screenplay,
+      the result was <a href="https://code.google.com/archive/p/screenbundle/">the Screenbundle</a>
+      for <a href="https://macromates.com">Textmate</a>
+      which allowed you to write screenplays
+      in a <a href="https://www.markdownguide.org/getting-started/">Markdown</a>-inspired way
+      (this was before the <a href="https://fountain.io">fountain markup syntax</a>
+      and a very long time before <a href="https://quoteunquoteapps.com/highland-2/">Highland</a>).
+      After a while the project morphed into a UNIX-style CLI program I called...
+    </p>
+
+    <p><b><a href="https://git.io/textplay">Textplay</a></b> is command-line utility
+      that converts screenplays written in <a href="https://fountain.io">Fountain</a>
+      formatted plain-text to HTML and FDX
+      (<a href="http://kb.finaldraft.com/article/1001/325/">Final Draft</a>).
+      The HTML can then be easily converted to a pagination-aware PDF with
+      <a href="https://princexml.com">PrinceXML</a>.</p>
+
+    <p>I've got my <b><a href="https://github.com/olivertaylor/dotfiles">dotfiles</a></b>
+      on GitHub, if you're interested in that kind of thing.
+      I've learned a lot reading other people's, so I hope you find something you can use yourself.</p>
+
+  </body>
 </html>
