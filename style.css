@@ -41,6 +41,12 @@ legend{color:#000}
 :root { --line:      1.5rem; }
 html  { line-height: 1.5; }
 
+@media (prefers-color-scheme: dark) {
+    :root { --line:      1.75rem; }
+    html  { line-height: 1.75; }
+}
+
+
 
 
 /* Layout Basics
