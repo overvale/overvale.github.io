@@ -176,6 +176,18 @@ a:hover {
     border-radius: 3px;
 }
 
+sup { vertical-align: top;
+      font-size: .65rem ;
+      font-weight: 500;
+      padding: 0 .1rem;}
+
+figure { border: 0.5pt solid var(--grey-dark);
+         padding: .7rem; }
+figure img { max-width: 100%; }
+figure figcaption { font-size: .9rem;
+                    font-style: italic;
+                    text-align: center; }
+
 
 /* Dark Mode
 --------------------------------------------- */
