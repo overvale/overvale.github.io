@@ -2,6 +2,7 @@
 --------------------------------------------- */
 
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 /* Reset
@@ -28,6 +29,7 @@ legend{color:#000}
 
 :root {
     --sans-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --serif-font: 'Source Serif Pro', serif;
     --mono-font: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --black: rgb(0,0,0);
     --white: rgb(255,255,255);
@@ -90,7 +92,7 @@ i, em { font-style: italic; font-weight: inherit; }
 b, strong { font-weight: 700; }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: var(--sans-font);
+    font-family: var(--serif-font);
     font-weight: 700;
 }
 
@@ -101,13 +103,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-top: 3rem;
 }
 
 h3 {
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.14rem;
     margin-top: var(--line);
 }
 
@@ -131,7 +133,8 @@ hr {
 }
 
 blockquote {
-    font-family: var(--sans-font);
+    font-family: var(--serif-font);
+    font-size: 1.1em;
     padding-left: var(--line);
     border-left: 1px solid var(--black);
     line-height: var(--line);
