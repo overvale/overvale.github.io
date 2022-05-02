@@ -80,13 +80,22 @@ nav {
     body {margin-left: auto;}
 }
 
-img { max-width: 100%;
-      margin-top: var(--line); }
+figure { border: 0.5pt solid var(--grey-dark);
+         margin: 0;
+         padding: .25rem;
+       }
+
+figure figcaption { font-size: .9rem;
+                    font-style: italic;
+                    text-align: center;
+                    margin: .25rem 0;}
+
+img { max-width: 100%;}
 
 /* Typography
 --------------------------------------------- */
 
-p, ul, ol, pre code, table { margin: var(--line) 0 0 0; }
+p, ul, ol, pre code, table, figure { margin: var(--line) 0 0 0; }
 
 i, em { font-style: italic; font-weight: inherit; }
 b, strong { font-weight: 700; }
@@ -97,6 +106,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
+    font-family: var(--sans-font);
     font-size: 2rem;
     line-height: 1.25;
     margin: 3rem 0 .5rem 0;
@@ -187,12 +197,6 @@ sup { vertical-align: top;
       font-weight: 500;
       padding: 0 .1rem;}
 
-figure { border: 0.5pt solid var(--grey-dark);
-         padding: .7rem; }
-figure img { max-width: 100%; }
-figure figcaption { font-size: .9rem;
-                    font-style: italic;
-                    text-align: center; }
 
 
 /* Dark Mode
