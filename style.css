@@ -205,8 +205,8 @@ sup { vertical-align: top;
 @media (prefers-color-scheme: dark) {
     html { background: rgb(36,36,45); }
     body { color: var(--white1); }
-    code, pre code { background-color: rgb(51,51,60);
-                     color: var(--white1);}
+    pre, code { color: var(--white1); }
+    code, pre code { background-color: rgb(51,51,60); }
     a { color: var(--white1); }
     a:hover, a:before, a:after {
 	    background: var(--white1);
