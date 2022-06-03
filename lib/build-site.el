@@ -38,6 +38,25 @@
       (replace-match title t))))
 
 
+;;; Work Pages
+
+(osite-build-page "Engineering"
+                  "lib/work/engineering.html"
+                  "work/engineering.html")
+
+(osite-build-page "Thoughts on Growing a Company"
+                  "lib/work/growth-thoughts.html"
+                  "work/growth-thoughts.html")
+
+(osite-build-page "Notes on Managing"
+                  "lib/work/managing.html"
+                  "work/managing.html")
+
+(osite-build-page "My Productivity System"
+                  "lib/work/productivity.html"
+                  "work/productivity.html")
+
+
 ;;; Notes Pages
 
 (osite-build-page "A Partial List of Movies Released in 2007"
