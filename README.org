@@ -1,6 +1,6 @@
 #+TITLE: olivertaylor.net Readme
 
-This directory contains all the source code for building [[https://olivertaylor.net][olivertaylor.net]], and
+This directory contains all the source code for building [[http://olivertaylor.net][olivertaylor.net]], and
 all its content.
 
 This site is managed by a very basic static-site generator, written in elisp.
