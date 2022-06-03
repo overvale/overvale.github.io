@@ -37,6 +37,11 @@
     (while (re-search-forward "{{TITLE}}" nil t)
       (replace-match title t))))
 
+;;; Pages
+
+(osite-build-page "Not Found!"
+                  "lib/404.html"
+                  "404.html")
 
 ;;; Work Pages
 
@@ -55,7 +60,6 @@
 (osite-build-page "My Productivity System"
                   "lib/work/productivity.html"
                   "work/productivity.html")
-
 
 ;;; Notes Pages
 
