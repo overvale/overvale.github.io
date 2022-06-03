@@ -19,13 +19,13 @@
 (defvar osite-base-path "~/home/src/olivertaylor/"
   "Path to local development directory for olivertaylor.net")
 
-(defvar osite-template-header "lib/header.html"
+(defvar osite-template-header "lib/templates/header.html"
   "Path, relative to `osite-base-bath' to header template file.")
 
-(defvar osite-template-nav "lib/nav.html"
+(defvar osite-template-nav "lib/templates/nav.html"
   "Path, relative to `osite-base-bath' to nav template file.")
 
-(defvar osite-template-footer "lib/footer.html"
+(defvar osite-template-footer "lib/templates/footer.html"
   "Path, relative to `osite-base-bath' to footer template file.")
 
 (defun osite-build-page (title input output &optional nav)
