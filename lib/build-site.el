@@ -22,17 +22,23 @@
 (defvar osite-template-header "lib/header.html"
   "Path, relative to `osite-base-bath' to header template file.")
 
+(defvar osite-template-nav "lib/nav.html"
+  "Path, relative to `osite-base-bath' to nav template file.")
+
 (defvar osite-template-footer "lib/footer.html"
   "Path, relative to `osite-base-bath' to footer template file.")
 
-(defun osite-build-page (title input output)
-  "Build webpage from INPUT to OUTPUT using TITLE."
+(defun osite-build-page (title input output &optional nav)
+  "Build webpage from INPUT to OUTPUT using TITLE.
+If NAV is non-nil, omit the navigation template."
   (with-temp-file (concat osite-base-path output)
     ;; This has to be backwards (bottom-up). Probably because the point stays
     ;; at zero, and `insert-file-contents' always inserts content after the
     ;; point.
     (insert-file-contents (concat osite-base-path osite-template-footer))
     (insert-file-contents (concat osite-base-path input))
+    (unless nav
+      (insert-file-contents (concat osite-base-path osite-template-nav)))
     (insert-file-contents (concat osite-base-path osite-template-header))
     (while (re-search-forward "{{TITLE}}" nil t)
       (replace-match title t))))
