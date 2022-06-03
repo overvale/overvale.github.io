@@ -1,0 +1,9 @@
+#+TITLE: olivertaylor.net Readme
+
+This directory contains all the source code for building [[https://olivertaylor.net][olivertaylor.net]], and
+all its content.
+
+This site is managed by a very basic static-site generator, written in elisp.
+This code, and all the source for the pages themselves, is in the ~lib~
+directory. Therefore, don't edit any of the pages in the root directory, use
+the static-site generator instead.
