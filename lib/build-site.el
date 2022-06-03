@@ -45,6 +45,11 @@ If NAV is non-nil, omit the navigation template."
 
 ;;; Pages
 
+(osite-build-page "Home"
+                  "lib/index.html"
+                  "index.html"
+                  t)
+
 (osite-build-page "Not Found!"
                   "lib/404.html"
                   "404.html")
