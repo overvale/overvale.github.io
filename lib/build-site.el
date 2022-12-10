@@ -61,24 +61,6 @@
 (onet-page :title "Not Found!"
            :filename "404.html")
 
-;;; Work Pages
-
-(onet-page :title "Engineering"
-           :filename "engineering.html"
-           :section "work")
-
-(onet-page :title "Thoughts on Growing a Company"
-           :filename "growth-thoughts.html"
-           :section "work")
-
-(onet-page :title "Notes on Managing"
-           :filename "managing.html"
-           :section "work")
-
-(onet-page :title "My Productivity System"
-           :filename "productivity.html"
-           :section "work")
-
 ;;; Notes Pages
 
 (onet-page :title "A Partial List of Movies Released in 2007"
