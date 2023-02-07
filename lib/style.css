@@ -59,7 +59,7 @@ html {
     font-feature-settings: 'ss01' 1;
     font-size: 14px;
     font-weight:400;
-    background-color: var(--white);
+    background-color: var(--white1);
     color: var(--black);
     padding: 0 0 30% 0;
 }
@@ -159,7 +159,7 @@ pre, code {
 
 code {
     padding: 0 .25rem;
-    background-color: var(--white2);
+    background-color: var(--white);
     border-radius: 6px;
 }
 
@@ -167,7 +167,7 @@ pre code {
     display: block;
     overflow: auto;
     line-height: 1.2rem;
-    background-color: var(--white1);
+    background-color: var(--white);
     padding: 1rem;
 }
 
