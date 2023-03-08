@@ -36,8 +36,8 @@ legend{color:#000}
 html  { line-height: 1.5; }
 
 @media (prefers-color-scheme: dark) {
-    :root { --line:      1.75rem; }
-    html  { line-height: 1.75; }
+    :root { --line:      1.5rem; }
+    html  { line-height: 1.5; }
 }
 
 
@@ -47,7 +47,7 @@ html  { line-height: 1.5; }
 html {
     font-family: var(--sans-font);
     font-feature-settings: 'ss01' 1;
-    font-size: 14px;
+    font-size: 15px;
     font-weight:400;
     background-color: var(--white1);
     color: var(--black);
@@ -109,7 +109,7 @@ h2 {
 
 h3 {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-top: var(--line);
 }
 
