@@ -61,6 +61,9 @@
 (website-page :title "Not Found!"
               :filename "404.html")
 
+(website-page :title "Links"
+              :filename "links.html")
+
 ;;; Notes Pages
 
 (website-page :title "Thoughts on Growing a Company"
