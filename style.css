@@ -28,7 +28,7 @@ legend{color:#000}
 
 
 :root {
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --sans: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --mono: "CommitMono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --line: 1.466rem;
     --black: rgb(0,0,0);
@@ -39,6 +39,7 @@ legend{color:#000}
     --grey-dark: rgb(125,125,125);
     --link-blue: rgb(76,176,237);
     --yellow: #fbc651;
+    --red: rgb(255, 84, 0);
 }
 
 
@@ -141,6 +142,7 @@ hr {
 blockquote {
     padding-left: var(--line);
     font-size: 14px;
+    font-weight: 425;
     line-height: var(--line);
 }
 
@@ -191,10 +193,14 @@ a:hover {
     border-radius: 3px;
 }
 
-sup { vertical-align: top;
-      font-size: .65rem ;
-      font-weight: 500;
-      padding: 0 .1rem;}
+sup {
+  vertical-align: super;
+  line-height: 0;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 0 .15rem;
+  color: var(--red);
+}
 
 
 /* Dark Mode
@@ -205,6 +211,7 @@ sup { vertical-align: top;
     body { color: var(--white1); }
     pre, code { color: var(--white1); border-color: rgb(71,71,80); }
     code, pre code { background-color: rgb(51,51,60); }
+    sup { color: var(--yellow); }
     a { color: var(--white1); }
     a:hover, a:before, a:after {
 	    color: rgb(36,36,45);
