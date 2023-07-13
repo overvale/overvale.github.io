@@ -94,7 +94,7 @@ p, ul, ol, pre code, table, figure { margin: var(--line) 0 0 0; }
 blockquote {margin-top: var(--line); }
 
 i, em { font-style: italic; font-weight: inherit; }
-b, strong { font-weight: 700; }
+b, strong { font-weight: 650; }
 
 html {
     font: 15px/22px var(--sans);
