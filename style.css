@@ -99,6 +99,7 @@ b, strong { font-weight: 650; }
 html {
     font: 15px/22px var(--sans);
     font-weight:400;
+    font-feature-settings: "ss01" 1, "zero" 1;
 }
 
 h1 {
