@@ -64,10 +64,6 @@ nav {
     font-family: var(--sans);
 }
 
-@media only screen and (max-width: 778px) {
-    body {margin-left: auto;}
-}
-
 figure {
     border: 0.5pt solid var(--grey-dark);
     margin: 0;
@@ -98,8 +94,16 @@ b, strong { font-weight: 650; }
 
 html {
     font: 15px/22px var(--sans);
-    font-weight:400;
+    font-weight:420;
     font-feature-settings: "ss01" 1, "zero" 1;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  html {
+    font: 16px/23px var(--sans);
+    font-weight:440;
+  }
 }
 
 h1 {
@@ -124,7 +128,7 @@ h3 {
 time {
     display: block;
     font-family: var(--mono);
-    font-size: 14px;
+    font-size: 0.933rem;
     color: var(--grey-dark);
     margin: 0 0 var(--line) 0;
 }
@@ -142,14 +146,13 @@ hr {
 
 blockquote {
     padding-left: var(--line);
-    font-size: 14px;
-    font-weight: 425;
+    font-size: 0.933rem;
     line-height: var(--line);
 }
 
 pre, code {
     font-family: var(--mono);
-    font-size: 14px;
+    font-size: 0.933rem;
     white-space: pre;
 }
 
