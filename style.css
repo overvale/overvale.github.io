@@ -54,7 +54,7 @@ html {
 
 body {
     max-width: 600px;
-    margin: var(--line) auto calc(var(--line) * 4) 0;
+    margin: var(--line) auto calc(var(--line) * 4) auto;
     padding: 0 var(--line);
 }
 
