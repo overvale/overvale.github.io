@@ -22,12 +22,26 @@ legend{color:#000}
 
 @font-face {
   font-family: "CommitMono";
-  src: url("/assets/CommitMono.woff2") format("woff2-variations");
+  src: url("/assets/CommitMono.woff2") format("woff2");
   font-weight: 450;
 }
 
+@font-face {
+  font-family: 'Literata';
+  src: url("/assets/Literata[opsz,wght].woff2") format('woff2');
+  font-weight: 200 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Literata';
+  src: url("/assets/Literata-Italic[opsz,wght].woff2") format('woff2');
+  font-weight: 200 900;
+  font-style: italic;
+}
 
 :root {
+    --serif: 'Literata', monospace;
     --sans: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --mono: "CommitMono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --line: 1.466rem;
@@ -95,7 +109,7 @@ b, strong { font-weight: 650; }
 html {
     font: 15px/22px var(--sans);
     font-weight:420;
-    font-feature-settings: "ss01" 1, "zero" 1;
+    font-feature-settings: "ss01" 1;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -145,9 +159,10 @@ hr {
 }
 
 blockquote {
-    padding-left: var(--line);
-    font-size: 0.933rem;
-    line-height: var(--line);
+  font: 15px/23px var(--serif); 
+  padding-left: var(--line);
+  font-weight: 400;
+  font-variation-settings: 'opsz' 30;
 }
 
 pre, code {
