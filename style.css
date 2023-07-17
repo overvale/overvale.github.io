@@ -6,7 +6,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
 address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
-ol,ul{list-style:none}
+/* ol,ul{list-style:none} */
 caption,th{text-align:left}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
 q:before,q:after{content:''}
@@ -17,7 +17,7 @@ input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;
 legend{color:#000}
 
 
-/* Variables
+/* Fonts & Variables
 --------------------------------------------- */
 
 @font-face {
@@ -41,64 +41,49 @@ legend{color:#000}
 }
 
 :root {
-    --serif: 'Literata', monospace;
-    --sans: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --mono: "CommitMono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    --line: 1.466rem;
-    --black: rgb(0,0,0);
-    --white: rgb(255,255,255);
-    --white1: rgb(245,245,245);
-    --white2: rgb(230,230,230);
-    --grey-light: rgb(200,200,200);
-    --grey-dark: rgb(125,125,125);
-    --link-blue: rgb(76,176,237);
-    --yellow: #fbc651;
-    --red: rgb(255, 84, 0);
+  /* Fonts */
+  --serif: 'Literata', serif;
+  --sans: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --mono: "CommitMono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Layout */
+  --size: 15px;
+  --line: 22px;
+
+  /* Colors */
+  --black: rgb(0,0,0);
+  --white: rgb(255,255,255);
+  --white1: rgb(245,245,245);
+  --white2: rgb(230,230,230);
+  --grey-light: rgb(200,200,200);
+  --grey-dark: rgb(125,125,125);
+  --link-blue: rgb(76,176,237);
+  --yellow: #fbc651;
+  --red: rgb(255, 84, 0);
 }
 
 
-/* Layout Basics
+/* Style
 --------------------------------------------- */
 
-html {
-    background-color: var(--white);
-    color: var(--black);
-    padding: 0 0 30% 0;
+body {
+  font: var(--size) / var(--line) var(--sans);
+  font-weight:420;
+  font-feature-settings: 'ss01' 1, 'cpsp' on;
+  color: var(--black);
 }
 
-body {
-    max-width: 600px;
-    margin: var(--line) auto calc(var(--line) * 4) auto;
-    padding: 0 var(--line);
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--line) var(--line) 30% var(--line);
 }
 
 nav {
-    border-bottom: 1px solid var(--grey-dark);
-    padding-bottom: var(--line);
-    font-family: var(--sans);
+  border-bottom: 1px solid var(--grey-dark);
+  padding-bottom: var(--line);
+  font-family: var(--sans);
 }
-
-figure {
-    border: 0.5pt solid var(--grey-dark);
-    margin: 0;
-    padding: .25rem;
-}
-
-figure figcaption {
-    font-size: .9rem;
-    font-style: italic;
-    text-align: center;
-    margin: .25rem 0;}
-
-img { max-width: 100%;}
-
-article#home {
-    margin-top: calc(var(--line) * 2);
-}
-
-
-/* Typography
---------------------------------------------- */
 
 p, ul, ol, pre code, table, figure { margin: var(--line) 0 0 0; }
 blockquote {margin-top: var(--line); }
@@ -106,110 +91,118 @@ blockquote {margin-top: var(--line); }
 i, em { font-style: italic; font-weight: inherit; }
 b, strong { font-weight: 650; }
 
-html {
-    font: 15px/22px var(--sans);
-    font-weight:420;
-    font-feature-settings: "ss01" 1;
-}
-
-@supports (-webkit-touch-callout: none) {
-  /* CSS specific to iOS devices */
-  html {
-    font: 16px/23px var(--sans);
-    font-weight:440;
-  }
+h1, h2, h3 {
+  font-family: var(--serif);
+  
 }
 
 h1 {
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 2.4rem;
-    margin: var(--line) 0 0 0;
+  font-variation-settings: 'opsz' 60;
+  font-size: 32px;
+  font-weight: 550;
+  line-height: 1.2;
+  margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 3rem;
+  font-variation-settings: 'opsz' 50;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: calc(var(--line) * 4);
 }
 
 h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: var(--line);
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: calc(var(--line) * 2);
 }
 
 time {
-    display: block;
-    font-family: var(--mono);
-    font-size: 0.933rem;
-    color: var(--grey-dark);
-    margin: 0 0 var(--line) 0;
+  display: block;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--grey-dark);
+  margin: calc(var(--line)/2) 0 var(--line) 0;
 }
 
 ol, ul { margin-left: var(--line); }
 ol { list-style: decimal; }
-ul { list-style-type: disc; }
 
 hr {
-    border: none;
-    border-top: 1px solid var(--grey-light);
-    margin: 3rem auto;
-    width: 50%;
+  border: none;
+  border-top: 1px solid var(--grey-light);
+  margin: 3rem auto;
+  width: 50%;
 }
 
 blockquote {
-  font: 15px/23px var(--serif); 
+  font-family: var(--serif); 
   padding-left: var(--line);
   font-weight: 400;
   font-variation-settings: 'opsz' 30;
 }
 
 pre, code {
-    font-family: var(--mono);
-    font-size: 0.933rem;
-    white-space: pre;
+  font-family: var(--mono);
+  font-size: 14px;
+  white-space: pre;
 }
 
 code {
-    padding: 0 .25rem;
-    border-radius: 6px;
-    background-color: var(--white1);
-    border: 1px solid var(--white2);
+  padding: 0 .25rem;
+  border-radius: 6px;
+  background-color: var(--white1);
+  border: 1px solid var(--white2);
 }
 
 pre code {
-    display: block;
-    overflow: auto;
-    font-size: 13px;
-    line-height: 1.2rem;
-    padding: 1rem;
+  display: block;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.3rem;
+  padding: 1rem;
 }
 
 code.wrap {
-    white-space: normal;
+  white-space: normal;
 }
+
+figure {
+  border: 0.5pt solid var(--grey-dark);
+  padding: .25rem;
+}
+
+figure figcaption {
+  font-size: 12px;
+  font-family: var(--serif);
+  font-variation-settings: 'opsz' 8;
+  font-style: italic;
+  text-align: center;
+  margin: .25rem 0;
+  }
+
+img { max-width: 100%;}
 
 table { width: 100%; }
 table, th, td { border: 1px solid var(--grey-light); }
 th, td { padding: .25rem .5rem; }
 th {
-    background-color: var(--white1);
-    border-bottom: 1px solid var(--black);
-    font-weight: 600;}
+  background-color: var(--white1);
+  border-bottom: 1px solid var(--black);
+  font-weight: 600;}
 
 a {
-    color:var(--black);
-    text-decoration: underline;
-    text-decoration-color: var(--link-blue);
-    text-decoration-thickness: 1.25px;
+  color:var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--link-blue);
+  text-decoration-thickness: 1.25px;
 }
 
 a:hover {
-    text-decoration: none;
-    background: var(--yellow);
-    color: var(--black);
-    border-radius: 3px;
+  text-decoration: none;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 3px;
 }
 
 sup {
@@ -222,18 +215,63 @@ sup {
 }
 
 
+/* Page Overrides
+--------------------------------------------- */
+
+main#home {
+  margin-top: calc(var(--line) * 2);
+}
+
+main#home p#welcome {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 350;
+  font-variation-settings: 'opsz' 60;
+  /* font-style: italic; */
+  line-height: 1.433;
+  margin-bottom: calc(var(--line) * 4);
+}
+
+.serif {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-variation-settings: 'opsz' 30;
+}
+
+main.emacs code {
+  background-color: rgb(247, 241, 255);
+  border: 1px solid rgb(226, 205, 255);
+}
+
+main.emacs a {
+  text-decoration-color: rgb(167, 100, 255);
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  body {
+  font: 16px/23px var(--sans);
+  font-weight:440;
+  }
+  main#home p#welcome {
+  font-weight: 400;
+  }
+}
+
+
 /* Dark Mode
 --------------------------------------------- */
 
 @media (prefers-color-scheme: dark) {
-    html { background: rgb(36,36,45); }
-    body { color: var(--white1); }
-    pre, code { color: var(--white1); border-color: rgb(71,71,80); }
-    code, pre code { background-color: rgb(51,51,60); }
-    sup { color: var(--yellow); }
-    a { color: var(--white1); }
-    a:hover, a:before, a:after {
-	    color: rgb(36,36,45);
-	    text-decoration-thickness: 2px;
-	}
+  html { background: rgb(36,36,45); }
+  body { color: var(--white1); font-weight: 375; }
+  b, strong { font-weight: 600; }
+  pre, code { color: var(--white1); border-color: rgb(71,71,80); }
+  code, pre code { background-color: rgb(51,51,60); }
+  sup { color: var(--yellow); }
+  a { color: var(--white1); }
+  a:hover, a:before, a:after {
+  background-color: var(--white);
+    color: var(--black);
+  }
 }
