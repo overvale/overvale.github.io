@@ -1,7 +1,6 @@
 /* Reset
 --------------------------------------------- */
 
-html{color:#000;background:#FFF}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
@@ -55,16 +54,26 @@ legend{color:#000}
   --white: rgb(255,255,255);
   --white1: rgb(245,245,245);
   --white2: rgb(230,230,230);
-  --grey-light: rgb(200,200,200);
-  --grey-dark: rgb(125,125,125);
-  --link-blue: rgb(76,176,237);
-  --yellow: #fbc651;
+  --white3: rgb(200,200,200);
+  --white4: rgb(125,125,125);
   --red: rgb(255, 84, 0);
+  
+  --accent-color: rgb(73, 186, 255);
+  --accent-light: rgb(205, 238, 255);
+  --accent-white: rgb(241, 253, 255);
 }
+
+  background-color: ;
+border: 1px solid ;
 
 
 /* Style
 --------------------------------------------- */
+
+html{
+  background: var(--bg-color);
+  color: var(--fg-color);
+}
 
 body {
   font: var(--size) / var(--line) var(--sans);
@@ -80,7 +89,7 @@ main {
 }
 
 nav {
-  border-bottom: 1px solid var(--grey-dark);
+  border-bottom: 1px solid var(--white4);
   padding-bottom: var(--line);
   font-family: var(--sans);
 }
@@ -123,7 +132,7 @@ time {
   display: block;
   font-family: var(--mono);
   font-size: 14px;
-  color: var(--grey-dark);
+  color: var(--white4);
   margin: calc(var(--line)/2) 0 var(--line) 0;
 }
 
@@ -133,7 +142,7 @@ ol { list-style: decimal; }
 
 hr {
   border: none;
-  border-top: 1px solid var(--grey-light);
+  border-top: 1px solid var(--white3);
   margin: 3rem auto;
   width: 50%;
 }
@@ -171,7 +180,7 @@ code.wrap {
 }
 
 figure {
-  border: 0.5pt solid var(--grey-dark);
+  border: 0.5pt solid var(--white4);
   padding: .25rem;
 }
 
@@ -187,7 +196,7 @@ figure figcaption {
 img { max-width: 100%;}
 
 table { width: 100%; }
-table, th, td { border: 1px solid var(--grey-light); }
+table, th, td { border: 1px solid var(--white3); }
 th, td { padding: .25rem .5rem; }
 th {
   background-color: var(--white1);
@@ -197,13 +206,13 @@ th {
 a {
   color:var(--black);
   text-decoration: underline;
-  text-decoration-color: var(--link-blue);
+  text-decoration-color: var(--accent-color);
   text-decoration-thickness: 1.25px;
 }
 
 a:hover {
   text-decoration: none;
-  background: var(--link-blue);
+  background: var(--accent-color);
   color: var(--white);
   border-radius: 3px;
 }
@@ -239,26 +248,19 @@ main#home p#welcome {
   font-variation-settings: 'opsz' 30;
 }
 
+main.emacs, p.emacs {
+  --accent-color: rgb(182, 126, 254);
+  --accent-light: rgb(226, 205, 255);
+  --accent-white: rgb(247, 241, 255);
+}
+
 main.emacs code {
-  background-color: rgb(247, 241, 255);
-  border: 1px solid rgb(226, 205, 255);
+  background-color: var(--accent-white);
+  border: 1px solid var(--accent-light);
 }
 
-main.emacs a {
-  text-decoration-color: rgb(167, 100, 255);
-}
-
-main.emacs a:hover {
-  background-color: rgb(167, 100, 255);
-}
-
-main.note a {
-  text-decoration-color: rgb(255, 210, 60);
-}
-
-main.note a:hover {
-  color: var(--black);
-  background-color: rgb(255, 210, 60);
+main.note, p.notes {
+  --accent-color: rgb(255, 204, 33);
 }
 
 section#growth-letter {
@@ -276,22 +278,4 @@ section#growth-letter {
   font-weight:440;
   }
   main#home p#welcome { font-weight: 400; }
-}
-
-
-/* Dark Mode
---------------------------------------------- */
-
-@media (prefers-color-scheme: dark) {
-  html { background: rgb(36,36,45); }
-  body { color: var(--white1); font-weight: 375; }
-  b, strong { font-weight: 600; }
-  pre, code { color: var(--white1); border-color: rgb(71,71,80); }
-  code, pre code { background-color: rgb(51,51,60); }
-  sup { color: var(--yellow); }
-  a { color: var(--white1); }
-  a:hover, a:before, a:after {
-  background-color: var(--white);
-    color: var(--black);
-  }
 }
