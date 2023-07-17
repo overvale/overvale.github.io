@@ -85,15 +85,17 @@ nav {
   font-family: var(--sans);
 }
 
-p, ul, ol, pre code, table, figure { margin: var(--line) 0 0 0; }
-blockquote {margin-top: var(--line); }
+p, ul, ol, pre code, table, figure, blockquote { margin: var(--line) 0 0 0; }
 
-i, em { font-style: italic; font-weight: inherit; }
 b, strong { font-weight: 650; }
+
+i, em {
+  font-style: italic;
+  font-weight: inherit;
+}
 
 h1, h2, h3 {
   font-family: var(--serif);
-  
 }
 
 h1 {
@@ -126,6 +128,7 @@ time {
 }
 
 ol, ul { margin-left: var(--line); }
+
 ol { list-style: decimal; }
 
 hr {
@@ -200,7 +203,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  background: var(--black);
+  background: var(--link-blue);
   color: var(--white);
   border-radius: 3px;
 }
@@ -226,7 +229,6 @@ main#home p#welcome {
   font-size: 24px;
   font-weight: 350;
   font-variation-settings: 'opsz' 60;
-  /* font-style: italic; */
   line-height: 1.433;
   margin-bottom: calc(var(--line) * 4);
 }
@@ -246,15 +248,34 @@ main.emacs a {
   text-decoration-color: rgb(167, 100, 255);
 }
 
+main.emacs a:hover {
+  background-color: rgb(167, 100, 255);
+}
+
+main.note a {
+  text-decoration-color: rgb(255, 210, 60);
+}
+
+main.note a:hover {
+  color: var(--black);
+  background-color: rgb(255, 210, 60);
+}
+
+section#growth-letter {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 450;
+  font-variation-settings: 'opsz' 40;
+  color: rgb(0, 90, 163);
+}
+
 @supports (-webkit-touch-callout: none) {
   /* CSS specific to iOS devices */
   body {
   font: 16px/23px var(--sans);
   font-weight:440;
   }
-  main#home p#welcome {
-  font-weight: 400;
-  }
+  main#home p#welcome { font-weight: 400; }
 }
 
 
