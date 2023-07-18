@@ -167,7 +167,7 @@ pre, code {
   font-family: var(--mono);
   font-weight: 350;
   font-size: 14px;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 code {
@@ -282,4 +282,5 @@ section#growth-letter {
   font-weight:440;
   }
   main#home p#welcome { font-weight: 400; }
+  blockquote { font-weight: 440; }
 }
