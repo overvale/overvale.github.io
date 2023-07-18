@@ -181,6 +181,7 @@ pre code {
   display: block;
   overflow: auto;
   padding: 0.5rem;
+  white-space: pre;
 }
 
 code.wrap {
