@@ -5,7 +5,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
 address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
-/* ol,ul{list-style:none} */
 caption,th{text-align:left}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
 q:before,q:after{content:''}
@@ -60,21 +59,22 @@ legend{color:#000}
   --line: 22px;
 
   /* Colors */
-  --black: rgb(0,0,0);
-  --white: rgb(255,255,255);
-  --white1: rgb(245,245,245);
-  --white2: rgb(230,230,230);
-  --white3: rgb(200,200,200);
-  --white4: rgb(125,125,125);
-  --red: rgb(255, 84, 0);
-  
-  --accent-color: rgb(73, 186, 255);
-  --accent-light: rgb(205, 238, 255);
-  --accent-white: rgb(241, 253, 255);
-}
+  --black:  hsl(0, 0%, 0%);
+  --white:  hsl(0, 0%, 100%);
+  --white1: hsl(0, 0%, 96%);
+  --white2: hsl(0, 0%, 90%);
+  --white3: hsl(0, 0%, 78%);
+  --white4: hsl(0, 0%, 50%);
+  --red:    hsl(20, 100%, 50%);
 
-  background-color: ;
-border: 1px solid ;
+  --bg-color: var(--white);
+  --fg-color: var(--black);
+  
+  --accent-color: hsl(203, 100%, 65%);
+  --accent-light: hsl(203, 100%, 85%);
+  --accent-white: hsl(203, 100%, 96%);
+  --accent-fg:    hsl(203, 100%, 100%);
+}
 
 
 /* Style
@@ -89,7 +89,6 @@ body {
   font: var(--size) / var(--line) var(--sans);
   font-weight:420;
   font-feature-settings: 'ss01' 1, 'cpsp' on;
-  color: var(--black);
 }
 
 main {
@@ -120,7 +119,7 @@ h1, h2, h3 {
 h1 {
   font-variation-settings: 'opsz' 60;
   font-size: 32px;
-  font-weight: 550;
+  font-weight: 600;
   line-height: 1.2;
   margin: calc(var(--line) * 2) 0 0 0;
 }
@@ -166,6 +165,7 @@ blockquote {
 
 pre, code {
   font-family: var(--mono);
+  font-weight: 350;
   font-size: 14px;
   white-space: pre;
 }
@@ -173,16 +173,14 @@ pre, code {
 code {
   padding: 0 .25rem;
   border-radius: 6px;
-  background-color: var(--white1);
-  border: 1px solid var(--white2);
+  background-color: var(--accent-white);
+  border: 1px solid var(--accent-light);
 }
 
 pre code {
   display: block;
   overflow: auto;
-  font-size: 13px;
-  line-height: 1.3rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 code.wrap {
@@ -196,9 +194,7 @@ figure {
 
 figure figcaption {
   font-size: 12px;
-  font-family: var(--serif);
-  font-variation-settings: 'opsz' 8;
-  font-style: italic;
+  font-weight: 400;
   text-align: center;
   margin: .25rem 0;
   }
@@ -211,7 +207,7 @@ th, td { padding: .25rem .5rem; }
 th {
   background-color: var(--white1);
   border-bottom: 1px solid var(--black);
-  font-weight: 600;}
+  font-weight: 650;}
 
 a {
   color:var(--black);
@@ -223,7 +219,7 @@ a {
 a:hover {
   text-decoration: none;
   background: var(--accent-color);
-  color: var(--white);
+  color: var(--accent-fg);
   border-radius: 3px;
 }
 
@@ -259,18 +255,16 @@ main#home p#welcome {
 }
 
 main.emacs, p.emacs {
-  --accent-color: rgb(182, 126, 254);
-  --accent-light: rgb(226, 205, 255);
-  --accent-white: rgb(247, 241, 255);
-}
-
-main.emacs code {
-  background-color: var(--accent-white);
-  border: 1px solid var(--accent-light);
+  --accent-color: hsl(266, 100%, 75%);
+  --accent-light: hsl(266, 100%, 94%);
+  --accent-white: hsl(266, 100%, 98%);
 }
 
 main.note, p.notes {
-  --accent-color: rgb(255, 204, 33);
+  --accent-color: hsl(46, 100%, 56%);
+  --accent-light: hsl(46, 100%, 85%);
+  --accent-white: hsl(46, 100%, 95%);
+  --accent-fg:    var(--black);
 }
 
 section#growth-letter {
@@ -278,7 +272,7 @@ section#growth-letter {
   line-height: 1.6;
   font-weight: 450;
   font-variation-settings: 'opsz' 40;
-  color: rgb(0, 90, 163);
+  color: hsl(207, 100%, 25%);
 }
 
 @supports (-webkit-touch-callout: none) {
