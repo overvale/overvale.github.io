@@ -249,6 +249,16 @@ main#home p#welcome {
   margin-bottom: calc(var(--line) * 4);
 }
 
+main#links h3 {
+  font-family: var(--sans)
+}
+
+main#links blockquote {
+  font-family: var(--sans);
+  font-weight: 420;
+  font-size: 14px;
+}
+
 .serif {
   font-family: var(--serif);
   font-weight: 400;
