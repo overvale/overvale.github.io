@@ -55,8 +55,9 @@ legend{color:#000}
   --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 
   /* Layout */
-  --size: 15px;
-  --line: 22px;
+  --size: 16px;
+  --line: 1.4rem;
+  --main-width: 625px;
 
   /* Colors */
   --black:  hsl(0, 0%, 0%);
@@ -67,7 +68,7 @@ legend{color:#000}
   --grey50: hsl(0, 0%, 50%);
   --red:    hsl(20, 100%, 50%);
 
-  --bg-color: var(--white);
+  --bg-color: hsl(0, 0%, 100%);
   --fg-color: var(--black);
   
   --accent-color: hsl(203, 100%, 65%);
@@ -82,26 +83,27 @@ legend{color:#000}
 
 html{
   background: var(--bg-color);
-  color: var(--fg-color);
+
 }
 
 body {
   font: var(--size) / var(--line) var(--sans);
   font-weight:420;
   font-feature-settings: 'ss01' 1, 'cpsp' on;
+  text-rendering: optimizeLegibility;
+}
+
+nav {
+  font-family: var(--sans);
+  margin-bottom: calc(var(--line) * 4) ;
 }
 
 main {
-  max-width: 600px;
+  max-width: var(--main-width);
   margin: 0 auto;
   padding: var(--line) var(--line) 30% var(--line);
 }
 
-nav {
-  border-bottom: 1px solid var(--grey50);
-  padding-bottom: var(--line);
-  font-family: var(--sans);
-}
 
 p, ul, ol, pre code, table, figure, blockquote { margin: var(--line) 0 0 0; }
 
@@ -125,14 +127,14 @@ h1 {
   font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
-  margin: calc(var(--line) * 2) 0 0 0;
+  margin: calc(var(--line) * 2) 0 ;
 }
 
 h2 {
   font-variation-settings: 'opsz' 50;
   font-size: 20px;
   font-weight: 700;
-  margin-top: calc(var(--line) * 4);
+  margin-top: calc(var(--line) * 2);
 }
 
 h3 {
@@ -161,10 +163,12 @@ hr {
 }
 
 blockquote {
+  font-size: 15px;
   font-family: var(--serif); 
   padding-left: var(--line);
-  font-weight: 400;
+  font-weight: 420;
   font-variation-settings: 'opsz' 30;
+  line-height: 1.5;
   position: relative; /* required for ::after element */
 }
 
@@ -178,7 +182,7 @@ blockquote::after{
   border-radius: 1rem;
   width: .25rem;
   height: 100%;
-  background-color: var(--accent-light);
+  background-color: var(--grey90);
 }
 
 pre, code {
@@ -257,6 +261,18 @@ sup {
 
 /* Page Overrides
 --------------------------------------------- */
+
+nav a {
+  font-weight: 520;
+  padding: 0 .25em;
+  margin-left: -.25em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: var(--black);
+  color: var(--white);
+}
 
 main#home {
   margin-top: calc(var(--line) * 2);
