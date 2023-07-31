@@ -287,14 +287,36 @@ main#home p#welcome {
   margin-bottom: calc(var(--line) * 4);
 }
 
-main#links h3 {
-  font-family: var(--sans)
+main#links h1 {
+  font-family: var(--sans);
+  font-weight: 420;
 }
 
 main#links blockquote {
   font-family: var(--sans);
-  font-weight: 420;
-  font-size: 14px;
+}
+
+div.link {
+  margin-top: calc(var(--line) * 2);
+}
+
+div.link time {
+  margin: 0 0 calc(var(--line) * -1) 0;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 625px) {
+  div.link {
+    position: relative;
+    margin-left: 100px;
+  }
+  div.link time {
+    margin: 0;
+    width: 80px;
+    text-align: right;
+    position: absolute;
+    left: -100px;
+  }
 }
 
 .serif {
