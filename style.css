@@ -52,7 +52,7 @@ legend{color:#000}
   /* Fonts */
   --serif: 'Literata', ui-serif, Cambria, Georgia, serif;
   --sans: 'Inter var', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --mono: ui-monospace, Menlo, Consolas, monospace;
 
   /* Layout */
   --size: 16px;
@@ -125,7 +125,7 @@ h1, h2, h3 {
 h1 {
   font-variation-settings: 'opsz' 60;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   margin: calc(var(--line) * 2) 0 ;
 }
@@ -133,7 +133,7 @@ h1 {
 h2 {
   font-variation-settings: 'opsz' 50;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: calc(var(--line) * 2);
 }
 
@@ -141,6 +141,11 @@ h3 {
   font-size: 17px;
   font-weight: 600;
   margin-top: calc(var(--line) * 2);
+}
+
+h3#subhead {
+  font-family: var(--sans);
+  font-weight: 500;
 }
 
 time {
@@ -187,7 +192,6 @@ blockquote::after{
 
 pre, code {
   font-family: var(--mono);
-  font-weight: 350;
   font-size: 14px;
   white-space: pre-wrap;
 }
@@ -204,6 +208,7 @@ pre code {
   overflow: auto;
   padding: 0.5rem;
   white-space: pre;
+  line-height: 1.1rem;
 }
 
 code.wrap {
