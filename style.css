@@ -177,7 +177,9 @@ blockquote {
   position: relative; /* required for ::after element */
 }
 
-/* This creates a border on left side */
+/* This creates a border on left side.
+   All this nonsense is required simply because I want
+   my blockquote borders to have rounded ends. You're welcome. */
 blockquote::after{
   content: '';
   display: block;
@@ -317,10 +319,10 @@ div.link time {
   }
   div.link time {
     margin: 0;
-    width: 80px;
+    width: 90px;
     text-align: right;
     position: absolute;
-    left: -100px;
+    left: -110px;
   }
 }
 
