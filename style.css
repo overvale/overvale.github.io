@@ -265,6 +265,10 @@ sup {
   color: var(--red);
 }
 
+cite {
+  font-style: italic;
+}
+
 
 /* Page Overrides
 --------------------------------------------- */
