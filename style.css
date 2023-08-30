@@ -157,7 +157,6 @@ blockquote {
   padding-left: var(--line);
   font-size: 14px;
   font-variation-settings: "wdth" 116, "GRAD" 450;
-
   font-weight: 400;
   position: relative; /* required for ::after element */
 }
