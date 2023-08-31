@@ -108,26 +108,27 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 38px;
   font-variation-settings: "wdth" 60;
   line-height: 1.2;
   margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-variation-settings: "wdth" 70;
-  margin-top: calc(var(--line) * 2);
+  margin-top: calc(var(--line) * 4);
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-variation-settings: "wdth" 80;
   margin-top: calc(var(--line) * 2);
 }
 
 h3#subhead {
-  font-weight: 510;
+  font-size: 18px;
+  font-weight: 500;
   font-variation-settings: "wdth" 116;
 }
 
@@ -155,9 +156,7 @@ hr {
 
 blockquote {
   padding-left: var(--line);
-  font-size: 14px;
-  font-variation-settings: "wdth" 116, "GRAD" 450;
-  font-weight: 400;
+  font-size: 15px;
   position: relative; /* required for ::after element */
 }
 
