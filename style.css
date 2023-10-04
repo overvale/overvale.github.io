@@ -20,8 +20,25 @@ legend{color:#000}
 /* Fonts & Variables
 --------------------------------------------- */
 
+@font-face {
+  font-family: 'Source Serif';
+  src: url("/assets/SourceSerif4-opsz,wght.ttf") format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url("/assets/SourceSerif4-Italic-opsz,wght.ttf") format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+}
+
 :root {
   --sans: 'Inter var', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --serif: 'Source Serif', serif;
+
   --mono: ui-monospace, Menlo, Consolas, monospace;
 
   --size: 16px;
@@ -35,7 +52,7 @@ legend{color:#000}
   --grey75: hsl(0, 0%, 75%);
   --grey50: hsl(0, 0%, 50%);
   --red:    hsl(20, 100%, 50%);
-  
+
   --accent-color: hsl(203, 100%, 65%);
   --accent-light: hsl(203, 100%, 85%);
   --accent-white: hsl(203, 100%, 96%);
