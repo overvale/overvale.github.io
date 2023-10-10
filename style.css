@@ -34,7 +34,7 @@ legend{color:#000}
   font-style: italic;
 }
 
-:root {
+html {
   --sans: 'Inter var', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   --serif: 'Source Serif', serif;
@@ -65,15 +65,32 @@ legend{color:#000}
 --------------------------------------------- */
 
 html{
-  background: var(--white);
-  font: var(--size) / var(--line) var(--sans);
-  font-weight:400;
+  background:  var(--white);
   text-rendering: optimizeLegibility;
   color: var(--black);
 }
 
+body {
+  font-size:   var(--size);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: var(--line);
+}
+
 nav {
   margin-bottom: calc(var(--line) * 4);
+}
+
+nav a {
+  font-weight: 510;
+  padding: 0 .25em;
+  margin-left: -.25em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 main {
@@ -82,7 +99,9 @@ main {
   padding: var(--line) var(--line) 30% var(--line);
 }
 
-p, ul, ol, pre code, table, figure, blockquote { margin: var(--line) 0 0 0; }
+p, ul, ol, pre code, table, figure, blockquote {
+    margin: var(--line) 0 0 0;
+}
 
 .collapse-top {
   margin-top: 0;
@@ -244,18 +263,6 @@ cite {
 /* Page Overrides
 --------------------------------------------- */
 
-nav a {
-  font-weight: 510;
-  padding: 0 .25em;
-  margin-left: -.25em;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background: var(--black);
-  color: var(--white);
-}
-
 main#home {
   margin-top: calc(var(--line) * 2);
 }
@@ -308,3 +315,16 @@ main.note, p.notes {
   --accent-white: hsl(46, 100%, 95%);
   --accent-fg:    var(--black);
 }
+
+/* body.serif { */
+/*     font-family: var(--serif); */
+/*     --line: 1.45rem; */
+/*     font-variation-settings: "opsz" 30; */
+/* } */
+
+/* body.serif h1, */
+/* body.serif h2, */
+/* body.serif h3, */
+/* body.serif h4 { */
+/*     font-family: var(--sans); */
+/* } */
