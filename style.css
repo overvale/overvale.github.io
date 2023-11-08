@@ -278,6 +278,7 @@ section#growth-letter {
   font-size: 17px;
   line-height: 1.6;
   color: var(--accent-dark);
+  font-weight: 490;
 }
 
 div.link {
