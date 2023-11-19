@@ -60,7 +60,7 @@ body {
 }
 
 nav {
-  margin-bottom: calc(var(--line) * 4);
+  margin-bottom: calc(var(--line) * 2);
 }
 
 nav a {
@@ -244,17 +244,6 @@ cite {
 
 /* Page Overrides
 --------------------------------------------- */
-
-main#home {
-  margin-top: calc(var(--line) * 2);
-}
-
-main#home p#welcome {
-  font-size: 24px;
-  line-height: 1.433;
-  font-weight: 325;
-  margin-bottom: calc(var(--line) * 4);
-}
 
 section#growth-letter {
   font-size: 17px;
