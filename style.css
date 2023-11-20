@@ -1,3 +1,5 @@
+@import url('https://rsms.me/inter/inter.css');
+
 /* Reset
 --------------------------------------------- */
 
@@ -19,12 +21,12 @@ legend{color:#000}
 --------------------------------------------- */
 
 html {
-  --sans: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  --sans: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 
   --mono: ui-monospace, Menlo, Consolas, monospace;
 
-  --size: 15px;
-  --line: 1.4rem;
+  --size: 16px;
+  --line: 1.5rem;
   --main-width: 625px;
 
   --black:  hsl(0, 0%, 0%);
@@ -48,8 +50,8 @@ html {
 
 html{
   background:  var(--white);
-  text-rendering: optimizeLegibility;
   color: var(--black);
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 body {
@@ -145,8 +147,6 @@ hr {
 
 blockquote {
   padding-left: var(--line);
-  font-size: 15px;
-  font-weight: 425;
   position: relative; /* required for ::after element */
 }
 
@@ -167,7 +167,7 @@ blockquote::after{
 
 pre, code {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: .95rem;
   white-space: pre-wrap;
 }
 
@@ -196,7 +196,7 @@ figure {
 }
 
 figure figcaption {
-  font-size: 12px;
+  font-size: .85rem;
   text-align: center;
   margin: .25rem 0;
   }
@@ -246,10 +246,10 @@ cite {
 --------------------------------------------- */
 
 section#growth-letter {
-  font-size: 17px;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: var(--accent-dark);
-  font-weight: 490;
+  font-weight: 480;
 }
 
 div.link {
@@ -258,7 +258,7 @@ div.link {
 
 div.link time {
   margin: 0 0 calc(var(--line) * -1) 0;
-  font-size: 13px;
+  font-size: .85rem;
 }
 
 @media only screen and (min-width: 625px) {
