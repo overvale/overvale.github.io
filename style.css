@@ -92,6 +92,11 @@ p, ul, ol, pre code, table, figure, blockquote {
   margin-top: 0;
 }
 
+.no-bullet {
+    list-style: none;
+    margin-left: 0;
+}
+
 b, strong { font-weight: 600; }
 
 i, em {
@@ -276,13 +281,13 @@ div.link time {
   }
 }
 
-main.emacs, p.emacs {
+main.emacs, ul.emacs {
   --accent-color: hsl(266, 100%, 75%);
   --accent-light: hsl(266, 100%, 94%);
   --accent-white: hsl(266, 100%, 98%);
 }
 
-main.note, p.notes {
+main.note, ul.notes {
   --accent-color: hsl(46, 100%, 56%);
   --accent-light: hsl(46, 100%, 85%);
   --accent-white: hsl(46, 100%, 95%);
