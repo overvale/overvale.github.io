@@ -36,6 +36,7 @@ html {
   --grey75: hsl(0, 0%, 75%);
   --grey50: hsl(0, 0%, 50%);
   --red:    hsl(20, 100%, 50%);
+  --purple: hsl(290, 100%, 50%);
 
   --accent-color: hsl(203, 100%, 65%);
   --accent-light: hsl(203, 100%, 85%);
@@ -230,11 +231,11 @@ a:hover {
 }
 
 sup {
-  vertical-align: super;
+  vertical-align: middle;
   line-height: 0;
-  font-size: .75rem;
+  font-size: .8rem;
   font-weight: 600;
-  color: var(--red);
+  color: var(--purple);
 }
 
 cite {
