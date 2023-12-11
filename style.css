@@ -1,52 +1,55 @@
-@import url('https://rsms.me/inter/inter.css');
 @import url('/reset.css');
 
+@import url('https://rsms.me/inter/inter.css');
+  /* weight: 100 900 */
+  /* opsz: 14 32 */
+
 :root {
-  --sans: InterVariable, system-ui, -apple-system, Roboto, sans-serif;
-  --mono: ui-monospace, Menlo, Consolas, monospace;
+	--sans:  InterVariable, system-ui;
+	--mono: ui-monospace, Menlo, Consolas, monospace;
 
-  --font-size: 16px;
-  --line: 1.5em;
-  --main-width: 42.5rem;
+	--font-size: 16px;
+	--line: 1.5em;
 
-  --black:  hsl(0, 0%, 0%);
-  --white:  hsl(0, 0%, 100%);
-  --grey95: hsl(0, 0%, 95%);
-  --grey90: hsl(0, 0%, 90%);
-  --grey75: hsl(0, 0%, 75%);
-  --grey50: hsl(0, 0%, 50%);
-  --red:    hsl(20, 100%, 50%);
-  --purple: hsl(290, 100%, 50%);
+	--black:  hsl(0, 0%, 0%);
+	--white:  hsl(0, 0%, 100%);
+	--grey95: hsl(0, 0%, 95%);
+	--grey90: hsl(0, 0%, 90%);
+	--grey75: hsl(0, 0%, 75%);
+	--grey50: hsl(0, 0%, 50%);
 
-  --accent-color: hsl(203, 100%, 65%);
-  --accent-light: hsl(203, 100%, 85%);
-  --accent-white: hsl(203, 100%, 96%);
-  --accent-fg:    hsl(203, 100%, 100%);
-  --accent-dark:  hsl(203, 100%, 25%);
+	--accent-color: hsl(203, 100%, 65%);
+	--accent-light: hsl(203, 100%, 85%);
+	--accent-white: hsl(203, 100%, 96%);
+	--accent-fg:    hsl(203, 100%, 100%);
+	--accent-dark:  hsl(203, 100%, 25%);
+}
+
+/* Fonts
+   ----------------------------------------------- */
+
+:root {
+	font-family: var(--sans);
+	font-size: var(--font-size);
+	line-height: var(--line);
+	font-weight: 400;
 }
 
 
-/* Style
---------------------------------------------- */
+/* Base
+   ----------------------------------------------- */
 
 html{
   background:  var(--white);
   color: var(--black);
-  font-size:  var(--font-size);
-  line-height: var(--line);
-  font-family: var(--sans);
-  font-weight: 400;
-  font-feature-settings: 'liga' 1, 'calt' 1;
 }
-
-body {}
 
 nav {
   margin-bottom: calc(var(--line) * 2);
 }
 
 nav a {
-  font-weight: 700;
+  font-weight: 600;
   padding: 0 .25em;
   margin-left: -.25em;
   text-decoration: none;
@@ -58,76 +61,66 @@ nav a:hover {
 }
 
 main {
-  max-width: var(--main-width);
-  margin: 0 auto;
-  padding: var(--line) var(--line) 30% var(--line);
+	max-width: 35rem;
+	margin: 0 auto;
+	padding: var(--line) var(--line) 30% var(--line);
 }
 
-p, ul, ol, pre code, table, figure, blockquote {
+p, ul, ol, pre code, table, figure, blockquote, time {
     margin: var(--line) 0 0 0;
 }
 
 .collapse-top {
-  margin-top: 0;
-}
-
-b, strong { font-weight: 600; }
-
-i, em {
-  font-style: italic;
-  font-weight: inherit;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.2;
-  margin: calc(var(--line) * 2) 0 0 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: calc(var(--line) * 4);
-}
-
-h3 {
-  font-size: 1.125rem;
-  margin-top: calc(var(--line) * 2);
-}
-
-h3#subhead {
-  font-weight: 500;
+	margin-top: 0;
 }
 
 time {
-  display: block;
-  font-weight: 300;
-  color: var(--grey50);
-  margin: calc(var(--line)/2) 0 var(--line) 0;
+	display: block;
+	color: var(--grey50);
 }
 
-h1 + time {
-  margin-bottom: calc(var(--line) * 4);
+b, strong {
+	font-weight: 600;
+}
+
+i, em {
+	font-style: italic;
+	font-weight: inherit;
+}
+
+h1, h2, h3 {
+	font-weight: 600;
+	margin: calc(var(--line) * 2) 0 0 0;
+}
+
+h1 {
+	font-size: 1.777em;
+	line-height: 1.2;
+	margin: calc(var(--line) * 2) 0 0 0;
+}
+
+h2 {
+	font-size: 1.2rem;
+}
+
+h3 {
+	font-size: 1rem;
 }
 
 ol, ul { margin-left: var(--line); }
 
 ol { list-style: decimal; }
 
-.no-bullet {
+ul.no-bullet {
     list-style: none;
     margin-left: 0;
 }
 
 hr {
-  border: none;
-  border-top: 1px solid var(--grey75);
-  margin: 3rem auto;
-  width: 33.33%;
+	border: none;
+	border-top: 1px solid var(--grey75);
+	margin: calc(var(--line) * 2) auto;
+	width: 33.33%;
 }
 
 blockquote {
@@ -151,111 +144,104 @@ blockquote::after{
 }
 
 pre, code {
-  font-family: var(--mono);
-  font-size: .82rem;
-  font-weight: 425;
-  white-space: pre-wrap;
+	font-family: var(--mono);
+	font-size: .82rem;
+	font-weight: 425;
+	white-space: pre-wrap;
 }
 
 code {
-  padding: 0 .25rem;
-  border-radius: 6px;
-  background-color: var(--grey95);
-  border: 1px solid var(--grey90);
+	padding: 0 .25rem;
+	border-radius: 6px;
+	background-color: var(--grey95);
+	border: 1px solid var(--grey90);
 }
 
 pre code {
-  display: block;
-  overflow: auto;
-  padding: 0.5rem;
-  white-space: pre;
-  line-height: 1.2rem;
-}
-
-code.wrap {
-  white-space: normal;
+	display: block;
+	overflow: auto;
+	padding: 0.5rem;
+	white-space: pre;
+	line-height: 1.2rem;
 }
 
 figure {
-  border: 0.5pt solid var(--grey50);
-  padding: .25rem;
+	border: 0.5pt solid var(--grey50);
+	padding: .25rem;
 }
 
 figure figcaption {
-  font-size: .85rem;
-  text-align: center;
-  margin: .25rem 0;
-  }
+	font-size: .85rem;
+	text-align: center;
+	margin: .25rem 0;
+}
 
 img { max-width: 100%;}
 
 table { width: 100%; }
+
 table, th, td { border: 1px solid var(--grey75); }
+
 th, td { padding: .25rem .5rem; }
+
 th {
-  background-color: var(--grey95);
-  border-bottom: 1px solid var(--black);
-  font-weight: 650;}
+	background-color: var(--grey95);
+	border-bottom: 1px solid var(--black);
+	font-weight: 650;
+}
 
 a {
-  color:var(--black);
-  text-decoration: underline;
-  text-decoration-color: var(--accent-color);
-  text-decoration-thickness: 1.25px;
+	color:var(--black);
+	text-decoration: underline;
+	text-decoration-color: var(--accent-color);
+	text-decoration-thickness: 1.25px;
 }
 
 a:hover {
-  text-decoration: none;
-  background: var(--accent-color);
-  color: var(--accent-fg);
-  border-radius: 3px;
-}
-
-::selection {
-  background: var(--accent-light);
+	text-decoration: none;
+	background: var(--accent-color);
+	color: var(--accent-fg);
+	border-radius: 3px;
 }
 
 sup {
-  vertical-align: middle;
-  line-height: 0;
-  font-size: .65rem;
-  font-weight: 425;
-  color: var(--purple);
+	font-family: var(--sans);
+	font-size: .65rem;
+	font-weight: 700;
+	background: var(--grey50);
+	color: var(--white);
+	padding: 0 .25em;
+	margin: 0 .15em;
+	border-radius: 2.5px;
 }
 
 cite {
-  font-style: italic;
+	font-style: italic;
 }
 
 
-/* Page Overrides
+/* Links Page
 --------------------------------------------- */
 
-section#growth-letter {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--accent-dark);
-}
-
 div.link {
-  margin-top: calc(var(--line) * 2);
+	margin-top: calc(var(--line) * 2);
 }
 
 div.link time {
-  margin: 0 0 calc(var(--line) * -1) 0;
-  font-size: .85rem;
+	margin: 0 0 calc(var(--line) * -1) 0;
+	color: var(--grey50);
 }
 
 @media only screen and (min-width: 625px) {
-  div.link {
-    position: relative;
-    margin-left: 100px;
-  }
-  div.link time {
-    margin: 0;
-    width: 90px;
-    text-align: right;
-    position: absolute;
-    left: -110px;
-  }
+	div.link {
+		position: relative;
+		margin-left: 100px;
+	}
+	div.link time {
+		margin: 0;
+		width: 90px;
+		text-align: right;
+		position: absolute;
+		left: -110px;
+	}
 }
