@@ -2,8 +2,7 @@
 @import url('/reset.css');
 
 :root {
-  --sans: InterVariable, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-
+  --sans: InterVariable, system-ui, -apple-system, Roboto, sans-serif;
   --mono: ui-monospace, Menlo, Consolas, monospace;
 
   --font-size: 16px;
@@ -153,7 +152,8 @@ blockquote::after{
 
 pre, code {
   font-family: var(--mono);
-  font-size: .90rem;
+  font-size: .82rem;
+  font-weight: 425;
   white-space: pre-wrap;
 }
 
@@ -218,8 +218,8 @@ a:hover {
 sup {
   vertical-align: middle;
   line-height: 0;
-  font-size: .8rem;
-  font-weight: 600;
+  font-size: .65rem;
+  font-weight: 425;
   color: var(--purple);
 }
 
@@ -235,7 +235,6 @@ section#growth-letter {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--accent-dark);
-  font-weight: 480;
 }
 
 div.link {
