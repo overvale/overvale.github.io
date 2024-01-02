@@ -160,7 +160,6 @@ pre, code {
 	font-family: var(--mono);
 	font-size: .88rem;
 	white-space: pre-wrap;
-	font-weight: 100;
 }
 
 code {
