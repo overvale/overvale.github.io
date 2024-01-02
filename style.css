@@ -4,9 +4,15 @@
   /* weight: 100 900 */
   /* opsz: 14 32 */
 
+@font-face {
+	font-family: BMTX02;
+	font-style: normal;
+	src: url('/assets/BMTX02R.woff2') format('woff2');
+}
+
 :root {
-	--sans:  InterVariable, system-ui;
-	--mono: ui-monospace, Menlo, Consolas, monospace;
+	--sans: InterVariable, system-ui;
+	--mono: BMTX02, ui-monospace, Menlo, Consolas, monospace;
 
 	--font-size: 16px;
 	--line: 1.5em;
@@ -152,8 +158,9 @@ blockquote::after{
 
 pre, code {
 	font-family: var(--mono);
-	font-size: .9rem;
+	font-size: .88rem;
 	white-space: pre-wrap;
+	font-weight: 100;
 }
 
 code {
