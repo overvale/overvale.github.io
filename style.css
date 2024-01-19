@@ -15,7 +15,7 @@
 	--mono: BMTX02, ui-monospace, Menlo, Consolas, monospace;
 
 	--font-size: 16px;
-	--line: 1.5em;
+	--line: 1.45em;
 
 	font-family: var(--sans);
 	font-size: var(--font-size);
@@ -109,7 +109,6 @@ h1, h2, h3 {
 h1 {
 	font-size: 1.777em;
 	line-height: 1.2;
-	margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h2 {
@@ -120,7 +119,10 @@ h3 {
 	font-size: 1rem;
 }
 
-ol, ul { margin-left: var(--line); }
+ol, ul {
+	margin-left: var(--line) ;
+	padding-left: 0 ;
+}
 
 ol { list-style: decimal; }
 
@@ -231,9 +233,10 @@ cite {
 	font-style: italic;
 }
 
-
-/* Links Page
+/* Page Overrides
 --------------------------------------------- */
+
+#home hr { margin-left: 0; }
 
 div.link {
 	margin-top: calc(var(--line) * 2);
@@ -242,18 +245,4 @@ div.link {
 div.link time {
 	margin: 0 0 calc(var(--line) * -1) 0;
 	color: var(--stroke-intense);
-}
-
-@media only screen and (min-width: 625px) {
-	div.link {
-		position: relative;
-		margin-left: 100px;
-	}
-	div.link time {
-		margin: 0;
-		width: 90px;
-		text-align: right;
-		position: absolute;
-		left: -110px;
-	}
 }
