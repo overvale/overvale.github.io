@@ -84,13 +84,6 @@ main {
 	padding: var(--line) var(--line) 30% calc(var(--line) * 3);
 }
 
-@media (max-width: 39.35rem) {
-	main {
-		padding-left: var(--line);
-		margin-left: auto;
-	}
-}
-
 p, ul, ol, pre code, table, figure, blockquote, time {
     margin: var(--line) 0 0 0;
 }
@@ -260,4 +253,18 @@ div.link {
 div.link time {
 	margin: 0 0 calc(var(--line) * -1) 0;
 	color: var(--stroke-intense);
+}
+
+
+/* Small Windos
+--------------------------------------------- */
+
+@media (max-width: 39.35rem) {
+	:root {
+		font-size: 16px;
+	}
+	main {
+		padding-left: var(--line);
+		margin-left: auto;
+	}
 }
