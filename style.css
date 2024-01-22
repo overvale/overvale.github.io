@@ -14,7 +14,7 @@
 	--sans: InterVariable, system-ui;
 	--mono: BMTX02, ui-monospace, Menlo, Consolas, monospace;
 
-	--font-size: 16px;
+	--font-size: 15px;
 	--line: 1.45em;
 
 	font-family: var(--sans);
@@ -58,25 +58,37 @@
 /* Base
    ----------------------------------------------- */
 
-html{
+html {
   background:  var(--background);
   color: var(--foreground);
 }
 
+body { margin: 0; }
+
 nav {
-  margin-bottom: calc(var(--line) * 2);
+	margin-bottom: calc(var(--line) * 2);
+	padding: 0 0 calc(var(--line) * 1) 0;
+	border-bottom: 1px solid var(--stroke-strong);
 }
 
 nav a {
   font-weight: 600;
   padding: 0 .25em;
   margin-left: -.25em;
+  text-decoration: none;
 }
 
 main {
 	max-width: 35rem;
-	margin: 0 auto;
-	padding: var(--line) var(--line) 30% var(--line);
+	margin: 0 auto 0 0;
+	padding: var(--line) var(--line) 30% calc(var(--line) * 3);
+}
+
+@media (max-width: 39.35rem) {
+	main {
+		padding-left: var(--line);
+		margin-left: auto;
+	}
 }
 
 p, ul, ol, pre code, table, figure, blockquote, time {
@@ -116,6 +128,7 @@ h2 {
 }
 
 h3 {
+	font-weight: 700;
 	font-size: 1rem;
 	margin-top: var(--line);
 	font-style: italic;
