@@ -12,7 +12,7 @@
 
 :root {
 	--sans: InterVariable, system-ui;
-	--mono: BMTX02, ui-monospace, Menlo, Consolas, monospace;
+	--mono: ui-monospace, Menlo, Consolas, monospace;
 
 	--font-size: 15px;
 	--line: 1.45em;
@@ -146,6 +146,8 @@ hr {
 	width: 33.33%;
 }
 
+hr.wide { width: 100% }
+
 blockquote {
   padding-left: var(--line);
   position: relative; /* required for ::after element */
@@ -258,6 +260,9 @@ div.link time {
 
 /* Small Windos
 --------------------------------------------- */
+
+/* The max-width of the media query below is based on
+   the width of the <main> element plus its padding. */
 
 @media (max-width: 39.35rem) {
 	:root {
