@@ -1,138 +1,154 @@
-@import url('/reset.css');
+@import url("/reset.css");
 
-@import url('https://rsms.me/inter/inter.css');
-  /* weight: 100 900 */
-  /* opsz: 14 32 */
+@import url("https://rsms.me/inter/inter.css");
+/* weight: 100 900 */
+/* opsz: 14 32 */
 
 @font-face {
-	font-family: BMTX02;
-	font-style: normal;
-	src: url('/assets/BMTX02R.woff2') format('woff2');
+    font-family: BMTX02;
+    font-style: normal;
+    src: url("/assets/BMTX02R.woff2") format("woff2");
 }
 
 :root {
-	--sans: InterVariable, system-ui;
-	--mono: ui-monospace, Menlo, Consolas, monospace;
+    --sans: InterVariable, system-ui;
+    --mono: ui-monospace, Menlo, Consolas, monospace;
 
-	--font-size: 15px;
-	--line: 1.45em;
+    --font-size: 15px;
+    --line: 1.45em;
 
-	font-family: var(--sans);
-	font-size: var(--font-size);
-	line-height: var(--line);
-	font-weight: 400;
+    font-family: var(--sans);
+    font-size: var(--font-size);
+    line-height: var(--line);
+    font-weight: 400;
 
-	--background:  hsl(0, 0%, 100%);
-	--foreground:  hsl(0, 0%, 0%);
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(0, 0%, 0%);
 
-	--grey95: hsl(0, 0%, 95%);
-	--grey90: hsl(0, 0%, 90%);
-	--grey75: hsl(0, 0%, 75%);
-	--grey50: hsl(0, 0%, 50%);
+    --grey95: hsl(0, 0%, 95%);
+    --grey90: hsl(0, 0%, 90%);
+    --grey75: hsl(0, 0%, 75%);
+    --grey50: hsl(0, 0%, 50%);
 
-	--accent-color: hsl(203, 100%, 65%);
+    --accent-color: hsl(203, 100%, 65%);
 
-	--link-fg: var(--foreground);
-	--link-bg: var(--accent-color);
+    --link-fg: var(--foreground);
+    --link-bg: var(--accent-color);
 
-	--stroke-subtle: var(--grey90);
-	--stroke-strong: var(--grey75);
-	--stroke-intense: var(--grey50);
-	--bg-subtle: var(--grey95);
-	--bg-strong: var(--grey90);
+    --stroke-subtle: var(--grey90);
+    --stroke-strong: var(--grey75);
+    --stroke-intense: var(--grey50);
+    --bg-subtle: var(--grey95);
+    --bg-strong: var(--grey90);
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		font-weight: 375;
-		--background: hsl(203, 15%, 15%);
-		--foreground: hsl(0, 0%, 90%);
-		--stroke-subtle: var(--grey50);
-		--stroke-strong: var(--grey75);
-		--stroke-intense: var(--grey90);
-		--bg-subtle: hsl(203, 15%, 20%);
-		--bg-strong: hsl(203, 15%, 30%);
-	}
+    :root {
+        font-weight: 375;
+        --background: hsl(203, 15%, 15%);
+        --foreground: hsl(0, 0%, 90%);
+        --stroke-subtle: var(--grey50);
+        --stroke-strong: var(--grey75);
+        --stroke-intense: var(--grey90);
+        --bg-subtle: hsl(203, 15%, 20%);
+        --bg-strong: hsl(203, 15%, 30%);
+    }
 }
 
 /* Base
    ----------------------------------------------- */
 
 html {
-  background:  var(--background);
-  color: var(--foreground);
+    background: var(--background);
+    color: var(--foreground);
 }
 
-body { margin: 0; }
+body {
+    margin: 0;
+}
 
 nav {
-	margin-bottom: calc(var(--line) * 2);
-	padding: 0 0 calc(var(--line) * 1) 0;
-	border-bottom: 1px solid var(--stroke-strong);
+    margin-bottom: calc(var(--line) * 2);
+    padding: 0 0 calc(var(--line) * 1) 0;
+    border-bottom: 1px solid var(--stroke-strong);
 }
 
 nav a {
-  font-weight: 600;
-  padding: 0 .25em;
-  margin-left: -.25em;
-  text-decoration: none;
+    font-weight: 600;
+    padding: 0 0.25em;
+    margin-left: -0.25em;
+    text-decoration: none;
 }
 
 main {
-	max-width: 35rem;
-	margin: 0 auto 0 0;
-	padding: var(--line) var(--line) 30% calc(var(--line) * 3);
+    max-width: 35rem;
+    margin: 0 auto 0 0;
+    padding: var(--line) var(--line) 30% calc(var(--line) * 3);
 }
 
-p, ul, ol, pre code, table, figure, blockquote, time {
+p,
+ul,
+ol,
+pre code,
+table,
+figure,
+blockquote,
+time {
     margin: var(--line) 0 0 0;
 }
 
 .collapse-top {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 time {
-	display: block;
-	color: var(--stroke-intense);
+    display: block;
+    color: var(--stroke-intense);
 }
 
-b, strong {
-	font-weight: 600;
+b,
+strong {
+    font-weight: 600;
 }
 
-i, em {
-	font-style: italic;
-	font-weight: inherit;
+i,
+em {
+    font-style: italic;
+    font-weight: inherit;
 }
 
-h1, h2, h3 {
-	font-weight: 600;
-	margin: calc(var(--line) * 2) 0 0 0;
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h1 {
-	font-size: 1.75em;
-	line-height: 1.2;
+    font-size: 1.75em;
+    line-height: 1.2;
 }
 
 h2 {
-	font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 h3 {
-	font-weight: 700;
-	font-size: 1rem;
-	margin-top: var(--line);
-	font-style: italic;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: var(--line);
+    font-style: italic;
 }
 
-ol, ul {
-	margin-left: var(--line) ;
-	padding-left: 0 ;
+ol,
+ul {
+    margin-left: var(--line);
+    padding-left: 0;
 }
 
-ol { list-style: decimal; }
+ol {
+    list-style: decimal;
+}
 
 ul.no-bullet {
     list-style: none;
@@ -140,123 +156,138 @@ ul.no-bullet {
 }
 
 hr {
-	border: none;
-	border-top: 1px solid var(--stroke-strong);
-	margin: calc(var(--line) * 2) auto;
-	width: 33.33%;
+    border: none;
+    border-top: 1px solid var(--stroke-strong);
+    margin: calc(var(--line) * 2) auto;
+    width: 33.33%;
 }
 
-hr.wide { width: 100% }
+hr.wide {
+    width: 100%;
+}
 
 blockquote {
-  padding-left: var(--line);
-  position: relative; /* required for ::after element */
+    padding-left: var(--line);
+    position: relative; /* required for ::after element */
 }
 
 /* This creates a border on left side.
    All this nonsense is required simply because I want the
    blockquote borders to have rounded ends. You're welcome. */
-blockquote::after{
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top:  0;
-  border-radius: 1rem;
-  width: .25rem;
-  height: 100%;
-  background-color: var(--stroke-subtle);
+blockquote::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 1rem;
+    width: 0.25rem;
+    height: 100%;
+    background-color: var(--stroke-subtle);
 }
 
-pre, code {
-	font-family: var(--mono);
-	font-size: 0.866rem;
-	white-space: pre-wrap;
+pre,
+code {
+    font-family: var(--mono);
+    font-size: 0.866rem;
+    white-space: pre-wrap;
 }
 
 code {
-	padding: 0 .25rem;
-	border-radius: 6px;
-	background-color: var(--bg-subtle);
-	border: 1px solid var(--bg-strong);
+    padding: 0 0.25rem;
+    border-radius: 6px;
+    background-color: var(--bg-subtle);
+    border: 1px solid var(--bg-strong);
 }
 
 pre code {
-	display: block;
-	overflow: auto;
-	padding: 0.5rem;
-	white-space: pre;
-	line-height: 1.2rem;
+    display: block;
+    overflow: auto;
+    padding: 0.5rem;
+    white-space: pre;
+    line-height: 1.2rem;
 }
 
 figure {
-	border: 0.5pt solid var(--stroke-intense);
-	padding: .25rem;
+    border: 0.5pt solid var(--stroke-intense);
+    padding: 0.25rem;
 }
 
 figure figcaption {
-	font-size: .85rem;
-	text-align: center;
-	margin: .25rem 0;
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0.25rem 0;
 }
 
-img { max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
-table { width: 100%; }
+table {
+    width: 100%;
+}
 
-table, th, td { border: 1px solid var(--stroke-strong); }
+table,
+th,
+td {
+    border: 1px solid var(--stroke-strong);
+}
 
-th, td { padding: .25rem .5rem; }
+th,
+td {
+    padding: 0.25rem 0.5rem;
+}
 
 th {
-	background-color: var(--stroke-subtle);
-	border-bottom: 1px solid var(--foreground);
-	font-weight: 650;
+    background-color: var(--stroke-subtle);
+    border-bottom: 1px solid var(--foreground);
+    font-weight: 650;
 }
 
 a {
-	color:var(--link-fg);
-	text-decoration: underline;
-	text-decoration-color: var(--accent-color);
-	text-decoration-thickness: 1.25px;
+    color: var(--link-fg);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 1.25px;
 }
 
 a:hover {
-	text-decoration: none;
-	background: var(--link-bg);
-	color: var(--link-fg);
-	border-radius: 3px;
+    text-decoration: none;
+    background: var(--link-bg);
+    color: var(--link-fg);
+    border-radius: 3px;
 }
 
 sup {
-	font-family: var(--sans);
-	font-size: .65rem;
-	font-weight: 700;
-	background: var(--accent-color);
-	color: var(--background);
-	padding: 0 .25em;
-	margin: 0 .15em;
-	border-radius: 2.5px;
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    background: var(--accent-color);
+    color: var(--background);
+    padding: 0 0.25em;
+    margin: 0 0.15em;
+    border-radius: 2.5px;
 }
 
 cite {
-	font-style: italic;
+    font-style: italic;
 }
 
 /* Page Overrides
 --------------------------------------------- */
 
-#home hr { margin-left: 0; }
+#home hr {
+    margin-left: 0;
+}
 
 div.link {
-	margin-top: calc(var(--line) * 2);
+    margin-top: calc(var(--line) * 2);
 }
 
 div.link time {
-	margin: 0 0 calc(var(--line) * -1) 0;
-	color: var(--stroke-intense);
+    margin: 0 0 calc(var(--line) * -1) 0;
+    color: var(--stroke-intense);
 }
-
 
 /* Small Windos
 --------------------------------------------- */
@@ -265,11 +296,11 @@ div.link time {
    the width of the <main> element plus its padding. */
 
 @media (max-width: 39.35rem) {
-	:root {
-		font-size: 16px;
-	}
-	main {
-		padding-left: var(--line);
-		margin-left: auto;
-	}
+    :root {
+        font-size: 16px;
+    }
+    main {
+        padding-left: var(--line);
+        margin-left: auto;
+    }
 }
