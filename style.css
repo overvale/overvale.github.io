@@ -31,10 +31,10 @@
 	--grey50: hsl(0, 0%, 50%);
 
 	--accent-color: hsl(203, 100%, 65%);
-	
+
 	--link-fg: var(--foreground);
 	--link-bg: var(--accent-color);
-	
+
 	--stroke-subtle: var(--grey90);
 	--stroke-strong: var(--grey75);
 	--stroke-intense: var(--grey50);
@@ -170,7 +170,7 @@ blockquote::after{
 
 pre, code {
 	font-family: var(--mono);
-	font-size: .88rem;
+	font-size: 0.866rem;
 	white-space: pre-wrap;
 }
 
