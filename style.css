@@ -270,8 +270,10 @@ cite {
 /* Page Overrides
 --------------------------------------------- */
 
-#home hr {
-    margin-left: 0;
+main#home p.greeting {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-dark);
 }
 
 div.link {
@@ -283,7 +285,7 @@ div.link time {
     color: var(--stroke-intense);
 }
 
-/* Small Windos
+/* Small Windows
 --------------------------------------------- */
 
 /* The max-width of the media query below is based on
