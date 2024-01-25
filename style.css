@@ -22,28 +22,35 @@
     --grey95: hsl(0, 0%, 95%);
     --grey90: hsl(0, 0%, 90%);
     --grey75: hsl(0, 0%, 75%);
+    --grey60: hsl(0, 0%, 60%);
     --grey50: hsl(0, 0%, 50%);
+    --grey40: hsl(0, 0%, 40%);
+    --grey30: hsl(0, 0%, 30%);
+    --grey10: hsl(0, 0%, 10%);
 
     --accent-color: hsl(203, 100%, 65%);
+    --accent-dark:  hsl(219, 90%, 42%);
 
     --link-fg: var(--foreground);
     --link-bg: var(--accent-color);
 
     --stroke-subtle: var(--grey90);
     --stroke-strong: var(--grey75);
-    --stroke-intense: var(--grey50);
+    --stroke-intense: var(--grey60);
     --bg-subtle: var(--grey95);
     --bg-strong: var(--grey90);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        font-weight: 375;
-        --background: hsl(203, 15%, 15%);
+        -webkit-font-smoothing: antialiased;
+        --background: hsl(203, 15%, 14%);
         --foreground: hsl(0, 0%, 90%);
-        --stroke-subtle: var(--grey50);
-        --stroke-strong: var(--grey75);
-        --stroke-intense: var(--grey90);
+        --accent-color: hsl(203, 100%, 38%);
+        --accent-dark: hsl(219, 90%, 65%);
+        --stroke-subtle: var(--grey40);
+        --stroke-strong: var(--grey50);
+        --stroke-intense: var(--grey60);
         --bg-subtle: hsl(203, 15%, 20%);
         --bg-strong: hsl(203, 15%, 30%);
     }
@@ -59,6 +66,7 @@ html {
 
 body {
     margin: 0;
+    font-feature-settings: "ss01", "ss08", "cv10", "cv06", "cv08";
 }
 
 nav {
@@ -121,6 +129,7 @@ h3 {
 h1 {
     font-size: 1.75em;
     line-height: 1.2;
+    color: var(--accent-dark);
 }
 
 h2 {
@@ -209,6 +218,7 @@ figure {
 
 figure figcaption {
     font-size: 0.85rem;
+    font-weight: 450;
     text-align: center;
     margin: 0.25rem 0;
 }
