@@ -4,12 +4,6 @@
 /* weight: 100 900 */
 /* opsz: 14 32 */
 
-@font-face {
-    font-family: BMTX02;
-    font-style: normal;
-    src: url("/assets/BMTX02R.woff2") format("woff2");
-}
-
 :root {
     --sans: InterVariable, system-ui;
     --mono: ui-monospace, Menlo, Consolas, monospace;
