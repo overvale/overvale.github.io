@@ -9,7 +9,7 @@
     --mono: ui-monospace, Menlo, Consolas, monospace;
 
     --font-size: 15px;
-    --line: 1.45em;
+    --line: 1.5em;
 
     font-family: var(--sans);
     font-size: var(--font-size);
@@ -83,7 +83,7 @@ nav a {
 }
 
 main {
-    max-width: 35rem;
+    max-width: 35em;
     margin: 0 auto 0 0;
     padding: var(--line) var(--line) 30% calc(var(--line) * 3);
 }
@@ -133,12 +133,12 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
 h3 {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1em;
     margin-top: var(--line);
     font-style: italic;
 }
@@ -183,8 +183,8 @@ blockquote::after {
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 1rem;
-    width: 0.25rem;
+    border-radius: 1em;
+    width: 0.25em;
     height: 100%;
     background-color: var(--stroke-subtle);
 }
@@ -192,12 +192,12 @@ blockquote::after {
 pre,
 code {
     font-family: var(--mono);
-    font-size: 0.866rem;
+    font-size: 14px;
     white-space: pre-wrap;
 }
 
 code {
-    padding: 0 0.25rem;
+    padding: 0 0.25em;
     border-radius: 6px;
     background-color: var(--bg-subtle);
     border: 1px solid var(--bg-strong);
@@ -206,21 +206,22 @@ code {
 pre code {
     display: block;
     overflow: auto;
-    padding: 0.5rem;
+    padding: 0.5em;
     white-space: pre;
-    line-height: 1.2rem;
+    line-height: 1.3em;
 }
 
 figure {
     border: 0.5pt solid var(--stroke-intense);
-    padding: 0.25rem;
+    padding: 0.25em;
 }
 
 figure figcaption {
-    font-size: 0.85rem;
+    font-size: 0.85em;
     font-weight: 450;
     text-align: center;
-    margin: 0.25rem 0;
+    margin: 0.25em 0;
+}
 }
 
 img {
@@ -239,7 +240,7 @@ td {
 
 th,
 td {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25em 0.5em;
 }
 
 th {
@@ -264,7 +265,7 @@ a:hover {
 
 sup {
     font-family: var(--sans);
-    font-size: 0.65rem;
+    font-size: 0.65em;
     font-weight: 700;
     background: var(--accent-color);
     color: var(--background);
@@ -281,7 +282,7 @@ cite {
 --------------------------------------------- */
 
 main#home p.greeting {
-    font-size: 1.1rem;
+    font-size: 1.1em;
     font-weight: 700;
     color: var(--accent-dark);
 }
@@ -301,7 +302,7 @@ div.link time {
 /* The max-width of the media query below is based on
    the width of the <main> element plus its padding. */
 
-@media (max-width: 39.35rem) {
+@media (max-width: 39.35em) {
     :root {
         font-size: 16px;
     }
