@@ -158,6 +158,11 @@ ul.no-bullet {
     margin-left: 0;
 }
 
+li { margin-bottom: calc(var(--line) * .5); }
+
+ul.tight li,
+ol.tight li { margin-bottom: 0; }
+
 hr {
     border: none;
     border-top: 1px solid var(--stroke-strong);
