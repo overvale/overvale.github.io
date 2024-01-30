@@ -66,7 +66,7 @@ html {
 
 body {
     margin: 0;
-    font-feature-settings: "ss01", "ss08", "cv10", "cv06", "cv08";
+    font-feature-settings: "ss01";
 }
 
 nav {
@@ -197,7 +197,7 @@ blockquote::after {
 pre,
 code {
     font-family: var(--mono);
-    font-size: 14px;
+    font-size: calc( var(--font-size) - 2px );
     white-space: pre-wrap;
 }
 
