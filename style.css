@@ -233,27 +233,6 @@ img {
     max-width: 100%;
 }
 
-table {
-    width: 100%;
-}
-
-table,
-th,
-td {
-    border: 1px solid var(--stroke-strong);
-}
-
-th,
-td {
-    padding: 0.25em 0.5em;
-}
-
-th {
-    background-color: var(--stroke-subtle);
-    border-bottom: 1px solid var(--foreground);
-    font-weight: 650;
-}
-
 a {
     color: var(--link-fg);
     text-decoration: underline;
