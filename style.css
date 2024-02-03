@@ -1,78 +1,55 @@
-@import url("/reset.css");
+/* Stylesheet for overvale.com */
 
+@import url("/reset.css");
 @import url("https://rsms.me/inter/inter.css");
-/* weight: 100 900 */
-/* opsz: 14 32 */
 
 :root {
-    --sans: InterVariable, system-ui;
+    --grey-100: hsl(0, 0%, 100%);
+    --grey-95: hsl(0, 0%, 95%);
+    --grey-85: hsl(0, 0%, 85%);
+    --grey-70: hsl(0, 0%, 70%);
+    --grey-60: hsl(0, 0%, 60%);
+    --grey-5: hsl(0, 0%, 5%);
+
+    --yellow-90: hsl(45, 95%, 90%);
+
+    --blue-65: hsl(215, 80%, 65%);
+    --blue-40:  hsl(215, 80%, 40%);
+
+    --sans: InterVariable, system-ui, Helvetica, sans-serif;
     --mono: ui-monospace, Menlo, Consolas, monospace;
 
-    --font-size: 15px;
+    --size: 15px;
     --line: 1.5em;
+    --weight: 400;
 
-    font-family: var(--sans);
-    font-size: var(--font-size);
-    line-height: var(--line);
-    font-weight: 400;
+    --background: var(--grey-100);
+    --background-fill: var(--grey-95);
+    --line-color-light: var(--grey-85);
+    --line-color:  var(--grey-70);
+    --grey-text: var(--grey-60);
+    --foreground: var(--grey-5);
 
-    --background: hsl(0, 0%, 100%);
-    --foreground: hsl(0, 0%, 0%);
-
-    --grey95: hsl(0, 0%, 95%);
-    --grey90: hsl(0, 0%, 90%);
-    --grey75: hsl(0, 0%, 75%);
-    --grey60: hsl(0, 0%, 60%);
-    --grey50: hsl(0, 0%, 50%);
-    --grey40: hsl(0, 0%, 40%);
-    --grey30: hsl(0, 0%, 30%);
-    --grey10: hsl(0, 0%, 10%);
-
-    --accent-color: hsl(203, 100%, 65%);
-    --accent-dark:  hsl(219, 90%, 42%);
-
-    --link-fg: var(--foreground);
-    --link-bg: var(--accent-color);
-
-    --stroke-subtle: var(--grey90);
-    --stroke-strong: var(--grey75);
-    --stroke-intense: var(--grey60);
-    --bg-subtle: var(--grey95);
-    --bg-strong: var(--grey90);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        -webkit-font-smoothing: antialiased;
-        --background: hsl(203, 15%, 14%);
-        --foreground: hsl(0, 0%, 90%);
-        --accent-color: hsl(203, 100%, 38%);
-        --accent-dark: hsl(219, 90%, 65%);
-        --stroke-subtle: var(--grey40);
-        --stroke-strong: var(--grey50);
-        --stroke-intense: var(--grey60);
-        --bg-subtle: hsl(203, 15%, 20%);
-        --bg-strong: hsl(203, 15%, 30%);
-    }
+    --link-color: var(--blue-65);
 }
 
 /* Base
    ----------------------------------------------- */
 
 html {
+    font-family: var(--sans);
+    font-feature-settings: "ss01";
+    font-size: var(--size);
+    line-height: var(--line);
+    font-weight: var(--weight);
     background: var(--background);
     color: var(--foreground);
-}
-
-body {
-    margin: 0;
-    font-feature-settings: "ss01";
 }
 
 nav {
     margin-bottom: calc(var(--line) * 2);
     padding: 0 0 calc(var(--line) * 1) 0;
-    border-bottom: 1px solid var(--stroke-strong);
+    border-bottom: 1px solid var(--line-color);
 }
 
 nav a {
@@ -103,11 +80,6 @@ time {
     margin-top: 0;
 }
 
-time {
-    display: block;
-    color: var(--stroke-intense);
-}
-
 b,
 strong {
     font-weight: 600;
@@ -129,7 +101,6 @@ h3 {
 h1 {
     font-size: 1.75em;
     line-height: 1.2;
-    color: var(--accent-dark);
 }
 
 h2 {
@@ -137,7 +108,6 @@ h2 {
 }
 
 h3 {
-    font-weight: 700;
     font-size: 1em;
     margin-top: var(--line);
     font-style: italic;
@@ -163,9 +133,14 @@ li { margin-bottom: calc(var(--line) * .5); }
 ul.tight li,
 ol.tight li { margin-bottom: 0; }
 
+time {
+    display: block;
+    color: var(--grey-text);
+}
+
 hr {
     border: none;
-    border-top: 1px solid var(--stroke-strong);
+    border-top: 1px solid var(--line-color);
     margin: calc(var(--line) * 2) auto;
     width: 33.33%;
 }
@@ -191,21 +166,21 @@ blockquote::after {
     border-radius: 1em;
     width: 0.25em;
     height: 100%;
-    background-color: var(--stroke-subtle);
+    background-color: var(--line-color-light);
 }
 
 pre,
 code {
     font-family: var(--mono);
-    font-size: calc( var(--font-size) - 2px );
+    font-size: calc( var(--size) - 2px );
     white-space: pre-wrap;
 }
 
 code {
     padding: 0 0.25em;
     border-radius: 6px;
-    background-color: var(--bg-subtle);
-    border: 1px solid var(--bg-strong);
+    background-color: var(--background-fill);
+    border: 1px solid var(--line-color-light);
 }
 
 pre code {
@@ -217,7 +192,7 @@ pre code {
 }
 
 figure {
-    border: 0.5pt solid var(--stroke-intense);
+    border: 1px solid var(--line-color);
     padding: 0.25em;
 }
 
@@ -234,16 +209,16 @@ img {
 }
 
 a {
-    color: var(--link-fg);
+    color: var(--foreground);
     text-decoration: underline;
-    text-decoration-color: var(--accent-color);
+    text-decoration-color: var(--link-color);
     text-decoration-thickness: 1.25px;
 }
 
 a:hover {
-    text-decoration: none;
-    background: var(--link-bg);
-    color: var(--link-fg);
+    color: var(--foreground);
+    /* text-decoration: none; */
+    background: var(--yellow-90);
     border-radius: 3px;
 }
 
@@ -268,7 +243,7 @@ cite {
 main#home p.greeting {
     font-size: 1.1em;
     font-weight: 700;
-    color: var(--accent-dark);
+    color: var(--blue-40);
 }
 
 div.link {
@@ -277,7 +252,7 @@ div.link {
 
 div.link time {
     margin: 0 0 calc(var(--line) * -1) 0;
-    color: var(--stroke-intense);
+    color: var(--grey-text);
 }
 
 /* Small Windows
