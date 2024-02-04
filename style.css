@@ -192,6 +192,7 @@ pre code {
 }
 
 figure {
+    width: 100%;
     border: 1px solid var(--line-color);
     padding: 0.25em;
 }
