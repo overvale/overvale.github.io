@@ -3,6 +3,13 @@
 @import url("/reset.css");
 @import url("https://rsms.me/inter/inter.css");
 
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/IBMPlexMono-Text.woff2') format('woff2');
+}
+
 :root {
     --grey-100: hsl(0, 0%, 100%);
     --grey-95: hsl(0, 0%, 95%);
@@ -13,11 +20,12 @@
 
     --yellow-90: hsl(45, 95%, 90%);
 
-    --blue-65: hsl(215, 80%, 65%);
-    --blue-40:  hsl(215, 80%, 40%);
+    --blue-65: hsl(210, 80%, 65%);
+    --blue-40: hsl(225, 80%, 40%);
+    --blue-30: hsl(240, 75%, 30%);
 
     --sans: InterVariable, system-ui, Helvetica, sans-serif;
-    --mono: ui-monospace, Menlo, Consolas, monospace;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
     --size: 15px;
     --line: 1.5em;
@@ -172,21 +180,14 @@ blockquote::after {
 pre,
 code {
     font-family: var(--mono);
-    font-size: calc( var(--size) - 2px );
+    font-size: calc( var(--size) - 1px );
     white-space: pre-wrap;
-}
-
-code {
-    padding: 0 0.25em;
-    border-radius: 6px;
-    background-color: var(--background-fill);
-    border: 1px solid var(--line-color-light);
+    color: var(--blue-30);
 }
 
 pre code {
     display: block;
     overflow: auto;
-    padding: 0.5em;
     white-space: pre;
     line-height: 1.3em;
 }
