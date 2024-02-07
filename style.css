@@ -7,10 +7,10 @@
 @import url("/fonts.css");
 
 :root {
-    --serif: I, Ravi, Georgia, serif;
+    --serif: Ravi, Georgia, serif;
     --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 17px;
+    --size: 16.5px;
     --line: 1.4em;
     --main-width: 35em;
 
