@@ -1,85 +1,45 @@
 /* Stylesheet for overvale.com */
 
+/* Setup
+----------------------------------------------------------- */
+
 @import url("/reset.css");
-@import url("https://rsms.me/inter/inter.css");
-
-@font-face {
-  font-family: "New Serif";
-  font-style: normal;
-  font-weight: normal;
-  src: url('/fonts/NewNew-Roman.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "New Serif";
-  font-style: italic;
-  font-weight: normal;
-  src: url('/fonts/NewNew-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "New Serif";
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/NewNew-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "New Serif";
-  font-style: italic;
-  font-weight: bold;
-  src: url('/fonts/NewNew-BoldItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: normal;
-  src: url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
-}
+@import url("/fonts.css");
 
 :root {
-    --grey-100: hsl(0, 0%, 100%);
-    --grey-95: hsl(0, 0%, 95%);
-    --grey-85: hsl(0, 0%, 85%);
-    --grey-70: hsl(0, 0%, 70%);
-    --grey-60: hsl(0, 0%, 60%);
-    --grey-5: hsl(0, 0%, 5%);
-
-    --yellow-90: hsl(45, 95%, 90%);
-
-    --blue-65: hsl(210, 80%, 65%);
-    --blue-40: hsl(225, 80%, 40%);
-    --blue-30: hsl(240, 75%, 30%);
-
-    --serif: "New Serif", serif;
-    --sans: InterVariable, system-ui, Helvetica, sans-serif;
+    --serif: I, Ravi, Georgia, serif;
     --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 18px;
-    --line: 1.3em;
-    --weight: normal;
+    --size: 17px;
+    --line: 1.4em;
+    --main-width: 35em;
 
-    --background: var(--grey-100);
-    --background-fill: var(--grey-95);
-    --line-color-light: var(--grey-85);
-    --line-color:  var(--grey-70);
-    --grey-text: var(--grey-60);
-    --foreground: var(--grey-5);
-
-    --link-color: var(--blue-65);
+    --background: hsl(0, 0%, 100%);
+    --background-fill: hsl(0, 0%, 95%);
+    --line-color:  hsl(0, 0%, 70%);
+    --grey-text: hsl(0, 0%, 60%);
+    --foreground: hsl(0, 0%, 5%);
+    --link-decoration: hsl(210, 100%, 75%);
 }
 
-/* Base
-   ----------------------------------------------- */
+/* Layout
+----------------------------------------------------------- */
 
 html {
     font-family: var(--serif);
     font-size: var(--size);
     line-height: var(--line);
-    font-weight: var(--weight);
     background: var(--background);
     color: var(--foreground);
+    /* font-feature-settings: "onum" 1; */
+    text-rendering: optimizeLegibility;
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+main {
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: var(--line) var(--line) 30% var(--line);
 }
 
 nav {
@@ -89,20 +49,17 @@ nav {
 }
 
 nav a {
-    font-family: var(--sans);
-    font-size: calc( var(--size) - 3px );
-    font-weight: 600;
-    line-height: var(--line);
-    padding: 0 0.25em;
-    margin-left: -0.25em;
     text-decoration: none;
 }
 
-main {
-    max-width: 30em;
-    margin: 0 auto;
-    padding: var(--line) var(--line) 30% var(--line);
+footer {
+    margin-top: calc(var(--line) * 4);
+    padding: calc(var(--line) * 1) 0 0 0;
+    border-top: 1px solid var(--line-color);
 }
+
+/* TYPOGRAPHY
+----------------------------------------------------------- */
 
 p,
 ul,
@@ -121,9 +78,7 @@ time {
 
 b,
 strong {
-    font-family: var(--sans);
-    font-size: calc(var(--size) - 3px);
-    font-weight: 600;
+    font-weight: bold;
 }
 
 i,
@@ -135,25 +90,22 @@ em {
 h1,
 h2,
 h3 {
-    font-family: var(--sans);
-    font-weight: 600;
+    font-weight: normal;
+    margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h1 {
     font-size: 1.5em;
     line-height: 1.2em;
-    margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h2 {
-    font-size: 1.1em;
-    margin: calc(var(--line) * 4) 0 0 0;
+    font-size: 1.25em;
 }
 
 h3 {
-    font-size: .85em;
+    font-size: 1em;
     font-style: italic;
-    margin: calc(var(--line) * 2) 0 0 0;
 }
 
 ol,
@@ -163,7 +115,7 @@ ul {
 }
 
 ol {
-    list-style: decimal;
+    list-style-type: decimal;
 }
 
 ul.no-bullet {
@@ -171,50 +123,43 @@ ul.no-bullet {
     margin-left: 0;
 }
 
-li { margin-bottom: calc(var(--line) * .5); }
+li { margin-bottom: calc(var(--line) * .25); }
 
 ul.tight li,
 ol.tight li { margin-bottom: 0; }
 
 time {
     display: block;
-    font-family: var(--sans);
-    font-feature-settings: "ss01";
-    font-size: calc( var(--size) - 4px );
-    line-height: var(--line);
     color: var(--grey-text);
+    line-height: var(--line);
 }
 
 hr {
     border: none;
     border-top: 1px solid var(--line-color);
     margin: calc(var(--line) * 2) auto;
-    width: 33.33%;
-}
-
-hr.wide {
-    width: 100%;
 }
 
 blockquote {
-    padding-left: calc(var(--line) * 2);
+    /* font-family: IM; */
+    font-style: italic;
+    padding-left: var(--line);
     font-size: calc(var(--size) - 1px);
     line-height: calc(var(--line) - 1px);
 }
 
-pre,
 code {
     font-family: var(--mono);
-    font-size: calc( var(--size) - 4px );
+    font-size: calc( var(--size) - 2px );
     white-space: pre-wrap;
-    color: var(--blue-30);
 }
 
 pre code {
     display: block;
     overflow: auto;
     white-space: pre;
-    line-height: 1.3em;
+    font-size: calc( var(--size) - 3px );
+    line-height: 1.4em;
 }
 
 figure {
@@ -224,9 +169,8 @@ figure {
 }
 
 figure figcaption {
-    font-family: var(--sans);
-    font-size: 0.65em;
-    font-weight: 450;
+    font-size: calc(var(--size) - 3px);
+    font-style: italic;
     text-align: center;
     margin: 0.25em 0;
 }
@@ -236,42 +180,33 @@ img {
 }
 
 a {
-    color: var(--foreground);
+    color: inherit;
     text-decoration: underline;
-    text-decoration-color: var(--link-color);
-    text-decoration-thickness: 1.25px;
-}
-
-a:hover {
-    color: var(--foreground);
-    /* text-decoration: none; */
-    background: var(--yellow-90);
-    border-radius: 3px;
+    text-decoration-color: var(--link-decoration);
+    text-decoration-thickness: 1px;
 }
 
 sup {
-    font-family: var(--sans);
-    font-size: 0.65em;
-    font-weight: bold;
-    background: var(--blue-65);
-    color: var(--background);
-    padding: 0 0.25em;
-    margin: 0 0.15em;
+    line-height: var(--line);
+    vertical-align: baseline;
+    font-feature-settings: "onum" off;
+    border: 1px solid var(--line-color);
     border-radius: 2.5px;
+    padding: 0 .25em;
+    margin: 0 .2em;
 }
 
 cite {
     font-style: italic;
 }
 
-/* Page Overrides
---------------------------------------------- */
-
-main#home p.greeting {
-    font-size: 1.2em;
-    font-style: italic;
-    color: var(--blue-40);
+abbr {
+    text-transform: lowercase;
+    font-feature-settings: "smcp" on;
 }
+
+/* Page Overrides
+----------------------------------------------------------- */
 
 div.link {
     margin-top: calc(var(--line) * 2);
@@ -283,10 +218,7 @@ div.link time {
 }
 
 /* Small Windows
---------------------------------------------- */
-
-/* The max-width of the media query below is based on
-   the width of the <main> element plus its padding. */
+----------------------------------------------------------- */
 
 @media (max-width: 39.35em) {
     :root {
