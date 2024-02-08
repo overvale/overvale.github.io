@@ -12,7 +12,7 @@
     --mono:  "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
     --size: 16px;
-    --weight: 425;
+    --weight: 400;
     --line: 1.45em;
     --main-width: 35em;
 
@@ -149,6 +149,7 @@ blockquote {
 code {
     font-family: var(--mono);
     font-size: calc( var(--size) - 1px );
+    font-weight: var(--weight);
     white-space: pre-wrap;
 }
 
@@ -229,6 +230,7 @@ div.link time {
 
 @media (max-width: 39.35em) {
     :root {
-        --size: 18px;
+        --size: 17px;
+        --weight: 450;
     }
 }

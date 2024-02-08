@@ -5,14 +5,28 @@
 @font-face {
   font-family: "IBM Plex Serif";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  src: url('/fonts/IBMPlexSerif-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/IBMPlexSerif-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-style: normal;
+  font-weight: 450;
   src: url('/fonts/IBMPlexSerif-Text.woff2') format('woff2');
 }
 
 @font-face {
   font-family: "IBM Plex Serif";
   font-style: italic;
-  font-weight: normal;
+  font-weight: 450;
   src: url('/fonts/IBMPlexSerif-TextItalic.woff2') format('woff2');
 }
 
@@ -50,6 +64,13 @@
 @font-face {
   font-family: "IBM Plex Mono";
   font-style: normal;
-  font-weight: normal;
-  src: url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
+  font-weight: 400;
+  src: url('/fonts/IBMPlexMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: 450;
+    src: url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
 }
