@@ -175,6 +175,11 @@ figure figcaption {
     margin: 0.25em 0;
 }
 
+figure.small {
+    width: 60%;
+    margin: var(--line) auto;
+}
+
 img {
     max-width: 100%;
 }
@@ -198,6 +203,10 @@ sup {
 
 cite {
     font-style: italic;
+}
+
+cite.source {
+    color: var(--grey-text);
 }
 
 abbr {
