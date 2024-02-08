@@ -1,42 +1,55 @@
 /* Stylesheet for overvale.com */
 
-/* MONOSPACE
------------------------------------------------------------ */
+/* --------- Serif ---------- */
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/IBMPlexSerif-Text.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-style: italic;
+  font-weight: normal;
+  src: url('/fonts/IBMPlexSerif-TextItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/IBMPlexSerif-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "IBM Plex Serif";
+  font-style: italic;
+  font-weight: bold;
+  src: url('/fonts/IBMPlexSerif-SemiBoldItalic.woff2') format('woff2');
+}
+
+/* --------- Sans ---------- */
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 100 700;
+  src: url('/fonts/IBMPlexSans-Var-Roman.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 100 700;
+  src: url('/fonts/IBMPlexSans-Var-Italic.woff2') format('woff2');
+}
+/* --------- Monospace ---------- */
 
 @font-face {
   font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: normal;
   src: url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
-}
-
-/* Serif
------------------------------------------------------------ */
-
-@font-face {
-  font-family: "Ravi";
-  font-style: normal;
-  font-weight: normal;
-  src: url('/fonts/Ravi-Text-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Ravi";
-  font-style: italic;
-  font-weight: normal;
-  src: url('/fonts/Ravi-Text-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Ravi";
-  font-style: normal;
-  font-weight: bold;
-  src: url('/fonts/Ravi-Text-SemiBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Ravi";
-  font-style: italic;
-  font-weight: bold;
-  src: url('/fonts/Ravi-Text-SemiBoldItalic.woff2') format('woff2');
 }

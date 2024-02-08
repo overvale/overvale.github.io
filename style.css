@@ -7,18 +7,20 @@
 @import url("/fonts.css");
 
 :root {
-    --serif: Ravi, Georgia, serif;
-    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --serif: "IBM Plex Serif", Georgia, serif;
+    --sans:  "IBM Plex Sans", sans;
+    --mono:  "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 16.5px;
-    --line: 1.4em;
+    --size: 16px;
+    --weight: 425;
+    --line: 1.45em;
     --main-width: 35em;
 
     --background: hsl(0, 0%, 100%);
     --background-fill: hsl(0, 0%, 95%);
     --line-color:  hsl(0, 0%, 70%);
     --grey-text: hsl(0, 0%, 60%);
-    --foreground: hsl(0, 0%, 5%);
+    --foreground: hsl(0, 0%, 0%);
     --link-decoration: hsl(210, 100%, 75%);
 }
 
@@ -28,12 +30,11 @@
 html {
     font-family: var(--serif);
     font-size: var(--size);
+    font-weight: var(--weight);
     line-height: var(--line);
     background: var(--background);
     color: var(--foreground);
-    /* font-feature-settings: "onum" 1; */
     text-rendering: optimizeLegibility;
-    /* -webkit-font-smoothing: antialiased; */
 }
 
 main {
@@ -90,7 +91,7 @@ em {
 h1,
 h2,
 h3 {
-    font-weight: normal;
+    font-weight: inherit;
     margin: calc(var(--line) * 2) 0 0 0;
 }
 
@@ -123,7 +124,7 @@ ul.no-bullet {
     margin-left: 0;
 }
 
-li { margin-bottom: calc(var(--line) * .25); }
+li { margin-bottom: calc(var(--line) * .5); }
 
 ul.tight li,
 ol.tight li { margin-bottom: 0; }
@@ -141,16 +142,13 @@ hr {
 }
 
 blockquote {
-    /* font-family: IM; */
-    font-style: italic;
+    font-family: var(--sans);
     padding-left: var(--line);
-    font-size: calc(var(--size) - 1px);
-    line-height: calc(var(--line) - 1px);
 }
 
 code {
     font-family: var(--mono);
-    font-size: calc( var(--size) - 2px );
+    font-size: calc( var(--size) - 1px );
     white-space: pre-wrap;
 }
 
@@ -158,7 +156,7 @@ pre code {
     display: block;
     overflow: auto;
     white-space: pre;
-    font-size: calc( var(--size) - 3px );
+    font-size: calc( var(--size) - 2px );
     line-height: 1.4em;
 }
 
@@ -188,7 +186,7 @@ a {
     color: inherit;
     text-decoration: underline;
     text-decoration-color: var(--link-decoration);
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
 }
 
 sup {
@@ -231,6 +229,6 @@ div.link time {
 
 @media (max-width: 39.35em) {
     :root {
-        font-size: calc(var(--size) + 1px);
+        --size: 18px;
     }
 }
