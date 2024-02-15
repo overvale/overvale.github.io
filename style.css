@@ -4,16 +4,22 @@
 ----------------------------------------------------------- */
 
 @import url("/reset.css");
-@import url("/fonts.css");
+@import url("https://rsms.me/inter/inter.css");
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/IBMPlexMono-Text.woff2') format('woff2');
+}
 
 :root {
-    --serif: "IBM Plex Serif", Georgia, serif;
-    --sans:  "IBM Plex Sans", sans;
+    --sans:  InterVariable, system-ui, sans-serif;
     --mono:  "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
     --size: 16px;
     --weight: 400;
-    --line: 1.45em;
+    --line: 1.5em;
     --main-width: 35em;
 
     --background: hsl(0, 0%, 100%);
@@ -21,14 +27,14 @@
     --line-color:  hsl(0, 0%, 70%);
     --grey-text: hsl(0, 0%, 60%);
     --foreground: hsl(0, 0%, 0%);
-    --link-decoration: hsl(210, 100%, 75%);
+    --link-decoration: hsl(210, 80%, 75%);
 }
 
 /* Layout
 ----------------------------------------------------------- */
 
 html {
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-size: var(--size);
     font-weight: var(--weight);
     line-height: var(--line);
@@ -91,20 +97,22 @@ em {
 h1,
 h2,
 h3 {
-    font-weight: inherit;
     margin: calc(var(--line) * 2) 0 0 0;
 }
 
 h1 {
+    font-weight: 500;
     font-size: 1.5em;
     line-height: 1.2em;
 }
 
 h2 {
+    font-weight: 550;
     font-size: 1.25em;
 }
 
 h3 {
+    font-weight: 600;
     font-size: 1em;
     font-style: italic;
 }
@@ -142,14 +150,13 @@ hr {
 }
 
 blockquote {
-    font-family: var(--sans);
+    border-left: 1px solid var(--line-color);
     padding-left: var(--line);
 }
 
 code {
     font-family: var(--mono);
     font-size: calc( var(--size) - 1px );
-    font-weight: var(--weight);
     white-space: pre-wrap;
 }
 
@@ -187,13 +194,12 @@ a {
     color: inherit;
     text-decoration: underline;
     text-decoration-color: var(--link-decoration);
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1.5px;
 }
 
 sup {
     line-height: var(--line);
     vertical-align: baseline;
-    font-feature-settings: "onum" off;
     border: 1px solid var(--line-color);
     border-radius: 2.5px;
     padding: 0 .25em;
@@ -231,6 +237,5 @@ div.link time {
 @media (max-width: 39.35em) {
     :root {
         --size: 17px;
-        --weight: 450;
     }
 }
