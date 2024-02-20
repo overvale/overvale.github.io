@@ -13,9 +13,8 @@
     src: url('/fonts/TX02-Regular.woff2') format('woff2');
 }
 
-
 :root {
-    --sans:  InterVariable, system-ui, sans-serif;
+    --font:  InterVariable, system-ui, sans-serif;
     --mono:  "TX02", ui-monospace, Menlo, Consolas, monospace;
 
     --size: 15px;
@@ -36,7 +35,7 @@
 ----------------------------------------------------------- */
 
 html {
-    font-family: var(--sans);
+    font-family: var(--font);
     font-size: var(--size);
     font-weight: var(--weight);
     line-height: var(--line);
