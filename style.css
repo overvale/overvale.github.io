@@ -16,19 +16,20 @@
 
 :root {
     --sans:  InterVariable, system-ui, sans-serif;
-    --mono:  "TX02", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --mono:  "TX02", ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 16px;
+    --size: 15px;
     --weight: 400;
-    --line: 1.5em;
+    --line: 1.35em;
     --main-width: 35em;
 
-    --background: hsl(0, 0%, 100%);
-    --background-fill: hsl(0, 0%, 95%);
+    --background: hsl(0, 0%, 97%);
+    --background-fill: hsl(0, 0%, 90%);
     --line-color:  hsl(0, 0%, 70%);
     --grey-text: hsl(0, 0%, 60%);
-    --foreground: hsl(0, 0%, 0%);
-    --link-decoration: hsl(210, 80%, 75%);
+    --foreground: hsl(0, 0%, 13%);
+    --link-decoration: hsl(220, 90%, 75%);
+    --white: hsl(0, 0%, 100%);
 }
 
 /* Layout
@@ -58,6 +59,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    font-weight: 600;
 }
 
 footer {
@@ -115,7 +117,7 @@ h2 {
 h3 {
     font-weight: 600;
     font-size: 1em;
-    font-style: italic;
+    margin-top: calc(var(--line) * 1);
 }
 
 ol,
@@ -133,10 +135,10 @@ ul.no-bullet {
     margin-left: 0;
 }
 
-li { margin-bottom: calc(var(--line) * .5); }
+li { margin-bottom: calc(var(--line) * .25); }
 
-ul.tight li,
-ol.tight li { margin-bottom: 0; }
+/* ul.tight li,
+ol.tight li { margin-bottom: 0; } */
 
 time {
     display: block;
@@ -151,7 +153,7 @@ hr {
 }
 
 blockquote {
-    border-left: 1px solid var(--line-color);
+    border-left: 2px solid var(--line-color);
     padding-left: var(--line);
 }
 
@@ -173,6 +175,7 @@ figure {
     width: 100%;
     border: 1px solid var(--line-color);
     padding: 0.25em;
+    background-color: var(--white);
 }
 
 figure figcaption {
