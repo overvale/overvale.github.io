@@ -4,7 +4,6 @@
 ----------------------------------------------------------- */
 
 @import url("/reset.css");
-@import url("https://rsms.me/inter/inter.css");
 
 @font-face {
     font-family: "TX02";
@@ -14,18 +13,22 @@
 }
 
 :root {
-    --font:  InterVariable, system-ui, sans-serif;
-    --mono:  "TX02", ui-monospace, Menlo, Consolas, monospace;
+    --font:  system-ui, "Helvetica Neue", helvetica, sans-serif;
+    --mono:  ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 15px;
-    --weight: 400;
+    --size: 17px;
     --line: 1.4em;
     --main-width: 35em;
 
-    --background: hsl(0, 0%, 97%);
+    --w-normal: 400;
+    --w-med: calc( var(--w-normal) + 80) ;
+    --w-bold: calc( var(--w-normal) + 160);
+
+    --background: hsl(0, 0%, 100%);
     --background-fill: hsl(0, 0%, 90%);
     --line-color:  hsl(0, 0%, 70%);
     --grey-text: hsl(0, 0%, 60%);
+    --red-text: hsl(355, 83%, 49%);
     --foreground: hsl(0, 0%, 13%);
     --link-decoration: hsl(220, 90%, 75%);
     --white: hsl(0, 0%, 100%);
@@ -37,7 +40,7 @@
 html {
     font-family: var(--font);
     font-size: var(--size);
-    font-weight: var(--weight);
+    font-weight: var(--w-normal);
     line-height: var(--line);
     background: var(--background);
     color: var(--foreground);
@@ -58,7 +61,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: var(--w-bold);
 }
 
 footer {
@@ -87,7 +90,7 @@ time {
 
 b,
 strong {
-    font-weight: 600;
+    font-weight: var(--w-bold);
 }
 
 i,
@@ -103,18 +106,18 @@ h3 {
 }
 
 h1 {
-    font-weight: 500;
+    font-weight: var(--w-med);
     font-size: 1.5em;
     line-height: 1.2em;
 }
 
 h2 {
-    font-weight: 550;
+    font-weight: var(--w-med);
     font-size: 1.25em;
 }
 
 h3 {
-    font-weight: 600;
+    font-weight: var(--w-bold);
     font-size: 1em;
     margin-top: calc(var(--line) * 1);
 }
@@ -136,9 +139,6 @@ ul.no-bullet {
 
 li { margin-bottom: calc(var(--line) * .25); }
 
-/* ul.tight li,
-ol.tight li { margin-bottom: 0; } */
-
 time {
     display: block;
     color: var(--grey-text);
@@ -158,7 +158,7 @@ blockquote {
 
 code {
     font-family: var(--mono);
-    font-size: calc( var(--size) - 1px );
+    font-size: calc( var(--size) - 2px );
     white-space: pre-wrap;
 }
 
@@ -166,7 +166,7 @@ pre code {
     display: block;
     overflow: auto;
     white-space: pre;
-    font-size: calc( var(--size) - 2px );
+    font-size: calc( var(--size) - 3px );
     line-height: 1.2em;
 }
 
@@ -222,6 +222,10 @@ abbr {
     font-feature-settings: "smcp" on;
 }
 
+.red {
+    color: var(--red-text);
+}
+
 /* Page Overrides
 ----------------------------------------------------------- */
 
@@ -232,13 +236,4 @@ div.link {
 div.link time {
     margin: 0 0 calc(var(--line) * -1) 0;
     color: var(--grey-text);
-}
-
-/* Small Windows
------------------------------------------------------------ */
-
-@media (max-width: 39.35em) {
-    :root {
-        --size: 17px;
-    }
 }
