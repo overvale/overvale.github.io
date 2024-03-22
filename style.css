@@ -6,30 +6,58 @@
 @import url("/reset.css");
 
 @font-face {
-    font-family: "TX02";
+    font-family: "Utopia";
     font-style: normal;
     font-weight: normal;
-    src: url('/fonts/TX02-Regular.woff2') format('woff2');
+    src: url('/fonts/Utopia-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Utopia";
+    font-style: italic;
+    font-weight: normal;
+    src: url('/fonts/Utopia-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Utopia";
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/Utopia-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Utopia";
+    font-style: italic;
+    font-weight: bold;
+    src: url('/fonts/Utopia-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'HXF';
+	src: url('/fonts/HXF.woff2') format('woff2');
+	font-weight: 400 800;
+	font-style: normal;
 }
 
 :root {
-    --font:  system-ui, "Helvetica Neue", helvetica, sans-serif;
+    --font:  Utopia, Georgia, serif;
+    --sans:  HXF, system-ui, "Helvetica Neue", helvetica, sans-serif;
     --mono:  ui-monospace, Menlo, Consolas, monospace;
 
     --size: 17px;
-    --line: 1.4em;
-    --main-width: 35em;
+    --line: 1.45em;
+    --main-width: 32em;
 
-    --w-normal: 400;
-    --w-med: calc( var(--w-normal) + 80) ;
-    --w-bold: calc( var(--w-normal) + 160);
+    --w-normal: normal;
+    --w-bold: bold;
 
     --background: hsl(0, 0%, 100%);
     --background-fill: hsl(0, 0%, 90%);
     --line-color:  hsl(0, 0%, 70%);
     --grey-text: hsl(0, 0%, 60%);
     --red-text: hsl(355, 83%, 49%);
-    --foreground: hsl(0, 0%, 13%);
+    --foreground: hsl(0, 0%, 0%);
     --link-decoration: hsl(220, 90%, 75%);
     --white: hsl(0, 0%, 100%);
 }
@@ -61,6 +89,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    font-family: var(--sans);
     font-weight: var(--w-bold);
 }
 
@@ -103,23 +132,25 @@ h1,
 h2,
 h3 {
     margin: calc(var(--line) * 2) 0 0 0;
+    font-family: var(--sans);
+    font-weight: 600;
 }
 
 h1 {
-    font-weight: var(--w-med);
     font-size: 1.5em;
     line-height: 1.2em;
+    font-size: 2em;
+    font-variation-settings: "wdth" 80, "wght" 700;
 }
 
 h2 {
-    font-weight: var(--w-med);
     font-size: 1.25em;
+    font-variation-settings: "wdth" 80;
 }
 
 h3 {
-    font-weight: var(--w-bold);
     font-size: 1em;
-    margin-top: calc(var(--line) * 1);
+    font-variation-settings: "wdth" 100, "wght" 550;
 }
 
 ol,
