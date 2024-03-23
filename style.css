@@ -33,16 +33,9 @@
     src: url('/fonts/Utopia-BoldItalic.ttf') format('truetype');
 }
 
-@font-face {
-	font-family: 'HXF';
-	src: url('/fonts/HXF.woff2') format('woff2');
-	font-weight: 400 800;
-	font-style: normal;
-}
-
 :root {
     --font:  Utopia, Georgia, serif;
-    --sans:  HXF, system-ui, "Helvetica Neue", helvetica, sans-serif;
+    --sans:  system-ui, "Helvetica Neue", helvetica, sans-serif;
     --mono:  ui-monospace, Menlo, Consolas, monospace;
 
     --size: 17px;
@@ -91,6 +84,7 @@ nav a {
     text-decoration: none;
     font-family: var(--sans);
     font-weight: var(--w-bold);
+    font-variation-settings: "wdth" 80;
 }
 
 footer {
@@ -133,24 +127,22 @@ h2,
 h3 {
     margin: calc(var(--line) * 2) 0 0 0;
     font-family: var(--sans);
-    font-weight: 600;
 }
 
 h1 {
-    font-size: 1.5em;
     line-height: 1.2em;
-    font-size: 2em;
-    font-variation-settings: "wdth" 80, "wght" 700;
+    font-size: 1.75em;
+    font-variation-settings: "wdth" 60, "wght" 700;
 }
 
 h2 {
-    font-size: 1.25em;
-    font-variation-settings: "wdth" 80;
+    font-size: 1.4em;
+    font-variation-settings: "wdth" 60, "wght" 650;
 }
 
 h3 {
     font-size: 1em;
-    font-variation-settings: "wdth" 100, "wght" 550;
+    font-variation-settings: "wdth" 90, "wght" 650;
 }
 
 ol,
@@ -172,6 +164,8 @@ li { margin-bottom: calc(var(--line) * .25); }
 
 time {
     display: block;
+    font-family: var(--mono);
+    font-size: .85em;
     color: var(--grey-text);
     line-height: var(--line);
 }
