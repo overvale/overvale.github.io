@@ -33,9 +33,18 @@
     src: url('/fonts/Utopia-BoldItalic.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
 :root {
     --font:  Utopia, Georgia, serif;
-    --sans:  system-ui, "Helvetica Neue", helvetica, sans-serif;
+    --sans:  "Mona Sans", system-ui, "Helvetica Neue", helvetica, sans-serif;
     --mono:  ui-monospace, Menlo, Consolas, monospace;
 
     --size: 17px;
@@ -84,7 +93,7 @@ nav a {
     text-decoration: none;
     font-family: var(--sans);
     font-weight: var(--w-bold);
-    font-variation-settings: "wdth" 80;
+    font-stretch: 90%;
 }
 
 footer {
@@ -132,17 +141,20 @@ h3 {
 h1 {
     line-height: 1.2em;
     font-size: 1.75em;
-    font-variation-settings: "wdth" 60, "wght" 700;
+    font-stretch: 80%;
+    font-weight: 650;
 }
 
 h2 {
-    font-size: 1.4em;
-    font-variation-settings: "wdth" 60, "wght" 650;
+    font-size: 1.3em;
+    font-stretch: 85%;
+    font-weight: 650;
 }
 
 h3 {
     font-size: 1em;
-    font-variation-settings: "wdth" 90, "wght" 650;
+    font-stretch: 95%;
+    font-weight: 650;
 }
 
 ol,
