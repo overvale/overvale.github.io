@@ -108,6 +108,8 @@ footer {
 p,
 ul,
 ol,
+dl,
+dt,
 pre code,
 table,
 figure,
@@ -173,6 +175,17 @@ ul.no-bullet {
 }
 
 li { margin-bottom: calc(var(--line) * .25); }
+
+dt {
+    font-family: var(--sans);
+    font-stretch: 95%;
+    font-weight: 550;
+}
+
+dd {
+    margin-top: calc(var(--line) * .25);
+    margin-left: var(--line);
+}
 
 time {
     display: block;
