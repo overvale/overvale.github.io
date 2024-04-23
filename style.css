@@ -6,31 +6,31 @@
 @import url("/reset.css");
 
 @font-face {
-    font-family: "Utopia";
+    font-family: "ATP";
     font-style: normal;
     font-weight: normal;
-    src: url('/fonts/Utopia-Regular.ttf') format('truetype');
+    src: url('/fonts/ATP-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "Utopia";
+    font-family: "ATP";
     font-style: italic;
     font-weight: normal;
-    src: url('/fonts/Utopia-Italic.ttf') format('truetype');
+    src: url('/fonts/ATP-It.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "Utopia";
+    font-family: "ATP";
     font-style: normal;
     font-weight: bold;
-    src: url('/fonts/Utopia-Bold.ttf') format('truetype');
+    src: url('/fonts/ATP-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "Utopia";
+    font-family: "ATP";
     font-style: italic;
     font-weight: bold;
-    src: url('/fonts/Utopia-BoldItalic.ttf') format('truetype');
+    src: url('/fonts/ATP-BoldIt.ttf') format('truetype');
 }
 
 @font-face {
@@ -43,13 +43,13 @@
 }
 
 :root {
-    --font:  Utopia, Georgia, serif;
+    --font:  ATP, Georgia, serif;
     --sans:  "Mona Sans", system-ui, "Helvetica Neue", helvetica, sans-serif;
     --mono:  ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 17px;
-    --line: 1.45em;
-    --main-width: 32em;
+    --size: 18px;
+    --line: 1.35em;
+    --main-width: 34em;
 
     --w-normal: normal;
     --w-bold: bold;
@@ -62,6 +62,7 @@
     --foreground: hsl(0, 0%, 0%);
     --link-decoration: hsl(220, 90%, 75%);
     --white: hsl(0, 0%, 100%);
+    --deep-blue: hsl(240, 100%, 25%);
 }
 
 /* Layout
@@ -142,13 +143,13 @@ h3 {
 
 h1 {
     line-height: 1.2em;
-    font-size: 1.75em;
+    font-size: 1.5em;
     font-stretch: 80%;
     font-weight: 650;
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.25em;
     font-stretch: 85%;
     font-weight: 650;
 }
@@ -190,7 +191,7 @@ dd {
 time {
     display: block;
     font-family: var(--mono);
-    font-size: .85em;
+    font-size: .8em;
     color: var(--grey-text);
     line-height: var(--line);
 }
@@ -202,22 +203,23 @@ hr {
 }
 
 blockquote {
-    border-left: 2px solid var(--line-color);
+    border-left: 1px solid var(--line-color);
     padding-left: var(--line);
 }
 
 code {
     font-family: var(--mono);
-    font-size: calc( var(--size) - 2px );
+    font-size: calc( var(--size) - 3px );
     white-space: pre-wrap;
+    color: var(--deep-blue);
 }
 
 pre code {
     display: block;
     overflow: auto;
     white-space: pre;
-    font-size: calc( var(--size) - 3px );
-    line-height: 1.2em;
+    font-size: calc( var(--size) - 4px );
+    line-height: 1.4em;
 }
 
 figure {
@@ -255,7 +257,7 @@ sup {
     vertical-align: baseline;
     border: 1px solid var(--line-color);
     border-radius: 2.5px;
-    padding: 0 .25em;
+    padding: .25em .25em 0 .25em;
     margin: 0 .2em;
 }
 
