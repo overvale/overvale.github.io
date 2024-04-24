@@ -47,7 +47,7 @@
     --sans:  "Mona Sans", system-ui, "Helvetica Neue", helvetica, sans-serif;
     --mono:  ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 18px;
+    --size: 19px;
     --line: 1.35em;
     --main-width: 34em;
 
@@ -179,7 +179,8 @@ li { margin-bottom: calc(var(--line) * .25); }
 
 dt {
     font-family: var(--sans);
-    font-stretch: 95%;
+    font-size: .9em;
+    line-height: var(--line);
     font-weight: 550;
 }
 
@@ -190,7 +191,7 @@ dd {
 
 time {
     display: block;
-    font-family: var(--mono);
+    font-family: var(--sans);
     font-size: .8em;
     color: var(--grey-text);
     line-height: var(--line);
@@ -281,11 +282,19 @@ abbr {
 /* Page Overrides
 ----------------------------------------------------------- */
 
+main#links h1 {
+    margin-bottom: calc(var(--line) * 2);
+}
+
 div.link {
-    margin-top: calc(var(--line) * 2);
+    border-bottom: 1px dashed var(--grey-text);
+    /* The below 2 amounts should be the same */
+    padding-bottom: calc(var(--line) * 2);
+    margin-bottom: calc(var(--line) * 2);
 }
 
 div.link time {
     margin: 0 0 calc(var(--line) * -1) 0;
     color: var(--grey-text);
+    display: none;
 }
