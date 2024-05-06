@@ -34,17 +34,15 @@
 }
 
 @font-face {
-  font-family: 'Mona Sans';
-  src:
-    url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
-    url('/fonts/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
+  font-family: 'Hex';
+  src: url('/fonts/HEX.woff2') format('woff2');
+  font-weight: 1 1000;
+  font-stretch: 60% 120%;
 }
 
 :root {
     --font:  ATP, Georgia, serif;
-    --sans:  "Mona Sans", system-ui, "Helvetica Neue", helvetica, sans-serif;
+    --sans:  "Hex", system-ui, "Helvetica Neue", helvetica, sans-serif;
     --mono:  ui-monospace, Menlo, Consolas, monospace;
 
     --size: 19px;
@@ -52,7 +50,7 @@
     --main-width: 34em;
 
     --w-normal: normal;
-    --w-bold: bold;
+    --w-bold: 600;
 
     --background: hsl(0, 0%, 100%);
     --background-fill: hsl(0, 0%, 90%);
@@ -94,7 +92,7 @@ nav a {
     text-decoration: none;
     font-family: var(--sans);
     font-weight: var(--w-bold);
-    font-stretch: 90%;
+    font-size: .8em;
 }
 
 footer {
@@ -139,25 +137,23 @@ h2,
 h3 {
     margin: calc(var(--line) * 2) 0 0 0;
     font-family: var(--sans);
+    font-weight: 600;
+    font-stretch: 95%;
 }
 
 h1 {
-    line-height: 1.2em;
-    font-size: 1.5em;
-    font-stretch: 80%;
-    font-weight: 650;
+    line-height: 1.25em;
+    font-size: 1.4em;
+    font-stretch: 85%;
 }
 
 h2 {
-    font-size: 1.25em;
-    font-stretch: 85%;
-    font-weight: 650;
+    font-size: 1.1em;
+
 }
 
 h3 {
     font-size: 1em;
-    font-stretch: 95%;
-    font-weight: 650;
 }
 
 ol,
