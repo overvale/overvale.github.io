@@ -6,47 +6,56 @@
 @import url("/reset.css");
 
 @font-face {
-    font-family: "ATP";
+    font-family: "Charter";
     font-style: normal;
     font-weight: normal;
-    src: url('/fonts/ATP-Regular.ttf') format('truetype');
+    src: url("/fonts/charter_regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "ATP";
+    font-family: "Charter";
     font-style: italic;
     font-weight: normal;
-    src: url('/fonts/ATP-It.ttf') format('truetype');
+    src: url("/fonts/charter_italic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "ATP";
+    font-family: "Charter";
     font-style: normal;
     font-weight: bold;
-    src: url('/fonts/ATP-Bold.ttf') format('truetype');
+    src: url("/fonts/charter_bold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "ATP";
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 100 1000;
+    size-adjust: 90%;
+    src: url("/fonts/InterVariable.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: Inter;
     font-style: italic;
-    font-weight: bold;
-    src: url('/fonts/ATP-BoldIt.ttf') format('truetype');
+    font-weight: 100 1000;
+    size-adjust: 90%;
+    src: url("/fonts/InterVariable-Italic.woff2") format("woff2-variations");
 }
 
 @font-face {
-  font-family: 'Hex';
-  src: url('/fonts/HEX.woff2') format('woff2');
-  font-weight: 1 1000;
-  font-stretch: 60% 120%;
+    font-family: "Geist Mono";
+    font-weight: 100 1000;
+    size-adjust: 85%;
+    src: url("/fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
 }
 
 :root {
-    --font:  ATP, Georgia, serif;
-    --sans:  "Hex", system-ui, "Helvetica Neue", helvetica, sans-serif;
-    --mono:  ui-monospace, Menlo, Consolas, monospace;
+    --font: Charter, Georgia, serif;
+    --sans: Inter, system-ui, "Helvetica Neue", helvetica, sans-serif;
+    --mono: "Geist Mono", ui-monospace, Menlo, Consolas, monospace;
 
-    --size: 19px;
-    --line: 1.35em;
+    --size: 18px;
+    --line: 1.4em;
     --main-width: 34em;
 
     --w-normal: normal;
@@ -54,7 +63,7 @@
 
     --background: hsl(0, 0%, 100%);
     --background-fill: hsl(0, 0%, 90%);
-    --line-color:  hsl(0, 0%, 70%);
+    --line-color: hsl(0, 0%, 70%);
     --grey-text: hsl(0, 0%, 60%);
     --red-text: hsl(355, 83%, 49%);
     --foreground: hsl(0, 0%, 0%);
@@ -92,7 +101,6 @@ nav a {
     text-decoration: none;
     font-family: var(--sans);
     font-weight: var(--w-bold);
-    font-size: .8em;
 }
 
 footer {
@@ -138,18 +146,15 @@ h3 {
     margin: calc(var(--line) * 2) 0 0 0;
     font-family: var(--sans);
     font-weight: 600;
-    font-stretch: 95%;
 }
 
 h1 {
     line-height: 1.25em;
-    font-size: 1.4em;
-    font-stretch: 85%;
+    font-size: 1.75em;
 }
 
 h2 {
-    font-size: 1.1em;
-
+    font-size: 1.25em;
 }
 
 h3 {
@@ -171,24 +176,24 @@ ul.no-bullet {
     margin-left: 0;
 }
 
-li { margin-bottom: calc(var(--line) * .25); }
+li {
+    margin-bottom: calc(var(--line) * 0.25);
+}
 
 dt {
     font-family: var(--sans);
-    font-size: .9em;
     line-height: var(--line);
-    font-weight: 550;
+    font-weight: 500;
 }
 
 dd {
-    margin-top: calc(var(--line) * .25);
+    margin-top: calc(var(--line) * 0.25);
     margin-left: var(--line);
 }
 
 time {
     display: block;
     font-family: var(--sans);
-    font-size: .8em;
     color: var(--grey-text);
     line-height: var(--line);
 }
@@ -206,7 +211,6 @@ blockquote {
 
 code {
     font-family: var(--mono);
-    font-size: calc( var(--size) - 3px );
     white-space: pre-wrap;
     color: var(--deep-blue);
 }
@@ -215,8 +219,6 @@ pre code {
     display: block;
     overflow: auto;
     white-space: pre;
-    font-size: calc( var(--size) - 4px );
-    line-height: 1.4em;
 }
 
 figure {
@@ -227,7 +229,6 @@ figure {
 }
 
 figure figcaption {
-    font-size: calc(var(--size) - 3px);
     font-style: italic;
     text-align: center;
     margin: 0.25em 0;
@@ -254,8 +255,8 @@ sup {
     vertical-align: baseline;
     border: 1px solid var(--line-color);
     border-radius: 2.5px;
-    padding: .25em .25em 0 .25em;
-    margin: 0 .2em;
+    padding: 0.25em 0.25em 0 0.25em;
+    margin: 0 0.2em;
 }
 
 cite {
