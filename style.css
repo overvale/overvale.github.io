@@ -1,297 +1,50 @@
-/* Stylesheet for overvale.com */
-
-/* Setup
------------------------------------------------------------ */
-
-@import url("/reset.css");
-
 @font-face {
-    font-family: "Charter";
+    font-family: "Utopia";
     font-style: normal;
     font-weight: normal;
-    src: url("/fonts/charter_regular.woff2") format("woff2");
+    src: url("/fonts/Utopia-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Charter";
+    font-family: "Utopia";
     font-style: italic;
     font-weight: normal;
-    src: url("/fonts/charter_italic.woff2") format("woff2");
+    src: url("/fonts/Utopia-Italic.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Charter";
+    font-family: "Utopia";
     font-style: normal;
     font-weight: bold;
-    src: url("/fonts/charter_bold.woff2") format("woff2");
+    src: url("/fonts/Utopia-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 100 1000;
-    size-adjust: 90%;
-    src: url("/fonts/InterVariable.woff2") format("woff2-variations");
-}
-
-@font-face {
-    font-family: Inter;
+    font-family: "Utopia";
     font-style: italic;
-    font-weight: 100 1000;
-    size-adjust: 90%;
-    src: url("/fonts/InterVariable-Italic.woff2") format("woff2-variations");
+    font-weight: bold;
+    src: url("/fonts/Utopia-BoldItalic.ttf") format("truetype");
 }
-
-@font-face {
-    font-family: "Geist Mono";
-    font-weight: 100 1000;
-    size-adjust: 85%;
-    src: url("/fonts/GeistMonoVariableVF.woff2") format("woff2-variations");
-}
-
-:root {
-    --font: Charter, Georgia, serif;
-    --sans: Inter, system-ui, "Helvetica Neue", helvetica, sans-serif;
-    --mono: "Geist Mono", ui-monospace, Menlo, Consolas, monospace;
-
-    --size: 18px;
-    --line: 1.4em;
-    --main-width: 34em;
-
-    --w-normal: normal;
-    --w-bold: 600;
-
-    --background: hsl(0, 0%, 100%);
-    --background-fill: hsl(0, 0%, 90%);
-    --line-color: hsl(0, 0%, 70%);
-    --grey-text: hsl(0, 0%, 60%);
-    --red-text: hsl(355, 83%, 49%);
-    --foreground: hsl(0, 0%, 0%);
-    --link-decoration: hsl(220, 90%, 75%);
-    --white: hsl(0, 0%, 100%);
-    --deep-blue: hsl(240, 100%, 25%);
-}
-
-/* Layout
------------------------------------------------------------ */
 
 html {
-    font-family: var(--font);
-    font-size: var(--size);
-    font-weight: var(--w-normal);
-    line-height: var(--line);
-    background: var(--background);
-    color: var(--foreground);
-    text-rendering: optimizeLegibility;
+    font-family: Utopia, Georgia, serif;
+    line-height: 1.5;
+    padding-bottom: 20%;
 }
-
 main {
-    max-width: var(--main-width);
     margin: 0 auto;
-    padding: var(--line) var(--line) 30% var(--line);
-}
-
-nav {
-    margin-bottom: calc(var(--line) * 2);
-    padding: 0 0 calc(var(--line) * 1) 0;
-    border-bottom: 1px solid var(--line-color);
-}
-
-nav a {
-    text-decoration: none;
-    font-family: var(--sans);
-    font-weight: var(--w-bold);
-}
-
-footer {
-    margin-top: calc(var(--line) * 4);
-    padding: calc(var(--line) * 1) 0 0 0;
-    border-top: 1px solid var(--line-color);
-}
-
-/* TYPOGRAPHY
------------------------------------------------------------ */
-
-p,
-ul,
-ol,
-dl,
-dt,
-pre code,
-table,
-figure,
-blockquote,
-time {
-    margin: var(--line) 0 0 0;
-}
-
-.collapse-top {
-    margin-top: 0;
-}
-
-b,
-strong {
-    font-weight: var(--w-bold);
-}
-
-i,
-em {
-    font-style: italic;
-    font-weight: inherit;
-}
-
-h1,
-h2,
-h3 {
-    margin: calc(var(--line) * 2) 0 0 0;
-    font-family: var(--sans);
-    font-weight: 600;
-}
-
-h1 {
-    line-height: 1.25em;
-    font-size: 1.75em;
-}
-
-h2 {
-    font-size: 1.25em;
-}
-
-h3 {
-    font-size: 1em;
-}
-
-ol,
-ul {
-    margin-left: var(--line);
-    padding-left: 0;
-}
-
-ol {
-    list-style-type: decimal;
-}
-
-ul.no-bullet {
-    list-style: none;
-    margin-left: 0;
-}
-
-li {
-    margin-bottom: calc(var(--line) * 0.25);
-}
-
-dt {
-    font-family: var(--sans);
-    line-height: var(--line);
-    font-weight: 500;
-}
-
-dd {
-    margin-top: calc(var(--line) * 0.25);
-    margin-left: var(--line);
-}
-
-time {
-    display: block;
-    font-family: var(--sans);
-    color: var(--grey-text);
-    line-height: var(--line);
-}
-
-hr {
-    border: none;
-    border-top: 1px solid var(--line-color);
-    margin: calc(var(--line) * 2) auto;
-}
-
-blockquote {
-    border-left: 1px solid var(--line-color);
-    padding-left: var(--line);
-}
-
-code {
-    font-family: var(--mono);
-    white-space: pre-wrap;
-    color: var(--deep-blue);
-}
-
-pre code {
-    display: block;
-    overflow: auto;
-    white-space: pre;
-}
-
-figure {
-    width: 100%;
-    border: 1px solid var(--line-color);
-    padding: 0.25em;
-    background-color: var(--white);
-}
-
-figure figcaption {
-    font-style: italic;
-    text-align: center;
-    margin: 0.25em 0;
-}
-
-figure.small {
-    width: 60%;
-    margin: var(--line) auto;
+    max-width: 35em;
 }
 
 img {
     max-width: 100%;
 }
 
-a {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: var(--link-decoration);
-    text-decoration-thickness: 1.5px;
-}
-
-sup {
-    line-height: var(--line);
-    vertical-align: baseline;
-    border: 1px solid var(--line-color);
-    border-radius: 2.5px;
-    padding: 0.25em 0.25em 0 0.25em;
-    margin: 0 0.2em;
-}
-
-cite {
-    font-style: italic;
-}
-
-cite.source {
-    color: var(--grey-text);
-}
-
-abbr {
-    text-transform: lowercase;
-    font-feature-settings: "smcp" on;
-}
-
-.red {
-    color: var(--red-text);
-}
-
-/* Page Overrides
------------------------------------------------------------ */
-
-main#links h1 {
-    margin-bottom: calc(var(--line) * 2);
-}
-
-div.link {
-    border-bottom: 1px dashed var(--grey-text);
-    /* The below 2 amounts should be the same */
-    padding-bottom: calc(var(--line) * 2);
-    margin-bottom: calc(var(--line) * 2);
-}
-
-div.link time {
-    margin: 0 0 calc(var(--line) * -1) 0;
-    color: var(--grey-text);
-    display: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
 }
