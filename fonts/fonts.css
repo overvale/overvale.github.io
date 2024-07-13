@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Utopia";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/Utopia-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Utopia";
+    font-style: italic;
+    font-weight: normal;
+    src: url("/fonts/Utopia-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Utopia";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/Utopia-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Utopia";
+    font-style: italic;
+    font-weight: bold;
+    src: url("/fonts/Utopia-BoldItalic.ttf") format("truetype");
+}

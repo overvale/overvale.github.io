@@ -1,31 +1,4 @@
-@font-face {
-    font-family: "Utopia";
-    font-style: normal;
-    font-weight: normal;
-    src: url("/fonts/Utopia-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Utopia";
-    font-style: italic;
-    font-weight: normal;
-    src: url("/fonts/Utopia-Italic.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Utopia";
-    font-style: normal;
-    font-weight: bold;
-    src: url("/fonts/Utopia-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Utopia";
-    font-style: italic;
-    font-weight: bold;
-    src: url("/fonts/Utopia-BoldItalic.ttf") format("truetype");
-}
-
+@import url("fonts/fonts.css");
 html {
     font-family: Utopia, Georgia, serif;
     line-height: 1.5;
@@ -35,16 +8,10 @@ main {
     margin: 0 auto;
     max-width: 35em;
 }
-
-img {
-    max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+img { max-width: 100%; }
+a, a:hover, a:visited {
+    color: inherit;
+    text-decoration-color: hsl(220, 90%, 75%);
+    text-decoration-thickness: 1.5px;
 }
