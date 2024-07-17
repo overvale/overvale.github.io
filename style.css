@@ -1,17 +1,26 @@
-@import url("fonts/fonts.css");
-html {
-    font-family: Utopia, Georgia, serif;
-    line-height: 1.5;
-    padding-bottom: 20%;
+@import url("https://rsms.me/inter/inter.css");
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-size: 15px;
+  line-height: 1.5;
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, system-ui, sans-serif; }
 }
 main {
     margin: 0 auto;
-    max-width: 35em;
+    max-width: 37em;
 }
-h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+b, h1, h2, h3, h4, h5, h6 { font-weight: 575; }
 img { max-width: 100%; }
-a, a:hover, a:visited {
+a, a:visited {
     color: inherit;
     text-decoration-color: hsl(220, 90%, 75%);
     text-decoration-thickness: 1.5px;
+}
+a:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none;
 }
