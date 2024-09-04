@@ -1,19 +1,20 @@
 @import url("https://rsms.me/inter/inter.css");
 :root {
   color-scheme: light dark;
-  font-family: Inter, system-ui, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-  font-size: 15px;
+  font-family: system-ui, -apple-system, Inter, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
+  --grey: hsl(0, 0%, 70%);
 }
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, system-ui, sans-serif; }
+  :root { font-family: system-ui, -apple-system, InterVariable, sans-serif; }
 }
 main {
+    max-width: 38em;
+    padding: 1em;
     margin: 0 auto;
-    max-width: 37em;
 }
-b, h1, h2, h3, h4, h5, h6 { font-weight: 575; }
+b, h1, h2, h3, h4, h5, h6 { font-weight: 600; }
 img { max-width: 100%; }
 a {
     color: inherit;
@@ -21,3 +22,12 @@ a {
 }
 dt { margin-top: 1em; }
 code { font-size: 14px; }
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--grey);
+    margin: 2em;
+}
+blockquote {
+    font-family: -apple-system-ui-serif, ui-serif, Georgia, serif;
+}
