@@ -22,6 +22,7 @@ a {
 }
 dt { margin-top: 1em; }
 code { font-size: 14px; }
+pre { overflow: scroll; }
 hr {
     border: none;
     height: 1px;
@@ -29,5 +30,6 @@ hr {
     margin: 2em;
 }
 blockquote {
-    font-family: -apple-system-ui-serif, ui-serif, Georgia, serif;
+    font-family: Georgia, serif;
+    font-size: 16.5px;
 }
