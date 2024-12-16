@@ -5,6 +5,7 @@
   font-size: 16px;
   line-height: 1.5;
   --grey: hsl(0, 0%, 70%);
+  --greyBG: hsl(0, 0%, 96%);
 }
 @supports (font-variation-settings: normal) {
   :root { font-family: system-ui, -apple-system, InterVariable, sans-serif; }
@@ -22,7 +23,12 @@ a {
 }
 dt { margin-top: 1em; }
 code { font-size: 14px; }
-pre { overflow: scroll; }
+pre {
+    overflow-x: auto;
+    background-color: var(--greyBG);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 hr {
     border: none;
     height: 1px;
