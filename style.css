@@ -5,6 +5,7 @@
   font-size: 16px;
   line-height: 1.5;
   --grey: hsl(0, 0%, 70%);
+  --grey-light: hsl(0, 0%, 85%);
   --greyBG: hsl(0, 0%, 96%);
 }
 @supports (font-variation-settings: normal) {
@@ -16,6 +17,7 @@ main {
     margin: 0 auto;
 }
 b, h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+h1 { line-height: 1.25; }
 img { max-width: 100%; }
 a {
     color: inherit;
@@ -27,7 +29,7 @@ pre {
     overflow-x: auto;
     background-color: var(--greyBG);
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 hr {
     border: none;
