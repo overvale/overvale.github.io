@@ -1,15 +1,11 @@
-@import url("https://rsms.me/inter/inter.css");
 :root {
   color-scheme: light dark;
-  font-family: system-ui, -apple-system, Inter, sans-serif;
-  font-size: 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 15px;
   line-height: 1.5;
   --grey: hsl(0, 0%, 70%);
   --grey-light: hsl(0, 0%, 85%);
   --greyBG: hsl(0, 0%, 96%);
-}
-@supports (font-variation-settings: normal) {
-  :root { font-family: system-ui, -apple-system, InterVariable, sans-serif; }
 }
 main {
     max-width: 38em;
@@ -29,12 +25,16 @@ a {
     text-decoration-color: hsl(220, 100%, 65%);
 }
 dt { margin-top: 1em; }
-code { font-size: 14px; }
+code { font-size: 13px; }
 pre {
     overflow-x: auto;
-    background-color: var(--greyBG);
-    padding: 5px 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--grey);
     border-radius: 10px;
+}
+blockquote {
+    font-size: 14.5px;
+    line-height: 1.5rem;
 }
 hr {
     border: none;
@@ -42,3 +42,4 @@ hr {
     background-color: var(--grey);
     margin: 2em;
 }
+mark { background-color: hsl(60, 100%, 75%); }
