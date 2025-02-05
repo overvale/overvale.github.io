@@ -7,7 +7,8 @@
   --grey: hsl(0, 0%, 70%);
   --grey-light: hsl(0, 0%, 85%);
   --greyBG: hsl(0, 0%, 96%);
-  --tanBG: rgb(250, 246, 239);
+  --blueBG: hsl(218, 42%, 96%);
+  --blueLine: hsl(218, 42%, 86%);
 }
 main {
     max-width: 38em;
@@ -37,8 +38,8 @@ pre {
 blockquote {
     margin: 1em;
     padding: .1px 15px;
-    background-color: var(--tanBG);
-    border-left: 1px solid var(--grey);
+    background-color: var(--blueBG);
+    border-left: 2px solid var(--blueLine);
 }
 hr {
     border: none;
