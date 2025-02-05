@@ -3,9 +3,11 @@
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 15px;
   line-height: 1.5;
+  color: hsl(0, 0%, 20%);
   --grey: hsl(0, 0%, 70%);
   --grey-light: hsl(0, 0%, 85%);
   --greyBG: hsl(0, 0%, 96%);
+  --tanBG: rgb(250, 246, 239);
 }
 main {
     max-width: 38em;
@@ -33,8 +35,10 @@ pre {
     border-radius: 10px;
 }
 blockquote {
-    font-size: 14.5px;
-    line-height: 1.5rem;
+    margin: 1em;
+    padding: .1px 15px;
+    background-color: var(--tanBG);
+    border-left: 1px solid var(--grey);
 }
 hr {
     border: none;
