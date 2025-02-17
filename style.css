@@ -12,6 +12,7 @@
   --greenBG: hsl(105, 40%, 96%);
   --greenLine: hsl(105, 40%, 86%);
 }
+body { margin: 0; }
 main {
     max-width: 38em;
     padding: 1em;
