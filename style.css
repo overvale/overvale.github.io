@@ -1,16 +1,11 @@
 :root {
+  --sans: system-ui, -apple-system, sans-serif;
+  --serif: -apple-system-ui-serif, ui-serif, Georgia, serif;
   color-scheme: light dark;
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 15px;
+  font-family: var(--sans);
+  font-size: 16px;
   line-height: 1.5;
   color: hsl(0, 0%, 20%);
-  --grey: hsl(0, 0%, 70%);
-  --grey-light: hsl(0, 0%, 85%);
-  --greyBG: hsl(0, 0%, 96%);
-  --blueBG: hsl(218, 42%, 96%);
-  --blueLine: hsl(218, 42%, 86%);
-  --greenBG: hsl(105, 40%, 96%);
-  --greenLine: hsl(105, 40%, 86%);
 }
 body { margin: 0; }
 main {
@@ -31,25 +26,23 @@ a {
     text-decoration-color: hsl(220, 100%, 65%);
 }
 dt { margin-top: 1em; }
-code { font-size: 13px; }
+code, pre { font-size: 14px; }
 pre {
     overflow-x: auto;
     padding: 7px 15px;
-    font-size: 12px;
-    line-height: 1.4;
-    background-color: var(--greenBG);
-    border-left: 2px solid var(--greenLine);
+    background-color: hsl(105, 40%, 96%);
+    border-left: 2px solid hsl(105, 40%, 86%);
 }
 blockquote {
     margin: 1em;
     padding: .1px 15px;
-    background-color: var(--blueBG);
-    border-left: 2px solid var(--blueLine);
+    background-color: hsl(218, 42%, 96%);
+    border-left: 2px solid hsl(218, 42%, 86%);
 }
 hr {
     border: none;
     height: 1px;
-    background-color: var(--grey);
+    background-color: hsl(0, 0%, 70%);
     margin: 2em;
 }
-mark { background-color: hsl(60, 100%, 75%); }
+mark { background-color: hsl(60, 100%, 81%); }
