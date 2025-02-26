@@ -6,6 +6,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: hsl(0, 0%, 20%);
+  background-color: hsl(40, 20%, 97%);
 }
 body { margin: 0; }
 main {
@@ -31,18 +32,20 @@ pre {
     overflow-x: auto;
     padding: 7px 15px;
     background-color: hsl(105, 40%, 96%);
+    background-color: white;
     border-left: 2px solid hsl(105, 40%, 86%);
 }
 blockquote {
     margin: 1em;
     padding: .1px 15px;
     background-color: hsl(218, 42%, 96%);
+    background-color: white;
     border-left: 2px solid hsl(218, 42%, 86%);
 }
 hr {
     border: none;
     height: 1px;
-    background-color: hsl(0, 0%, 70%);
+    background-color: hsl(0, 0%, 80%);
     margin: 2em;
 }
 mark { background-color: hsl(60, 100%, 81%); }
