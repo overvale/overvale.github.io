@@ -3,21 +3,37 @@
     font-family: e-serif;
     font-style: normal;
     font-weight: 300 900;
-    src: url(https://r2.overvale.com/e-serif-roman.woff2) format("woff2")
+    src: url('https://r2.overvale.com/e-serif-roman.woff2') format("woff2")
 }
 @font-face {
     font-display: swap;
     font-family: e-serif;
     font-style: italic;
     font-weight: 300 900;
-    src: url(https://r2.overvale.com/e-serif-italic.woff2) format("woff2")
+    src: url('https://r2.overvale.com/e-serif-italic.woff2') format("woff2")
+}
+@font-face {
+    font-family: InterVariable;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('https://r2.overvale.com/InterVariable.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: InterVariable;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('https://r2.overvale.com/InterVariable-Italic.woff2') format('woff2');
 }
 :root {
-  --sans: e-sans, system-ui, -apple-system, sans-serif;
+  --sans: InterVariable, system-ui, -apple-system, sans-serif;
   --serif: e-serif, -apple-system-ui-serif, ui-serif, Georgia, serif;
   color-scheme: light;
   font-family: var(--serif);
   font-size: 18px;
+  font-weight: 350;
   line-height: 1.5;
   color: hsl(0, 0%, 20%);
   background-color: hsl(40, 20%, 97%);
@@ -26,10 +42,24 @@ body { margin: 0; }
 main {
     max-width: 36em;
     padding: 1em;
-    margin: 0 auto;
+    margin: 0 auto 10em auto;
 }
-b, h1, h2, h3, h4, h5, h6 { font-weight: 600; }
-h1 { line-height: 1.25; }
+nav {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+}
+b, h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+h1 {
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 6rem 0 3rem 0;
+}
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 3rem 0 1rem 0;
+}
 hgroup { margin-bottom: 1.5em;}
 hgroup p {
     font-style: italic;
@@ -41,19 +71,30 @@ a {
     text-decoration-color: hsl(220, 100%, 65%);
 }
 dt { margin-top: 1em; }
-code, pre { font-size: 15px; }
+code { font-size: 16px; }
 pre {
     overflow-x: auto;
     padding: 7px 15px;
-    background-color: white;
+    background-color: hsl(220, 37%, 46%);
+    color: white;
     border-radius: 4px;
+    line-height: 1.1;
+}
+pre code {
+    font-size: 14px;
 }
 blockquote {
-    margin: 1em;
-    padding: .1px 15px;
-    background-color: hsl(218, 42%, 96%);
-    background-color: white;
+    margin: 1em ;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 425;
+    padding: 0 15px;
     border-left: 2px solid hsl(40, 20%, 86%);
+    line-height: 1.6;
+}
+time {
+    display: block;
+    color: hsl(40, 10%, 60%);
 }
 hr {
     border: none;
