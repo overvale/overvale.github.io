@@ -27,6 +27,13 @@
     font-display: swap;
     src: url('https://r2.overvale.com/InterVariable-Italic.woff2') format('woff2');
 }
+@font-face {
+    font-family: JBMono;
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url('https://r2.overvale.com/JetBrainsMono.ttf') format('truetype');
+}
 :root {
   --sans: InterVariable, system-ui, -apple-system, sans-serif;
   --serif: e-serif, -apple-system-ui-serif, ui-serif, Georgia, serif;
@@ -71,14 +78,18 @@ a {
     text-decoration-color: hsl(220, 100%, 65%);
 }
 dt { margin-top: 1em; }
-code { font-size: 16px; }
+code {
+    font-family: JBMono, monospace;
+    font-size: 15px;
+    font-weight: 400;
+}
 pre {
     overflow-x: auto;
     padding: 7px 15px;
-    background-color: hsl(220, 37%, 46%);
-    color: white;
+    background-color: hsl(40, 20%, 86%);
+    color: hsl(40, 20%, 26%);
     border-radius: 4px;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 pre code {
     font-size: 14px;
