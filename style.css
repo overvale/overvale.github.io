@@ -56,7 +56,8 @@ nav {
     font-size: 15px;
     font-weight: 600;
 }
-b, h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+b { font-weight: 600; }
 h1 {
     font-weight: 300;
     line-height: 1.25;
@@ -64,8 +65,13 @@ h1 {
 }
 h2 {
     font-size: 22px;
-    font-weight: 700;
-    margin: 3rem 0 1rem 0;
+    margin: 3rem 0;
+}
+h3 {
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 650;
+    margin: 3rem 0 0 0;
 }
 hgroup { margin-bottom: 1.5em;}
 hgroup p {
@@ -76,6 +82,15 @@ img { max-width: 100%; }
 a {
     color: inherit;
     text-decoration-color: hsl(220, 100%, 65%);
+}
+a.en {
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 450;
+    padding: 0 .2em;
+    border: 1px solid hsl(220, 100%, 65%);
+    border-radius: 3px;
 }
 dt { margin-top: 1em; }
 code {
@@ -103,6 +118,11 @@ blockquote {
     border-left: 2px solid hsl(40, 20%, 86%);
     line-height: 1.6;
 }
+blockquote.callout {
+    border-left: none;
+    font-style: italic;
+    margin: 1em 3em;
+}
 time {
     display: block;
     color: hsl(40, 10%, 60%);
@@ -114,6 +134,11 @@ hr {
     margin: 2em;
 }
 mark { background-color: hsl(60, 100%, 81%); }
+figure {
+    margin: 1em;
+    border: 1px solid hsl(40, 20%, 60%);
+    background-color: white;
+}
 figcaption {
     font-family: var(--sans);
     font-size: 14px;
