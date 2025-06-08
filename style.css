@@ -103,7 +103,12 @@ figure {
     border: 1px solid hsl(40, 0%, 60%);
     background-color: white;
 }
+figure.small {
+    max-width: 60%;
+    margin: 1em auto;
+}
 figcaption {
     font-size: 14px;
     text-align: center;
+    font-style: italic;
 }
