@@ -72,16 +72,17 @@ code {
 }
 pre {
     overflow-x: auto;
-    padding: 7px 15px;
-    background-color: hsl(40, 0%, 90%);
-    color: hsl(40, 0%, 26%);
+    padding: 7px 10px;
+    background-color: hsl(40, 0%, 94%);
+    color: hsl(40, 0%, 20%);
+    border: 1px solid hsl(40, 0%, 84%);
     border-radius: 4px;
     line-height: 1.3;
 }
 blockquote {
     margin: 1em ;
     padding: 0 15px;
-    border-left: 2px solid hsl(40, 0%, 85%);
+    border-left: 2px solid hsl(40, 0%, 80%);
 }
 blockquote.callout {
     border-left: none;
