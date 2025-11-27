@@ -24,7 +24,7 @@ nav {
 h1, h2, h3, h4, h5, h6 { font-weight: 550; }
 b { font-weight: 600; }
 h1 {
-    font-weight: 400;
+    font-family: var(--sans);
     line-height: 1.25;
     margin: 6rem 0 3rem 0;
 }
@@ -111,4 +111,7 @@ figcaption {
     font-size: 14px;
     text-align: center;
     font-style: italic;
+}
+.sans {
+    font-family: var(--sans);
 }
