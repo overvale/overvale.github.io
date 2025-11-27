@@ -63,13 +63,12 @@ dt { margin-top: 1em; }
 code {
     font-family: var(--mono);
     font-size: .9em;
-    color: rgb(101, 0, 84);
+    color: hsl(225, 100%, 25%);
 }
 pre {
     overflow-x: auto;
     padding: 7px 10px;
     background-color: hsl(40, 0%, 94%);
-    color: hsl(40, 0%, 20%);
     border: 1px solid hsl(40, 0%, 84%);
     border-radius: 4px;
     font-size: .9em;
