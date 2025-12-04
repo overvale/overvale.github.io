@@ -1,6 +1,38 @@
+@font-face {
+  font-family: "Utopia";
+  src: url("https://r2.overvale.com/Utopia-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Utopia";
+  src: url("https://r2.overvale.com/Utopia-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Utopia";
+  src: url("https://r2.overvale.com/Utopia-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Utopia";
+  src: url("https://r2.overvale.com/Utopia-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --sans: ui-sans-serif, sans-serif;
-  --serif: ui-serif, Georgia, serif;
+  --serif: Utopia, ui-serif, Georgia, serif;
   --mono: ui-monospace, monospace;
   color-scheme: light;
   font: -apple-system-body;
@@ -19,25 +51,21 @@ main {
 }
 nav {
     font-family: var(--sans);
-    font-weight: 600;
+    font-weight: 500;
 }
-h1, h2, h3, h4, h5, h6 { font-weight: 550; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 b { font-weight: 600; }
 h1 {
-    font-family: var(--sans);
     line-height: 1.25;
     margin: 6rem 0 3rem 0;
 }
 h2 {
-    font-family: var(--sans);
     font-size: 22px;
-    font-weight: 700;
     margin: 3rem 0;
 }
 h3 {
-    font-family: var(--sans);
     font-size: 18px;
-    font-weight: 650;
+    font-style: italic;
     margin: 3rem 0 0 0;
 }
 hgroup { margin-bottom: 1.5em;}
@@ -48,7 +76,7 @@ hgroup p {
 img { max-width: 100%; }
 a {
     color: inherit;
-    text-decoration-color: hsl(220, 100%, 65%);
+    text-decoration-color: hsl(220, 100%, 75%);
 }
 a.en {
     text-decoration: none;
@@ -56,14 +84,13 @@ a.en {
     font-size: 14px;
     font-weight: 450;
     padding: 0 .2em;
-    border: 1px solid hsl(220, 100%, 65%);
+    border: 1px solid hsl(220, 100%, 75%);
     border-radius: 3px;
 }
 dt { margin-top: 1em; }
 code {
     font-family: var(--mono);
     font-size: .9em;
-    color: hsl(225, 100%, 25%);
 }
 pre {
     overflow-x: auto;
@@ -84,12 +111,7 @@ blockquote.callout {
     font-style: italic;
     margin: 1em 3em;
 }
-time {
-    display: block;
-    color: hsl(40, 0%, 60%);
-    font-family: var(--mono);
-    font-size: .9em;
-}
+time { display: block; }
 hr {
     border: none;
     height: 1px;
