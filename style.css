@@ -45,7 +45,7 @@
 }
 body { margin: 0; }
 main {
-    max-width: 40em;
+    max-width: 37.5em;
     padding: 1em;
     margin: 0 auto 10em auto;
 }
@@ -56,15 +56,16 @@ nav {
 h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 b { font-weight: 600; }
 h1 {
+    font-size: 2rem;
     line-height: 1.25;
     margin: 6rem 0 3rem 0;
 }
 h2 {
-    font-size: 22px;
+    font-size: 1.5rem;
     margin: 3rem 0;
 }
 h3 {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-style: italic;
     margin: 3rem 0 0 0;
 }
