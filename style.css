@@ -48,8 +48,7 @@
     --ov-black-02: hsl(0, 0%, 20%);
     --ov-black-03: hsl(0, 0%, 25%);
     
-    --ov-blue: hsl(220, 100%, 75%);
-    --ov-blue-dark: hsl(220, 100%, 65%);
+    --ov-blue: hsl(220, 100%, 65%);
     
     /* Then define uses, assuming light color sceme */
     --ov-background: var(--ov-white);
@@ -71,7 +70,7 @@
     :root {
         --ov-background: var(--ov-black);
         --ov-text: var(--ov-white);
-        --ov-link: var(--ov-blue-dark);
+        --ov-link: var(--ov-blue);
 
         --ov-border: var(--ov-black-03);
         --ov-code-bg: var(--ov-black-01);
@@ -105,8 +104,9 @@ h2 {
     margin: 3rem 0;
 }
 h3 {
+    font-family: var(--sans);
     font-size: 1.1rem;
-    font-style: italic;
+    font-weight: bold;
     margin: 3rem 0 0 0;
 }
 hgroup { margin-bottom: 1.5em;}
