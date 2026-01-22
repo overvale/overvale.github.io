@@ -34,7 +34,7 @@
     --sans: ui-sans-serif, sans-serif;
     --serif: Utopia, ui-serif, Georgia, serif;
     --mono: ui-monospace, monospace;
-    
+
     /* Start by defining colors */
     --ov-white-pure: hsl(0, 0%, 100%);
     --ov-white: hsl(0, 0%, 98%);
@@ -47,9 +47,9 @@
     --ov-black-01: hsl(0, 0%, 15%);
     --ov-black-02: hsl(0, 0%, 20%);
     --ov-black-03: hsl(0, 0%, 25%);
-    
+
     --ov-blue: hsl(220, 100%, 65%);
-    
+
     /* Then define uses, assuming light color sceme */
     --ov-background: var(--ov-white);
     --ov-text: var(--ov-black);
@@ -57,7 +57,7 @@
     --ov-border: var(--ov-white-03);
     --ov-code-bg: var(--ov-white-01);
     --ov-figure-bg: var(--ov-white-pure);
-    
+
     color-scheme: light dark;
     font: -apple-system-body;
     font-size: 18px;
@@ -83,42 +83,67 @@ body {
     color: var(--ov-text);
     background-color: var(--ov-background);
 }
+
 main {
     max-width: 38em;
     padding: 1em;
     margin: 0 auto 10em auto;
 }
+
 nav {
     font-family: var(--sans);
     font-weight: 500;
 }
-h1, h2, h3, h4, h5, h6 { font-weight: 400; }
-b { font-weight: 600; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+b {
+    font-weight: 600;
+}
+
 h1 {
     font-size: 2rem;
     line-height: 1.25;
     margin: 6rem 0 3rem 0;
 }
+
 h2 {
     font-size: 1.5rem;
     margin: 3rem 0;
 }
+
 h3 {
     font-family: var(--sans);
     font-size: 1.1rem;
     font-weight: bold;
     margin: 3rem 0 0 0;
 }
-hgroup { margin-bottom: 1.5em;}
+
+hgroup {
+    margin-bottom: 1.5em;
+}
+
 hgroup p {
     font-style: italic;
     margin-top: -1em;
 }
-img { max-width: 100%; }
+
+img {
+    max-width: 100%;
+}
+
 a {
     color: inherit;
     text-decoration-color: var(--ov-link);
 }
+
 a.en {
     text-decoration: none;
     font-family: var(--sans);
@@ -128,11 +153,16 @@ a.en {
     border: 1px solid var(--ov-link);
     border-radius: 3px;
 }
-dt { margin-top: 1em; }
+
+dt {
+    margin-top: 1em;
+}
+
 code {
     font-family: var(--mono);
     font-size: .9em;
 }
+
 pre {
     overflow-x: auto;
     padding: 7px 10px;
@@ -142,37 +172,47 @@ pre {
     font-size: .9em;
     line-height: 1.3;
 }
+
 blockquote {
-    margin: 1em ;
+    margin: 1em;
     padding: 0 15px;
     border-left: 1px solid var(--ov-border);
 }
+
 blockquote.callout {
     border-left: none;
     font-style: italic;
     margin: 1em 3em;
 }
-time { display: block; }
+
+time {
+    display: block;
+}
+
 hr {
     border: none;
     height: 1px;
     background-color: var(--ov-border);
     margin: 2em;
 }
+
 figure {
     margin: 1em;
     border: 1px solid var(--ov-border);
     background-color: var(--ov-figure-bg);
 }
+
 figure.small {
     max-width: 60%;
     margin: 1em auto;
 }
+
 figcaption {
     font-size: 14px;
     text-align: center;
     font-style: italic;
 }
+
 .sans {
     font-family: var(--sans);
 }
