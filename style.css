@@ -184,3 +184,21 @@ figcaption {
 .sans {
     font-family: var(--sans);
 }
+
+h3#links {
+    margin-bottom: 1.5em;
+}
+
+div.link {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--ov-border);
+}
+
+time a {
+    text-decoration: none;
+}
+
+time a:hover {
+    text-decoration: underline;
+}
