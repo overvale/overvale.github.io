@@ -15,84 +15,34 @@
 
 <time>November 2021</time>
 
-<p>
-Reading blog posts about Emacs is fun,
-watching videos on YouTube is sometimes useful (though often tedious),
-but I've learned the most, and been influenced the most, by reading the actual code of other people's init files.
-</p>
-<p>
-Now, most init files you run in to are endless repetitions of use-package statements.
-Yuck. What fun is that? And, honestly, what's to learn from it?
-Me, I'd rather read the config of a lunatic who has been using Emacs for 30 years,
-has a 20,000-line config, and has never installed a single package.
-<i>That's</i> where you'll find the good stuff,
-the stuff that makes you think about Emacs's possibilities in a new light.
-</p>
-<p>
-I recently saw something in <a href="https://svn.red-bean.com/repos/kfogel/trunk/.emacs">such a config</a>
-that blew my mind because it's such
-a simple idea &ndash; but it's an idea that would only occur to you if you don't think of Emacs
-as an <i>editor</i> but as a <i>productivity platform</i>.
-</p>
-<p>
-I recently started a new job and my work computer is a Windows 7 machine.
-Let me tell you what's no fun at all: a Windows 7 machine is no fun at all.
-Convincing IT to install Emacs was a great idea
-because now Emacs is my home away from home at work.
-I use it to keep all my notes, track my todo list and things to follow up on,
-and I've started to use it for more and more things like a calendar, a calculator,
-and a simple way of drafting emails &ndash;
-but the most fun thing I've set up is a quick way of bringing up reference material.
-</p>
-<p>
-There are 14 separate departments I need to work with, in 4 separate time-zones,
-and each one of them has at least three people I need to keep in touch with about different things,
-that's ~42 people in 4 time zones! As a new employee, how can I be expected to keep all that straight?
-Sure, the company wiki displays that information, but in a format that takes a while to navigate.
-Emacs to the rescue!
-</p>
-<p>
-The idea is to create buffers of reference material that are
-super easy to call-up and super easy to dismiss.
-In the past I've put this information in <i>files</i> on the computer
-and then created quick ways of opening those files,
-but why not just do it with code?
-</p>
-<p>
-Example time. Try pasting the below in your Scratch buffer and evaluating it.
-</p>
-
-<pre><code>(let ((buffer-name "*Quick Help*"))
+<p>Reading blog posts about Emacs is fun, watching videos on YouTube is sometimes useful (though often tedious), but I’ve learned the most, and been influenced the most, by reading the actual code of other people’s init files.</p>
+<p>Now, most init files you run in to are endless repetitions of use-package statements. Yuck. What fun is that? And, honestly, what’s to learn from it? Me, I’d rather read the config of a lunatic who has been using Emacs for 30 years, has a 20,000-line config, and has never installed a single package. <em>That’s</em> where you’ll find the good stuff, the stuff that makes you think about Emacs’s possibilities in a new light.</p>
+<p>I recently saw something in <a href="https://svn.red-bean.com/repos/kfogel/trunk/.emacs">such a config</a> that blew my mind because it’s such a simple idea – but it’s an idea that would only occur to you if you don’t think of Emacs as an <em>editor</em> but as a <em>productivity platform</em>.</p>
+<p>I recently started a new job and my work computer is a Windows 7 machine. Let me tell you what’s no fun at all: a Windows 7 machine is no fun at all. Convincing IT to install Emacs was a great idea because now Emacs is my home away from home at work. I use it to keep all my notes, track my todo list and things to follow up on, and I’ve started to use it for more and more things like a calendar, a calculator, and a simple way of drafting emails – but the most fun thing I’ve set up is a quick way of bringing up reference material.</p>
+<p>There are 14 separate departments I need to work with, in 4 separate time-zones, and each one of them has at least three people I need to keep in touch with about different things, that’s ~42 people in 4 time zones! As a new employee, how can I be expected to keep all that straight? Sure, the company wiki displays that information, but in a format that takes a while to navigate. Emacs to the rescue!</p>
+<p>The idea is to create buffers of reference material that are super easy to call-up and super easy to dismiss. In the past I’ve put this information in <em>files</em> on the computer and then created quick ways of opening those files, but why not just do it with code?</p>
+<p>Example time. Try pasting the below in your Scratch buffer and evaluating it.</p>
+<pre class="elisp"><code>(let ((buffer-name &quot;*Quick Help*&quot;))
   (with-current-buffer (get-buffer-create buffer-name)
-    (insert "IT HOTLINE: 855-555-5555")
+    (insert &quot;IT HOTLINE: 855-555-5555&quot;)
     (goto-char (point-min))
-    (local-set-key (kbd "q") 'kill-buffer-and-window)
+    (local-set-key (kbd &quot;q&quot;) &#39;kill-buffer-and-window)
     (not-modified)
     (read-only-mode))
-  (pop-to-buffer buffer-name '((display-buffer-below-selected)
+  (pop-to-buffer buffer-name &#39;((display-buffer-below-selected)
                                (window-parameters . ((no-other-window . nil)))
                                (window-height . fit-window-to-buffer))))</code></pre>
-
-<p>
-  This will create a small window, below your current one, that displays the
-  IT Hotline number, which you can quickly dismiss by pressing "q".
-</p>
-
-<p>
-  Now all that remains to be done is to turn this code into a macro that can
-  be used repeatedly, define the reference help we want, and give the
-  generated functions a nice set of bindings.
-</p>
-
-<pre><code>(defmacro quick-help (name buffer text)
-  "Macro for creating callable functions that display help.
-Where NAME is name of function, BUFFER is name of buffer, and TEXT is displayed."
+<p>This will create a small window, below your current one, that displays the IT Hotline number, which you can quickly dismiss by pressing “q”.</p>
+<p>Now all that remains to be done is to turn this code into a macro that can be used repeatedly, define the reference help we want, and give the generated functions a nice set of bindings.</p>
+<pre class="elisp"><code>(defmacro quick-help (name buffer text)
+  &quot;Macro for creating callable functions that display help.
+Where NAME is name of function, BUFFER is name of buffer, and TEXT is displayed.&quot;
   (declare (indent defun))
   `(progn
      (defun ,name nil
        ,buffer
        (interactive)
-       (let ((qh-buff (concat "*Quick Help: " ,buffer "*"))
+       (let ((qh-buff (concat &quot;*Quick Help: &quot; ,buffer &quot;*&quot;))
              (qh-text ,text))
          (get-buffer-create qh-buff)
          (with-current-buffer qh-buff
@@ -100,20 +50,20 @@ Where NAME is name of function, BUFFER is name of buffer, and TEXT is displayed.
            (goto-char (point-min))
            (not-modified)
            (read-only-mode)
-           (local-set-key (kbd "C-g") (lambda () (interactive) (other-window -1)))
-           (local-set-key (kbd "q") 'kill-buffer-and-window))
-         (pop-to-buffer qh-buff '((display-buffer-below-selected)
+           (local-set-key (kbd &quot;C-g&quot;) (lambda () (interactive) (other-window -1)))
+           (local-set-key (kbd &quot;q&quot;) &#39;kill-buffer-and-window))
+         (pop-to-buffer qh-buff &#39;((display-buffer-below-selected)
                                   (window-parameters . ((no-other-window . nil)))
                                   (window-height . fit-window-to-buffer)))
-         (message "C-g - Previous Window, q - Remove Window")))))
+         (message &quot;C-g - Previous Window, q - Remove Window&quot;)))))
 
 (quick-help qh--it-hotline
-  "IT Hotline"
-  "IT HOTLINE: 855-555-5555")
+  &quot;IT Hotline&quot;
+  &quot;IT HOTLINE: 855-555-5555&quot;)
 
 (quick-help qh--departments
-  "Departments"
-  "\
+  &quot;Departments&quot;
+  &quot;\
 | Department | Manager     | Extension | Time Zone |
 |------------+-------------+-----------+-----------|
 | Sales      | Dave F      |        16 | LA        |
@@ -122,32 +72,27 @@ Where NAME is name of function, BUFFER is name of buffer, and TEXT is displayed.
 | Shipping   | Shaun D     |       345 | ATL       |
 | Recieving  | Brian C     |       876 | NY        |
 | Marketing  | Elizabeth W |        12 | LA        |
-| Coffee     | Donna F     |        34 | NY        |")
+| Coffee     | Donna F     |        34 | NY        |&quot;)
 
 (quick-help qh--wheather
-  "Weather Whether Wether"
-  "The climate is made up of “WEATHER”;
+  &quot;Weather Whether Wether&quot;
+  &quot;The climate is made up of “WEATHER”;
 WHETHER it is nice out depends on whether it is raining or not.
-A WETHER is just a castrated sheep.")
+A WETHER is just a castrated sheep.&quot;)
 
-(define-prefix-command 'quick-help-prompt nil "Quick Help")
+(define-prefix-command &#39;quick-help-prompt nil &quot;Quick Help&quot;)
 
 (let ((map quick-help-prompt))
-  (define-key map "i" '("IT Hotline" . qh--it-hotline))
-  (define-key map "d" '("Departments" . qh--departments))
-  (define-key map "w" '("Weather Whether Wether" . qh--wheather)))
+  (define-key map &quot;i&quot; &#39;(&quot;IT Hotline&quot; . qh--it-hotline))
+  (define-key map &quot;d&quot; &#39;(&quot;Departments&quot; . qh--departments))
+  (define-key map &quot;w&quot; &#39;(&quot;Weather Whether Wether&quot; . qh--wheather)))
 
-(global-set-key (kbd "C-c h") 'quick-help-prompt)
-</code></pre>
+(global-set-key (kbd &quot;C-c h&quot;) &#39;quick-help-prompt)</code></pre>
+<p>Now, any time you need that reference material you can call it up directly in Emacs as naturally as you would the definition of a function or variable.</p>
+<p><em>Emacs isn’t an editor, it is a text productivity platform.</em></p>
 
-<p>
-  Now, any time you need that reference material you can call it up directly
-  in Emacs as naturally as you would the definition of a function or variable.
-</p>
-
-<p>
-  <em>Emacs isn't an editor, it is a text productivity platform.</em>
-</p>
+<footer>
+</footer>
 
 </main>
 </body>
