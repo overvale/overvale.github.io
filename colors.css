@@ -1,0 +1,83 @@
+/* Colors from here: https://stephango.com/flexoki */
+
+/* Black & White */
+:root {
+--color-black:       #100F0F;
+--color-paper:       #FFFCF0;
+--color-base-50:     #F2F0E5;
+--color-base-100:    #E6E4D9;
+--color-base-150:    #DAD8CE;
+--color-base-200:    #CECDC3;
+--color-base-300:    #B7B5AC;
+--color-base-400:    #9F9D96;
+--color-base-500:    #878580;
+--color-base-600:    #6F6E69;
+--color-base-700:    #575653;
+--color-base-800:    #403E3C;
+--color-base-850:    #343331;
+--color-base-900:    #282726;
+--color-base-950:    #1C1B1A;
+
+/* Light Mode Colors */
+--color-red-600:     #AF3029;
+--color-orange-600:  #BC5215;
+--color-yellow-600:  #AD8301;
+--color-green-600:   #66800B;
+--color-cyan-600:    #24837B;
+--color-blue-600:    #205EA6;
+--color-purple-600:  #5E409D;
+--color-magenta-600: #A02F6F;
+
+/* Dark Mode Colors */
+--color-red-400:      #D14D41;
+--color-orange-400:   #DA702C;
+--color-yellow-400:   #D0A215;
+--color-green-400:    #879A39;
+--color-cyan-400:     #3AA99F;
+--color-blue-400:     #4385BE;
+--color-purple-400:   #8B7EC8;
+--color-magenta-400:  #CE5D97;
+
+/* Color Shorthands */
+--color-bg:   var(--color-paper);
+--color-bg-2: var(--color-base-50);
+--color-ui:   var(--color-base-100); /* Border and UI elements */
+--color-ui-2: var(--color-base-150);
+--color-ui-3: var(--color-base-200);
+--color-tx-3: var(--color-base-300); /* Faint text */
+--color-tx-2: var(--color-base-600); /* Muted text */
+--color-tx:   var(--color-black);    /* Main text */
+
+--color-ln:   var(--color-cyan-400); /* links */
+
+--color-re: var(--color-red-600);
+--color-or: var(--color-orange-600);
+--color-ye: var(--color-yellow-600);
+--color-gr: var(--color-green-600);
+--color-cy: var(--color-cyan-600);
+--color-bl: var(--color-blue-600);
+--color-pu: var(--color-purple-600);
+--color-ma: var(--color-magenta-600);
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+--color-bg:   var(--color-black);
+--color-bg-2: var(--color-base-950);
+--color-ui:   var(--color-base-900);
+--color-ui-2: var(--color-base-850);
+--color-ui-3: var(--color-base-800);
+--color-tx-3: var(--color-base-700);
+--color-tx-2: var(--color-base-500);
+--color-tx:   var(--color-base-200);
+
+--color-re: var(--color-red-400);
+--color-or: var(--color-orange-400);
+--color-ye: var(--color-yellow-400);
+--color-gr: var(--color-green-400);
+--color-cy: var(--color-cyan-400);
+--color-bl: var(--color-blue-400);
+--color-pu: var(--color-purple-400);
+--color-ma: var(--color-magenta-400);
+}
+}
