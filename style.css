@@ -73,6 +73,15 @@ img {
     max-width: 100%;
 }
 
+div#portrait-container {
+    float: right;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 0 1em 1.5em;
+}
+
 a {
     color: inherit;
     text-decoration-color: var(--color-ln);
@@ -166,7 +175,7 @@ figcaption {
     font-family: var(--sans);
 }
 
-h3#links {
+h2#links {
     margin-bottom: 1.5em;
 }
 
