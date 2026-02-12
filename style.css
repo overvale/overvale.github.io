@@ -9,7 +9,7 @@
     font-size: 18px;
     font-family: var(--serif);
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 body {
@@ -26,7 +26,8 @@ main {
 
 nav {
     font-family: var(--sans);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: .025em;
 }
 
 h1,
@@ -85,6 +86,7 @@ div#portrait-container {
 a {
     color: inherit;
     text-decoration-color: var(--color-ln);
+    text-underline-offset: 2px;
 }
 
 a:hover {
@@ -137,7 +139,10 @@ blockquote.callout {
 
 time {
     display: block;
+    font-family: var(--sans);
     color: var(--color-tx-2);
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
 }
 
 hr {
@@ -176,6 +181,9 @@ figcaption {
 }
 
 h2#links {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-ui);
     margin-bottom: 1.5em;
 }
 
