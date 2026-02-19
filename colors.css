@@ -2,41 +2,41 @@
 
 /* Black & White */
 :root {
---color-black:       #100F0F;
---color-paper:       #fdfbf1;
---color-base-50:     #F2F0E5;
---color-base-100:    #E6E4D9;
---color-base-150:    #DAD8CE;
---color-base-200:    #CECDC3;
---color-base-300:    #B7B5AC;
---color-base-400:    #9F9D96;
---color-base-500:    #878580;
---color-base-600:    #6F6E69;
---color-base-700:    #575653;
---color-base-800:    #403E3C;
---color-base-850:    #343331;
---color-base-900:    #282726;
---color-base-950:    #1C1B1A;
+--color-black:       hsl(0, 3%, 6%);
+--color-paper:       hsl(51, 45%, 97%);
+--color-base-50:     hsl(51, 33%, 92%);
+--color-base-100:    hsl(51, 21%, 88%);
+--color-base-150:    hsl(51, 15%, 82%);
+--color-base-200:    hsl(51, 10%, 76%);
+--color-base-300:    hsl(51, 6%, 70%);
+--color-base-400:    hsl(51, 3%, 64%);
+--color-base-500:    hsl(51, 0%, 58%);
+--color-base-600:    hsl(51, 0%, 52%);
+--color-base-700:    hsl(51, 0%, 46%);
+--color-base-800:    hsl(51, 0%, 40%);
+--color-base-850:    hsl(51, 0%, 34%);
+--color-base-900:    hsl(51, 0%, 28%);
+--color-base-950:    hsl(51, 0%, 22%);
 
 /* Light Mode Colors */
---color-red-600:     #AF3029;
---color-orange-600:  #BC5215;
---color-yellow-600:  #AD8301;
---color-green-600:   #66800B;
---color-cyan-600:    #24837B;
---color-blue-600:    #205EA6;
---color-purple-600:  #5E409D;
---color-magenta-600: #A02F6F;
+--color-red-600:     hsl(3, 62%, 42%);
+--color-orange-600:  hsl(22, 80%, 41%);
+--color-yellow-600:  hsl(45, 99%, 34%);
+--color-green-600:   hsl(73, 84%, 27%);
+--color-cyan-600:    hsl(175, 57%, 33%);
+--color-blue-600:    hsl(212, 68%, 39%);
+--color-purple-600:  hsl(259, 42%, 43%);
+--color-magenta-600: hsl(326, 55%, 41%);
 
 /* Dark Mode Colors */
---color-red-400:      #D14D41;
---color-orange-400:   #DA702C;
---color-yellow-400:   #D0A215;
---color-green-400:    #879A39;
---color-cyan-400:     #3AA99F;
---color-blue-400:     #4385BE;
---color-purple-400:   #8B7EC8;
---color-magenta-400:  #CE5D97;
+--color-red-400:      hsl(5, 61%, 54%);
+--color-orange-400:   hsl(23, 70%, 51%);
+--color-yellow-400:   hsl(45, 82%, 45%);
+--color-green-400:    hsl(72, 46%, 41%);
+--color-cyan-400:     hsl(175, 49%, 45%);
+--color-blue-400:     hsl(208, 49%, 50%);
+--color-purple-400:   hsl(251, 40%, 64%);
+--color-magenta-400:  hsl(329, 54%, 59%);
 
 /* Color Shorthands */
 --color-bg:   var(--color-paper);
