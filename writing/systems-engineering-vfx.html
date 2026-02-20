@@ -7,15 +7,68 @@
 <title>Systems Engineering for Visual Effects @overvale.com</title>
 </head>
 <body>
-<main class="article">
+<main class="content-page article">
+<div class="page-layout">
+<aside class="sidebar-left">
+<nav class="tree-nav" aria-label="Site Navigation">
+<ul class="tree-root">
+  <li><a href="/">Home</a></li>
+  <li class="tree-group"><span class="tree-group-label">Writing</span>
+    <ul>
+      <li><a href="/writing/structured-to-innovate.html">DARPA, Skunk Works, &amp; Bell Labs: Structured to Innovate</a></li>
+      <li><a href="/writing/systems-engineering-nasa.html">Systems Engineering at NASA</a></li>
+      <li><a href="/writing/systems-engineering-vfx.html" class="active">Systems Engineering for Visual Effects</a></li>
+    </ul>
+  </li>
+  <li class="tree-group"><span class="tree-group-label">Notes</span>
+    <ul>
+      <li><a href="/notes/books.html">Recommended Books</a></li>
+      <li><a href="/notes/papers.html">Recommended Papers</a></li>
+      <li><a href="/notes/managing.html">Notes on Managing</a></li>
+      <li><a href="/notes/growth_thoughts.html">Thoughts on Growing a Company</a></li>
+      <li><a href="/notes/the-thinning-of-understanding.html">The Thinning of Understanding</a></li>
+      <li><a href="/notes/black-ivy-style.html">Black Ivy Style Guide</a></li>
+      <li><a href="/notes/free_fonts.html">My Favorite Free Fonts</a></li>
+      <li><a href="/notes/macos_window_management.html">Built-In macOS Window Management Tools</a></li>
+      <li><a href="/notes/worth_the_money.html">Worth The Money</a></li>
+      <li><a href="/notes/software_love.html">Software I Love</a></li>
+      <li><a href="/notes/harrison_ford_movies.html">Harrison Ford Movies</a></li>
+      <li><a href="/notes/2007_movies.html">A Partial List of Movies Released in 2007</a></li>
+      <li><a href="/notes/revelation_complex.html">The Revelation of the Complex</a></li>
+      <li><a href="/notes/perfection.html">Perfection</a></li>
+      <li><a href="/notes/writing_in_plain_text.html">Writing In Plain-Text</a></li>
+    </ul>
+  </li>
+  <li class="tree-group"><span class="tree-group-label">Emacs Notes</span>
+    <ul>
+      <li><a href="/emacs/quick-help.html">Quick Help: Emacs as a Text Productivity Platform</a></li>
+      <li><a href="/emacs/buffer-confirm-kill.html">Confirm Killing Modified Buffers</a></li>
+      <li><a href="/emacs/custom-scratch-buffers.html">Custom Scratch Buffers</a></li>
+      <li><a href="/emacs/keymap-prompt.html">Keymap Prompts</a></li>
+      <li><a href="/emacs/mark-line-transient-command.html">Mark Line &amp; Marking Transient Command</a></li>
+      <li><a href="/emacs/kill-buffer-dwim.html">Kill Buffer DWIM</a></li>
+      <li><a href="/emacs/mouse-window-splits.html">Splitting Windows With the Mouse</a></li>
+      <li><a href="/emacs/bosskey-mode.html">Emacs Keybindings That Won&#39;t Get Overridden by Minor Modes</a></li>
+      <li><a href="/emacs/notes-on-package-el.html">How Package.el Works with Use Package</a></li>
+      <li><a href="/emacs/extending-emacs-bookmarks.html">Extending Emacs Bookmarks to Work With EWW</a></li>
+    </ul>
+  </li>
+  <li class="tree-group"><span class="tree-group-label">Links</span>
+    <ul>
+      <li><a href="/links.html">Link Archive</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+</aside>
 
-<nav><a href="/">overvale.com</a></nav>
-
+<article class="content-main">
 <h1>Systems Engineering for Visual Effects</h1>
 
 <time></time>
 
-<p>January 2024 (revised 2025, 2026) Oliver Taylor</p>
+<p>January 2024 (revised 2025, 2026)<br />
+Oliver Taylor</p>
 <p>Visual effects studios depend on the collaboration between art and engineering — two cultures with fundamentally different ways of thinking. This paper argues that the failures VFX projects experience most often stem not from bad work but from the unmanaged interactions between these cultures, their tools, and their processes. It proposes that Systems Engineering, developed at NASA to address exactly this kind of complexity, offers VFX studios a practical framework for improving how they design and operate their projects.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Visual Effects is a discipline born of the successful collaboration between art and engineering. It is an art whose tools are complex engineering projects in themselves, and an engineering discipline whose reason for being is artistic. In the art of VFX everything is an illusion, created with slight-of-hand. It requires spontaneity, intuition, psychological and emotional empathy, and the freedom to experiment and fail. The engineering of VFX is not that different from many engineering fields, it requires patience, rigor, and reliability of equipment, processes, and people. Visual Effects are built on the successful blending of two very different cultures, skills, and ways of thinking. The fusion between them creates a unique playground for innovation, but also a breeding ground for insidiously difficult problems.</p>
@@ -186,7 +239,42 @@ NASA Space Flight Project Life Cycle
 
 <footer>
 </footer>
+</article>
 
+<aside class="sidebar-right">
+<nav class="toc-nav" aria-label="Table of Contents">
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#embracing-systems-engineering" id="toc-embracing-systems-engineering">Embracing Systems Engineering</a></li>
+<li><a href="#management-structures" id="toc-management-structures">Management Structures</a>
+<ul>
+<li><a href="#the-role-isolation-failure-mode" id="toc-the-role-isolation-failure-mode">The Role Isolation Failure Mode</a></li>
+<li><a href="#technical-leadership-systems-management" id="toc-technical-leadership-systems-management">Technical Leadership &amp; Systems Management</a></li>
+<li><a href="#systems-engineering-management-for-vfx" id="toc-systems-engineering-management-for-vfx">Systems Engineering Management for VFX</a></li>
+</ul></li>
+<li><a href="#system-design-development" id="toc-system-design-development">System Design &amp; Development</a>
+<ul>
+<li><a href="#the-rigid-factory-failure-mode" id="toc-the-rigid-factory-failure-mode">The Rigid Factory Failure Mode</a></li>
+<li><a href="#system-design-challenges-at-a-vfx-studio" id="toc-system-design-challenges-at-a-vfx-studio">System Design Challenges at a VFX Studio</a></li>
+<li><a href="#the-chaotic-boutique-failure-mode" id="toc-the-chaotic-boutique-failure-mode">The Chaotic Boutique Failure Mode</a></li>
+<li><a href="#nasas-system-design-methods" id="toc-nasas-system-design-methods">NASA’s System Design Methods</a></li>
+</ul></li>
+<li><a href="#the-concept-of-operations" id="toc-the-concept-of-operations">The Concept of Operations</a>
+<ul>
+<li><a href="#why-write-it-down" id="toc-why-write-it-down">Why Write it Down?</a></li>
+<li><a href="#aspects-of-a-vfx-conops" id="toc-aspects-of-a-vfx-conops">Aspects of a VFX ConOps</a></li>
+</ul></li>
+<li><a href="#project-system-reviews" id="toc-project-system-reviews">Project &amp; System Reviews</a>
+<ul>
+<li><a href="#nasas-project-reviews" id="toc-nasas-project-reviews">NASA’s Project Reviews</a></li>
+<li><a href="#vfx-project-reviews" id="toc-vfx-project-reviews">VFX Project Reviews</a></li>
+</ul></li>
+<li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+</ul>
+</nav>
+</aside>
+</div>
 </main>
 </body>
 </html>
