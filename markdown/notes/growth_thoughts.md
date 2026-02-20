@@ -1,6 +1,6 @@
 ---
 title: "Thoughts on Growing a Company"
-date: November, 2020
+dateline: November, 2020
 author: Oliver Taylor
 category: note
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Kill Buffer DWIM"
-date: 2021, Summer
+dateline: 2021, Summer
 author: Oliver Taylor
 category: emacs
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Structured to Innovate"
-date: 
+dateline: 
 author: Oliver Taylor
 category: article
 ---

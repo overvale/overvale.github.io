@@ -1,6 +1,6 @@
 ---
 title: "Black Ivy Style Guide"
-date: February, 2025
+dateline: February, 2025
 author: Oliver Taylor
 category: note
 ---

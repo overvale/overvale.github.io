@@ -1,6 +1,6 @@
 ---
 title: "Emacs Keybindings That Won‘t Get Overridden by Minor Modes"
-date: 2021, Summer
+dateline: 2021, Summer
 author: Oliver Taylor
 category: emacs
 ---

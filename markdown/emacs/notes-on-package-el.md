@@ -1,6 +1,6 @@
 ---
 title: "How Package.el Works with Use Package"
-date: 2021-04-31
+dateline: 2021-04-31
 author: Oliver Taylor
 category: emacs
 ---

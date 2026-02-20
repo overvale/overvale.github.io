@@ -1,6 +1,6 @@
 ---
 title: "Extending Emacs Bookmarks to Work With EWW"
-date: 2021-02-07
+dateline: 2021-02-07
 author: Oliver Taylor
 category: emacs
 ---

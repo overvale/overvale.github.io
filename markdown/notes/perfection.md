@@ -1,6 +1,6 @@
 ---
 title: "Perfection"
-date: June, 2013
+dateline: June, 2013
 author: Oliver Taylor
 category: note
 ---

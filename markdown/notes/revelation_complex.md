@@ -1,6 +1,6 @@
 ---
 title: "Revelation of the Complex"
-date: September, 2013
+dateline: September, 2013
 author: Oliver Taylor
 category: note
 ---

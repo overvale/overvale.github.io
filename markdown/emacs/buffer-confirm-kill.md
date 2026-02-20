@@ -1,6 +1,6 @@
 ---
 title: "Confirm Killing Modified Buffers"
-date: 2021-09-04
+dateline: 2021-09-04
 author: Oliver Taylor
 category: emacs
 ---

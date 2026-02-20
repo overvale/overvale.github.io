@@ -1,6 +1,6 @@
 ---
 title: "Custom Scratch Buffers"
-date: 2021, August
+dateline: 2021, August
 author: Oliver Taylor
 category: emacs
 ---

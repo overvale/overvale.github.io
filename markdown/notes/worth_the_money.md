@@ -1,6 +1,6 @@
 ---
 title: "Worth the Money"
-date: Undated and ongoing...
+dateline: Undated and ongoing...
 author: Oliver Taylor
 category: note
 ---

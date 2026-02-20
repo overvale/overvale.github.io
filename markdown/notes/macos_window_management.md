@@ -1,6 +1,6 @@
 ---
 title: "Built-In macOS Window Management Tools"
-date: 
+dateline: 
 author: Oliver Taylor
 category: note
 ---

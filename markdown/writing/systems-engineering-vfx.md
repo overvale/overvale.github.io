@@ -1,6 +1,6 @@
 ---
 title: "Systems Engineering for Visual Effects"
-date: 
+dateline: 
 author: Oliver Taylor
 category: article
 ---

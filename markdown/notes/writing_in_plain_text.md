@@ -1,6 +1,6 @@
 ---
 title: "Writing in Plain Text"
-date: October, 2011
+dateline: October, 2011
 author: Oliver Taylor
 category: note
 ---

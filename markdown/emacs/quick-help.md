@@ -1,6 +1,6 @@
 ---
 title: "Quick Help: Emacs as a Text Productivity Platform"
-date: November 2021
+dateline: November 2021
 author: Oliver Taylor
 category: emacs
 ---

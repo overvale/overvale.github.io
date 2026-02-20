@@ -1,6 +1,6 @@
 ---
 title: "Splitting Windows With the Mouse"
-date: 2021, Spring
+dateline: 2021, Spring
 author: Oliver Taylor
 category: emacs
 ---

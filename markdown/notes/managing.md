@@ -1,6 +1,6 @@
 ---
 title: "Notes on Managing"
-date: February, 2022
+dateline: February, 2022
 author: Oliver Taylor
 category: note
 ---

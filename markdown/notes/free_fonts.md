@@ -1,6 +1,6 @@
 ---
 title: "My Favorite Free Fonts"
-date: January 2024
+dateline: January 2024
 author: Oliver Taylor
 category: note
 ---
