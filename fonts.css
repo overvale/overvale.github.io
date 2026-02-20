@@ -1,31 +1,135 @@
 @font-face {
-    font-family: "Family";
-    src: url("https://r2.overvale.com/family-regular.woff2") format("woff2");
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ThinItalic.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ExtLtIta.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Family";
-    src: url("https://r2.overvale.com/family-italic.woff2") format("woff2");
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Family";
-    src: url("https://r2.overvale.com/family-bold.woff2") format("woff2");
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Family";
-    src: url("https://r2.overvale.com/family-bold-italic.woff2") format("woff2");
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-BoldItalic.woff2") format("woff2");
     font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ExtraBlack.woff2") format("woff2");
+    font-weight: 950;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Unica";
+    src: url("https://r2.overvale.com/NHUnica-ExtBlkIta.woff2") format("woff2");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
