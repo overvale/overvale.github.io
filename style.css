@@ -283,8 +283,7 @@ blockquote.callout {
     margin: 1em 3em;
 }
 
-time {
-    display: block;
+.date {
     font-family: var(--sans);
     color: var(--color-tx-2);
     font-size: 0.9em;
@@ -339,11 +338,11 @@ div.link {
     border-bottom: 1px solid var(--color-ui);
 }
 
-time a {
+.date a {
     text-decoration: none;
 }
 
-time a:hover {
+.date a:hover {
     text-decoration: underline;
 }
 

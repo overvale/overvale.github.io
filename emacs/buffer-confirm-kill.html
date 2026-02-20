@@ -65,7 +65,7 @@
 <article class="content-main">
 <h1>Confirm Killing Modified Buffers</h1>
 
-<time>2021-09-04</time>
+<p class="date">2021-09-04</p>
 
 <p>In Emacs, a file-visiting buffer is one where the buffer displays the contents of a file. A regular buffer simply displays text: the output of a command, documentation, messages, an unsaved document, etc. Emacs uses these regular buffers to display its user interface in the same way that most apps use windows.</p>
 <p>When killing a file-visiting buffer that has unsaved changes Emacs will prompt you to confirm that action since you would lose those unsaved changes to the file. However, when killing a modified regular buffer Emacs does not prompt you at all. I imagine the reasoning for this is simply that Emacs creates and kills many temporary buffers to display its user interface, and no user wants to confirm killing every one of those buffers. This means that Emacs assumes the user does not want to lose modifications to file-visiting buffers but that losing modifications to regular buffers is just fine.</p>

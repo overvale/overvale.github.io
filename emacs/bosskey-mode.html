@@ -65,7 +65,7 @@
 <article class="content-main">
 <h1>Emacs Keybindings That Won‘t Get Overridden by Minor Modes</h1>
 
-<time>2021, Summer</time>
+<p class="date">2021, Summer</p>
 
 <p>Recently I‘ve been making an effort to better understand what’s happening under the hood of some of the packages I use, and I got curious about how <a href="https://melpa.org/#/bind-key">bind-key</a> manages to ensure my bindings are never overridden by minor modes (which can be very annoying).</p>
 <p>To understand how bind-key does it you need to learn two things. First, you need to understand the order of priority which Emacs assigns to different keymaps, which is well explained at <a href="https://www.masteringemacs.org/article/mastering-key-bindings-emacs#keymap-lookup-order">Mastering Emacs</a>. Second, you should read <a href="https://github.com/jwiegley/use-package/blob/master/bind-key.el">the bind-key source code</a>.</p>
