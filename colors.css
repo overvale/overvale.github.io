@@ -2,82 +2,82 @@
 
 /* Black & White */
 :root {
---color-black:       hsl(0, 3%, 6%);
---color-paper:       hsl(51, 45%, 97%);
---color-base-50:     hsl(51, 33%, 92%);
---color-base-100:    hsl(51, 21%, 88%);
---color-base-150:    hsl(51, 15%, 82%);
---color-base-200:    hsl(51, 10%, 76%);
---color-base-300:    hsl(51, 6%, 70%);
---color-base-400:    hsl(51, 3%, 64%);
---color-base-500:    hsl(51, 0%, 58%);
---color-base-600:    hsl(51, 0%, 52%);
---color-base-700:    hsl(51, 0%, 46%);
---color-base-800:    hsl(51, 0%, 40%);
---color-base-850:    hsl(51, 0%, 34%);
---color-base-900:    hsl(51, 0%, 28%);
---color-base-950:    hsl(51, 0%, 22%);
+    --color-black: #1c1e1c;
+    --color-paper: #f5f4ef;
+    --color-base-50: #edeade;
+    --color-base-100: #e2dbcc;
+    --color-base-150: #d6cebf;
+    --color-base-200: #c8bfaf;
+    --color-base-300: #afa593;
+    --color-base-400: #978b78;
+    --color-base-500: #807361;
+    --color-base-600: #6b5f4f;
+    --color-base-700: #584d40;
+    --color-base-800: #453d33;
+    --color-base-850: #393228;
+    --color-base-900: #2f2922;
+    --color-base-950: #26211c;
 
-/* Light Mode Colors */
---color-red-600:     hsl(3, 62%, 42%);
---color-orange-600:  hsl(22, 80%, 41%);
---color-yellow-600:  hsl(45, 99%, 34%);
---color-green-600:   hsl(73, 84%, 27%);
---color-cyan-600:    hsl(175, 57%, 33%);
---color-blue-600:    hsl(212, 68%, 39%);
---color-purple-600:  hsl(259, 42%, 43%);
---color-magenta-600: hsl(326, 55%, 41%);
+    /* Light Mode Colors */
+    --color-red-600: hsl(3, 62%, 42%);
+    --color-orange-600: hsl(22, 80%, 41%);
+    --color-yellow-600: hsl(45, 99%, 34%);
+    --color-green-600: hsl(73, 84%, 27%);
+    --color-cyan-600: hsl(175, 57%, 33%);
+    --color-blue-600: hsl(212, 68%, 39%);
+    --color-purple-600: hsl(259, 42%, 43%);
+    --color-magenta-600: hsl(326, 55%, 41%);
 
-/* Dark Mode Colors */
---color-red-400:      hsl(5, 61%, 54%);
---color-orange-400:   hsl(23, 70%, 51%);
---color-yellow-400:   hsl(45, 82%, 45%);
---color-green-400:    hsl(72, 46%, 41%);
---color-cyan-400:     hsl(175, 49%, 45%);
---color-blue-400:     hsl(208, 49%, 50%);
---color-purple-400:   hsl(251, 40%, 64%);
---color-magenta-400:  hsl(329, 54%, 59%);
+    /* Dark Mode Colors */
+    --color-red-400: hsl(5, 61%, 54%);
+    --color-orange-400: hsl(23, 70%, 51%);
+    --color-yellow-400: hsl(45, 82%, 45%);
+    --color-green-400: hsl(72, 46%, 41%);
+    --color-cyan-400: hsl(175, 49%, 45%);
+    --color-blue-400: hsl(208, 49%, 50%);
+    --color-purple-400: hsl(251, 40%, 64%);
+    --color-magenta-400: hsl(329, 54%, 59%);
 
-/* Color Shorthands */
---color-bg:   var(--color-paper);
---color-bg-2: var(--color-base-50);
---color-ui:   var(--color-base-100); /* Border and UI elements */
---color-ui-2: var(--color-base-150);
---color-ui-3: var(--color-base-200);
---color-tx-3: var(--color-base-300); /* Faint text */
---color-tx-2: var(--color-base-600); /* Muted text */
---color-tx:   var(--color-black);    /* Main text */
+    /* Color Shorthands */
+    --color-bg: var(--color-paper);
+    --color-bg-2: var(--color-base-50);
+    --color-ui: var(--color-base-100); /* Border and UI elements */
+    --color-ui-2: var(--color-base-150);
+    --color-ui-3: var(--color-base-200);
+    --color-tx-3: var(--color-base-300); /* Faint text */
+    --color-tx-2: var(--color-base-600); /* Muted text */
+    --color-tx: var(--color-black); /* Main text */
 
---color-ln:   var(--color-cyan-400); /* links */
+    --color-ln: var(--color-cyan-400); /* links */
 
---color-re: var(--color-red-600);
---color-or: var(--color-orange-600);
---color-ye: var(--color-yellow-600);
---color-gr: var(--color-green-600);
---color-cy: var(--color-cyan-600);
---color-bl: var(--color-blue-600);
---color-pu: var(--color-purple-600);
---color-ma: var(--color-magenta-600);
+    --color-re: var(--color-red-600);
+    --color-or: var(--color-orange-600);
+    --color-ye: var(--color-yellow-600);
+    --color-gr: var(--color-green-600);
+    --color-cy: var(--color-cyan-600);
+    --color-bl: var(--color-blue-600);
+    --color-pu: var(--color-purple-600);
+    --color-ma: var(--color-magenta-600);
 }
 
 @media (prefers-color-scheme: dark) {
-:root {
---color-bg:   var(--color-black);
---color-bg-2: var(--color-base-950);
---color-ui:   var(--color-base-900);
---color-ui-2: var(--color-base-850);
---color-ui-3: var(--color-base-800);
---color-tx-3: var(--color-base-700);
---color-tx-2: var(--color-base-500);
---color-tx:   var(--color-base-200);
+    :root {
+        --color-bg: var(--color-black);
+        --color-bg-2: var(--color-base-950);
+        --color-ui: var(--color-base-900);
+        --color-ui-2: var(--color-base-850);
+        --color-ui-3: var(--color-base-800);
+        --color-tx-3: var(--color-base-700);
+        --color-tx-2: var(--color-base-500);
+        --color-tx: var(--color-base-200);
 
---color-re: var(--color-red-400);
---color-or: var(--color-orange-400);
---color-ye: var(--color-yellow-400);
---color-gr: var(--color-green-400);
---color-cy: var(--color-cyan-400);
---color-bl: var(--color-blue-400);
---color-pu: var(--color-purple-400);
---color-ma: var(--color-magenta-400);
-}
+        --color-re: var(--color-red-400);
+        --color-or: var(--color-orange-400);
+        --color-ye: var(--color-yellow-400);
+        --color-gr: var(--color-green-400);
+        --color-cy: var(--color-cyan-400);
+        --color-bl: var(--color-blue-400);
+        --color-pu: var(--color-purple-400);
+        --color-ma: var(--color-magenta-400);
+    }
 }
