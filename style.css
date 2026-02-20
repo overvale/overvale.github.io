@@ -80,9 +80,10 @@ main.content-page > nav {
 .sidebar-left,
 .sidebar-right {
     position: fixed;
-    top: var(--layout-sidebar-top);
+    top: 50%;
+    transform: translateY(-50%);
     width: var(--layout-sidebar-width);
-    max-height: calc(100vh - (var(--layout-sidebar-top) * 2));
+    max-height: calc(100vh - 2rem);
     overflow-y: auto;
     font-family: var(--sans);
     font-size: 0.8rem;
