@@ -1,31 +1,16 @@
 @import url("./fonts.css");
 @import url("./colors.css");
+
+/* -- Variables ----------------------------------------------- */
+
 :root {
     --sans: "Unica", ui-sans-serif, sans-serif;
     --serif: "Family", ui-serif, Georgia, serif;
     --mono: "Commit Mono", ui-monospace, monospace;
 
-    /* UI layout controls */
     --layout-content-width: 38rem;
     --layout-content-max-width: calc(100vw - 2rem);
     --layout-page-bottom-space: 10em;
-    --layout-main-inline-padding: 0;
-    --layout-content-inline-padding: 0rem;
-    --layout-content-page-side-padding: 18rem;
-    --layout-sidebar-width-right: 16rem;
-    --layout-sidebar-width-left: 14rem;
-    --layout-sidebar-left-offset: 1rem;
-    --layout-sidebar-right-offset: 0rem;
-    --layout-sidebar-top: 0rem;
-    --layout-sidebar-vpad: 1rem;
-    --layout-sidebar-hpad: 1rem;
-    --layout-panel-radius: 0;
-    --layout-sidebar-bg: var(--color-bg);
-    --layout-sidebar-border: 0px solid var(--color-ui);
-    --layout-center-column-bg: var(--color-bg);
-    --layout-center-column-border: 1px solid var(--color-ui);
-    --layout-nav-home-gap: 0.9rem;
-    --layout-nav-home-letter-spacing: 0.04em;
 
     color-scheme: light dark;
     font: -apple-system-body;
@@ -34,6 +19,8 @@
     font-weight: 400;
     line-height: 1.4;
 }
+
+/* -- Layout -------------------------------------------------- */
 
 body {
     margin: 0;
@@ -61,64 +48,48 @@ header a {
 
 main {
     max-width: var(--layout-content-width);
-    padding: var(--layout-main-inline-padding);
     margin: 0 auto var(--layout-page-bottom-space) 0;
 }
 
 main.content-page {
     max-width: none;
-    padding: var(--layout-content-inline-padding)
-             var(--layout-content-page-side-padding)
-             var(--layout-page-bottom-space)
-             var(--layout-content-page-side-padding);
+    padding: 0 18rem var(--layout-page-bottom-space) 18rem;
     box-sizing: border-box;
-}
-
-main.content-page > nav {
-    box-sizing: border-box;
-    width: var(--layout-content-width);
-    max-width: var(--layout-content-max-width);
-    margin: 0 auto;
-    padding: 0 var(--layout-content-inline-padding);
-}
-
-.page-layout {
-    display: block;
 }
 
 .content-main {
     box-sizing: border-box;
     width: var(--layout-content-width);
     max-width: var(--layout-content-max-width);
-    padding: 1px var(--layout-content-inline-padding) 8rem 2rem;
+    padding: 1px 0 8rem 2rem;
     min-width: 0;
-    background-color: var(--layout-center-column-bg);
-    border-left: var(--layout-center-column-border);
-    border-radius: var(--layout-panel-radius);
+    background-color: var(--color-bg);
+    border-left: 1px solid var(--color-ui);
 }
 
 .sidebar-left,
 .sidebar-right {
-    padding: var(--layout-sidebar-vpad) var(--layout-sidebar-hpad);
-    background-color: var(--layout-sidebar-bg);
-    border-radius: var(--layout-panel-radius);
+    padding: 1rem;
+    background-color: var(--color-bg);
 }
 
 .sidebar-left {
     position: absolute;
-    top: calc(3rem + var(--layout-sidebar-top));
-    left: var(--layout-sidebar-left-offset);
-    width: var(--layout-sidebar-width-left);
+    top: 3rem;
+    left: 1rem;
+    width: 14rem;
 }
 
 .sidebar-right {
     position: fixed;
-    top: calc(3rem + var(--layout-sidebar-top));
-    max-height: calc(100vh - 3rem - var(--layout-sidebar-top));
-    width: var(--layout-sidebar-width-right);
+    top: 3rem;
+    max-height: calc(100vh - 3rem);
+    width: 16rem;
     overflow-y: auto;
-    right: var(--layout-sidebar-right-offset);
+    right: 0;
 }
+
+/* -- Navigation ---------------------------------------------- */
 
 .tree-nav,
 .toc-nav {
@@ -152,17 +123,20 @@ main.content-page > nav {
     font-weight: 600;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.footer-nav {
+    display: none;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-ui);
+}
+
+/* -- Typography ---------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-strong,
-b {
+strong, b {
     font-weight: 500;
 }
 
@@ -193,19 +167,6 @@ hgroup p {
     margin-top: -1em;
 }
 
-img {
-    max-width: 100%;
-}
-
-div#portrait-container {
-    float: right;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 0 1em 1.5em;
-}
-
 a {
     color: inherit;
     text-decoration-color: var(--color-ln);
@@ -231,6 +192,21 @@ a.en {
 
 dt {
     margin-top: 1em;
+}
+
+/* -- Content Elements ---------------------------------------- */
+
+img {
+    max-width: 100%;
+}
+
+div#portrait-container {
+    float: right;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 0 1em 1.5em;
 }
 
 code {
@@ -276,6 +252,14 @@ time {
     margin-bottom: 0.5em;
 }
 
+.date a {
+    text-decoration: none;
+}
+
+.date a:hover {
+    text-decoration: underline;
+}
+
 hr {
     border: none;
     height: 1px;
@@ -284,15 +268,13 @@ hr {
 }
 
 figure {
-    margin: 1em;
+    margin: 1em auto;
     padding: 0;
     border: 1px solid var(--color-ui);
     background-color: var(--color-bg-2);
     max-width: 100%;
     box-sizing: border-box;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 figure img {
@@ -306,7 +288,6 @@ figure p {
 
 figure.small {
     max-width: 60%;
-    margin: 1em auto;
 }
 
 figcaption {
@@ -319,6 +300,8 @@ figcaption {
 .sans {
     font-family: var(--sans);
 }
+
+/* -- Links Page ---------------------------------------------- */
 
 h2#links {
     margin-top: 4rem;
@@ -333,26 +316,14 @@ div.link {
     border-bottom: 1px solid var(--color-ui);
 }
 
-.date a {
-    text-decoration: none;
-}
-
-.date a:hover {
-    text-decoration: underline;
-}
-
-
-.footer-nav {
-    display: none;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-ui);
-}
+/* -- Global -------------------------------------------------- */
 
 ::selection {
     background-color: var(--color-ui-2);
     color: var(--color-tx);
 }
+
+/* -- Responsive ---------------------------------------------- */
 
 @media (max-width: 1200px) {
     .sidebar-right {
@@ -360,7 +331,7 @@ div.link {
     }
 
     main.content-page {
-        padding-right: var(--layout-content-inline-padding);
+        padding-right: 0;
     }
 
     main.content-page > nav,
@@ -375,13 +346,12 @@ div.link {
         display: none;
     }
 
-
     .footer-nav {
         display: block;
     }
 
     main.content-page {
-        padding-left: var(--layout-content-inline-padding);
+        padding-left: 0;
     }
 
     main.content-page > nav,
