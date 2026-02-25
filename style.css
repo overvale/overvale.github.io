@@ -6,7 +6,7 @@
     --mono: "Commit Mono", ui-monospace, monospace;
 
     /* UI layout controls */
-    --layout-content-width: 38em;
+    --layout-content-width: 38rem;
     --layout-content-max-width: calc(100vw - 2rem);
     --layout-page-bottom-space: 10em;
     --layout-main-inline-padding: 0;
@@ -50,6 +50,8 @@ header {
     font-weight: 500;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 header a {
@@ -97,10 +99,6 @@ main.content-page > nav {
 
 .sidebar-left,
 .sidebar-right {
-    font-family: var(--sans);
-    font-size: 0.8rem;
-    line-height: 1.35;
-    color: var(--color-tx-2);
     padding: var(--layout-sidebar-vpad) var(--layout-sidebar-hpad);
     background-color: var(--layout-sidebar-bg);
     border-radius: var(--layout-panel-radius);
@@ -115,7 +113,7 @@ main.content-page > nav {
 
 .sidebar-right {
     position: fixed;
-    top: calc(4.4rem + var(--layout-sidebar-top));
+    top: calc(3rem + var(--layout-sidebar-top));
     max-height: calc(100vh - 3rem - var(--layout-sidebar-top));
     width: var(--layout-sidebar-width-right);
     overflow-y: auto;
@@ -123,9 +121,9 @@ main.content-page > nav {
 }
 
 .tree-nav,
-.toc-nav,
-.footer-nav {
-    font-family: var(--mono);
+.toc-nav {
+    font-size: 0.8rem;
+    color: var(--color-tx-2);
 }
 
 .tree-nav ul,
@@ -137,29 +135,12 @@ main.content-page > nav {
 
 .tree-nav li,
 .toc-nav li {
-    margin: 0.2rem 0;
+    margin: 0.4rem 0;
 }
 
 .tree-nav .tree-root,
 .toc-nav > ul {
     padding-left: 0;
-}
-
-.tree-nav .tree-group {
-    margin-bottom: 0.7rem;
-}
-
-.tree-nav .tree-root > li:first-child {
-    margin-bottom: var(--layout-nav-home-gap);
-}
-
-.tree-nav .tree-root > li:first-child > a {
-
-    letter-spacing: var(--layout-nav-home-letter-spacing);
-}
-
-.tree-nav .tree-group-label {
-    display: block;
 }
 
 .tree-nav a,
@@ -169,15 +150,6 @@ main.content-page > nav {
 
 .tree-nav a.active {
     font-weight: 600;
-}
-
-.toc-nav #TOC,
-.toc-nav nav {
-    margin: 0;
-}
-
-.toc-nav ul ul {
-    margin-top: 0.2rem;
 }
 
 h1,
@@ -369,57 +341,12 @@ div.link {
     text-decoration: underline;
 }
 
-.breadcrumb {
-    display: none;
-    font-family: var(--sans);
-    font-size: 0.8rem;
-    color: var(--color-tx-3);
-    margin: 1rem 0 0 0;
-}
-
-.breadcrumb a {
-    text-decoration: none;
-}
 
 .footer-nav {
     display: none;
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-ui);
-    font-size: 0.85rem;
-    color: var(--color-tx-3);
-}
-
-.footer-nav h2 {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin: 0 0 1rem 0;
-    font-weight: 500;
-    color: var(--color-tx-3);
-}
-
-.footer-nav h3 {
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin: 1.5rem 0 0.25rem 0;
-    font-weight: 400;
-    color: var(--color-tx-3);
-}
-
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav li {
-    margin: 0.2rem 0;
-}
-
-.footer-nav a {
-    text-decoration: none;
 }
 
 ::selection {
@@ -448,9 +375,6 @@ div.link {
         display: none;
     }
 
-    .breadcrumb {
-        display: block;
-    }
 
     .footer-nav {
         display: block;
@@ -469,27 +393,16 @@ div.link {
     .content-main {
         border-left: none;
     }
-}
 
-@media (max-width: 720px) {
-    main.content-page {
-        padding: var(--layout-content-inline-padding) 2rem
-                 var(--layout-page-bottom-space) 2rem;
+    header {
+        padding: 0;
     }
 
-    main.content-page > nav {
-        width: auto;
-        max-width: var(--layout-content-width);
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 var(--layout-main-inline-padding);
-    }
-
-    .content-main {
-        width: auto;
-        max-width: var(--layout-content-width);
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 var(--layout-main-inline-padding);
+    header p {
+        box-sizing: border-box;
+        width: var(--layout-content-width);
+        max-width: var(--layout-content-max-width);
+        margin: 0 auto;
+        padding-left: 2rem;
     }
 }
