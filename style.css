@@ -1,11 +1,12 @@
 @import url("./fonts.css");
+@import url("https://rsms.me/inter/inter.css");
 @import url("./colors.css");
 
 /* -- Variables ----------------------------------------------- */
 
 :root {
-    --sans: "Unica", ui-sans-serif, sans-serif;
-    --serif: "Family", ui-serif, Georgia, serif;
+    --sans: "Inter", ui-sans-serif, sans-serif;
+    --serif: "Charter", ui-serif, Georgia, serif;
     --mono: "Commit Mono", ui-monospace, monospace;
 
     --layout-content-width: 38rem;
@@ -15,9 +16,9 @@
     color-scheme: light dark;
     font: -apple-system-body;
     font-size: 16px;
-    font-family: var(--sans);
+    font-family: var(--serif);
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 /* -- Layout -------------------------------------------------- */
@@ -33,6 +34,7 @@ header {
     height: 3rem;
     padding: 0 2rem;
     border-bottom: 1px solid var(--color-ui);
+    font-family: var(--sans);
     font-size: 1.25rem;
     font-weight: 500;
     position: relative;
@@ -43,6 +45,7 @@ header {
 
 header a {
     text-decoration: none;
+    font-weight: 600;
     padding: .2em 0;
 }
 
@@ -69,6 +72,7 @@ main.content-page {
 
 .sidebar-left,
 .sidebar-right {
+    font-family: var(--sans);
     padding: 1rem;
     background-color: var(--color-bg);
 }
@@ -124,6 +128,7 @@ main.content-page {
 }
 
 .footer-nav {
+    font-family: var(--sans);
     display: none;
     margin-top: 3rem;
     padding-top: 2rem;
@@ -133,7 +138,8 @@ main.content-page {
 /* -- Typography ---------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
+    font-family: var(--sans);
+    font-weight: 600;
 }
 
 strong, b {
@@ -152,7 +158,6 @@ h2 {
 }
 
 h3 {
-    font-family: var(--sans);
     font-size: 1rem;
     font-weight: 700;
     margin: 3rem 0 0 0;
