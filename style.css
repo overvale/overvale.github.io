@@ -1,5 +1,4 @@
 @import url("./fonts.css");
-@import url("https://rsms.me/inter/inter.css");
 @import url("./colors.css");
 
 /* -- Variables ----------------------------------------------- */
@@ -7,7 +6,7 @@
 :root {
     --sans: "Inter", ui-sans-serif, sans-serif;
     --serif: "Charter", ui-serif, Georgia, serif;
-    --mono: "Commit Mono", ui-monospace, monospace;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
 
     --layout-content-width: 38rem;
     --layout-content-max-width: calc(100vw - 2rem);
@@ -15,7 +14,7 @@
 
     color-scheme: light dark;
     font: -apple-system-body;
-    font-size: 16px;
+    font-size: 17px;
     font-family: var(--serif);
     font-weight: 400;
     line-height: 1.45;
@@ -35,7 +34,7 @@ header {
     padding: 0 2rem;
     border-bottom: 1px solid var(--color-ui);
     font-family: var(--sans);
-    font-size: 1.25rem;
+    font-size: 1.42rem;
     font-weight: 500;
     position: relative;
     z-index: 1;
@@ -97,7 +96,7 @@ main.content-page {
 
 .tree-nav,
 .toc-nav {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--color-tx-2);
 }
 
@@ -147,13 +146,13 @@ strong, b {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.27rem;
     line-height: 1.25;
     margin: 2rem 0 3rem 0;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 3rem 0;
 }
 
@@ -185,7 +184,7 @@ a:hover {
 a.en {
     text-decoration: none;
     font-family: var(--sans);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 500;
     padding: 0 0.2em;
     border: 1px solid var(--color-bl);
@@ -216,21 +215,15 @@ div#portrait-container {
 
 code {
     font-family: var(--mono);
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 450;
+    color: var(--color-bl);
 }
 
 pre {
     overflow-x: auto;
     padding: 7px 10px;
-    background-color: var(--color-bg-2);
-    border: 1px solid var(--color-ui);
-    border-radius: 4px;
     line-height: 1.3;
-}
-
-pre code {
-    font-size: 0.85rem;
 }
 
 blockquote {
@@ -247,13 +240,13 @@ blockquote.callout {
 
 time {
     font-family: var(--mono);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .date {
     font-family: var(--sans);
     color: var(--color-tx-2);
-    font-size: 0.9em;
+    font-size: 1em;
     margin-bottom: 0.5em;
 }
 
@@ -297,7 +290,7 @@ figure.small {
 
 figcaption {
     font-family: var(--sans);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-align: center;
     padding: 0.6rem 0 0.4rem 0;
 }

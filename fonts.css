@@ -31,18 +31,37 @@
 }
 
 @font-face {
-    font-family: "Commit Mono";
-    src: url("fonts/CommitMonoVF.woff2") format("woff2");
-    font-weight: 200 700;
+    font-family: "Inter";
+    src: url("https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1") format("woff2");
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
+    size-adjust: 88%;
 }
 
 @font-face {
-    font-family: "Commit Mono";
-    src: url("fonts/CommitMonoVF.woff2") format("woff2");
-    font-weight: 200 700;
+    font-family: "Inter";
+    src: url("https://rsms.me/inter/font-files/InterVariable-Italic.woff2?v=4.1") format("woff2");
+    font-weight: 100 900;
     font-style: italic;
-    font-variation-settings: "ital" 1;
     font-display: swap;
+    size-adjust: 88%;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono[wght].ttf") format("truetype");
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+    size-adjust: 85%;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Italic[wght].ttf") format("truetype");
+    font-weight: 100 800;
+    font-style: italic;
+    font-display: swap;
+    size-adjust: 85%;
 }

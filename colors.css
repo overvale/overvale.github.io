@@ -1,42 +1,42 @@
-/* Colors from here: https://stephango.com/flexoki */
+/* Colors */
 
-/* Black & White */
 :root {
-    --color-black: #1c1e1c;
-    --color-paper: #f5f4ef;
-    --color-base-50: #edeade;
-    --color-base-100: #e2dbcc;
-    --color-base-150: #d6cebf;
-    --color-base-200: #c8bfaf;
-    --color-base-300: #afa593;
-    --color-base-400: #978b78;
-    --color-base-500: #807361;
-    --color-base-600: #6b5f4f;
-    --color-base-700: #584d40;
-    --color-base-800: #453d33;
-    --color-base-850: #393228;
-    --color-base-900: #2f2922;
-    --color-base-950: #26211c;
+    /* Scale oklch: Lightness, Chroma, Hue */
+    --color-paper:    oklch(0.92 0.020 252);
+    --color-black:    oklch(0.23 0.090 252);
+    --color-base-50:  oklch(0.89 0.028 252);
+    --color-base-100: oklch(0.83 0.036 252);
+    --color-base-150: oklch(0.80 0.050 252);
+    --color-base-200: oklch(0.73 0.049 252);
+    --color-base-300: oklch(0.64 0.061 252);
+    --color-base-400: oklch(0.56 0.066 252);
+    --color-base-500: oklch(0.50 0.054 252);
+    --color-base-600: oklch(0.43 0.045 252);
+    --color-base-700: oklch(0.38 0.036 252);
+    --color-base-800: oklch(0.33 0.029 252);
+    --color-base-850: oklch(0.30 0.025 252);
+    --color-base-900: oklch(0.27 0.020 252);
+    --color-base-950: oklch(0.24 0.016 252);
 
-    /* Light Mode Colors */
-    --color-red-600: hsl(3, 62%, 42%);
-    --color-orange-600: hsl(22, 80%, 41%);
-    --color-yellow-600: hsl(45, 99%, 34%);
-    --color-green-600: hsl(73, 84%, 27%);
-    --color-cyan-600: hsl(175, 57%, 33%);
-    --color-blue-600: hsl(212, 68%, 39%);
-    --color-purple-600: hsl(259, 42%, 43%);
-    --color-magenta-600: hsl(326, 55%, 41%);
+    /* Light Mode Accents */
+    --color-red-600:     oklch(0.50 0.164  28);
+    --color-orange-600:  oklch(0.57 0.152  45);
+    --color-yellow-600:  oklch(0.63 0.129  85);
+    --color-green-600:   oklch(0.56 0.132 123);
+    --color-cyan-600:    oklch(0.56 0.087 187);
+    --color-blue-600:    oklch(0.40 0.150 255);
+    --color-purple-600:  oklch(0.45 0.144 295);
+    --color-magenta-600: oklch(0.50 0.164 350);
 
-    /* Dark Mode Colors */
-    --color-red-400: hsl(5, 61%, 54%);
-    --color-orange-400: hsl(23, 70%, 51%);
-    --color-yellow-400: hsl(45, 82%, 45%);
-    --color-green-400: hsl(72, 46%, 41%);
-    --color-cyan-400: hsl(175, 49%, 45%);
-    --color-blue-400: hsl(208, 49%, 50%);
-    --color-purple-400: hsl(251, 40%, 64%);
-    --color-magenta-400: hsl(329, 54%, 59%);
+    /* Dark Mode Accents */
+    --color-red-400:     oklch(0.60 0.168  28);
+    --color-orange-400:  oklch(0.65 0.155  48);
+    --color-yellow-400:  oklch(0.74 0.146  87);
+    --color-green-400:   oklch(0.65 0.123 120);
+    --color-cyan-400:    oklch(0.68 0.101 187);
+    --color-blue-400:    oklch(0.76 0.100 252);
+    --color-purple-400:  oklch(0.64 0.109 291);
+    --color-magenta-400: oklch(0.64 0.156 350);
 
     /* Color Shorthands */
     --color-bg: var(--color-paper);
