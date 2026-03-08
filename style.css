@@ -366,7 +366,7 @@ div.link {
         padding: 0;
     }
 
-    header p {
+    header a {
         box-sizing: border-box;
         width: var(--layout-content-width);
         max-width: var(--layout-content-max-width);
