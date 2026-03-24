@@ -204,15 +204,6 @@ img {
     max-width: 100%;
 }
 
-div#portrait-container {
-    float: right;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 0 1em 1.5em;
-}
-
 code {
     font-family: var(--mono);
     font-size: 1rem;
