@@ -146,6 +146,7 @@ main.content-page {
 
 h1#hello-im-oliver-taylor {
     font-family: var(--subheading);
+    font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6,
