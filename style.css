@@ -151,7 +151,8 @@ h1#hello-im-oliver-taylor {
 
 h1, h2, h3, h4, h5, h6,
 code, blockquote, time,
-.date, .sans, figcaption {
+.date, .sans, figcaption,
+.tree-nav, .toc-nav, .footer-nav {
     font-variant-ligatures: no-discretionary-ligatures;
     font-variant-numeric: lining-nums;
 }
@@ -166,13 +167,13 @@ strong, b {
 }
 
 h1 {
-    font-size: 2.27rem;
+    font-size: 2rem;
     line-height: 1.25;
     margin: 2rem 0 3rem 0;
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 6rem 0 3rem 0;
 }
 
@@ -359,6 +360,10 @@ div.link {
 }
 
 @media (max-width: 970px) {
+    :root {
+        font-size: 20px;
+        line-height: 1.3;
+    }
     .sidebar-left {
         display: none;
     }
@@ -379,6 +384,7 @@ div.link {
 
     .content-main {
         border-left: none;
+        padding: 0;
     }
 
     header {
@@ -390,6 +396,6 @@ div.link {
         width: var(--layout-content-width);
         max-width: var(--layout-content-max-width);
         margin: 0 auto;
-        padding-left: 2rem;
+        padding-left: 0;
     }
 }
