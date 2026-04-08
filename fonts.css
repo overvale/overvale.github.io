@@ -1,97 +1,71 @@
 @font-face {
-    font-family: "Cormorant Unicase";
-    src: url("fonts/CormorantUnicase[wght].ttf") format("truetype");
-    font-weight: 300 700;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 110%;
-}
-
-@font-face {
-    font-family: "Cormorant Upright";
-    src: url("fonts/CormorantUpright[wght].ttf") format("truetype");
-    font-weight: 300 700;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 110%;
-}
-
-@font-face {
-    font-family: "Ysabeau Office";
-    src: url("fonts/YsabeauOffice[wght].ttf") format("truetype");
-    font-weight: 1 1000;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 100%;
-}
-
-@font-face {
-    font-family: "Ysabeau Office";
-    src: url("fonts/YsabeauOffice-Italic[wght].ttf") format("truetype");
-    font-weight: 1 1000;
-    font-style: italic;
-    font-display: swap;
-    size-adjust: 100%;
-}
-
-@font-face {
-    font-family: "Libertinus Serif";
-    src: url("fonts/LibertinusSerif-Regular.otf") format("opentype");
+    font-family: "Domitian";
+    src: url("fonts/Domitian-Roman.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    size-adjust: 105%;
 }
 
 @font-face {
-    font-family: "Libertinus Serif";
-    src: url("fonts/LibertinusSerif-Italic.otf") format("opentype");
+    font-family: "Domitian";
+    src: url("fonts/Domitian-Italic.otf") format("opentype");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-    size-adjust: 105%;
 }
 
 @font-face {
-    font-family: "Libertinus Serif";
-    src: url("fonts/LibertinusSerif-Semibold.otf") format("opentype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 105%;
-}
-
-@font-face {
-    font-family: "Libertinus Serif";
-    src: url("fonts/LibertinusSerif-SemiboldItalic.otf") format("opentype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-    size-adjust: 105%;
-}
-
-@font-face {
-    font-family: "Libertinus Serif";
-    src: url("fonts/LibertinusSerif-Bold.otf") format("opentype");
+    font-family: "Domitian";
+    src: url("fonts/Domitian-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    size-adjust: 105%;
 }
 
 @font-face {
-    font-family: "Libertinus Serif";
-    src: url("fonts/LibertinusSerif-BoldItalic.otf") format("opentype");
+    font-family: "Domitian";
+    src: url("fonts/Domitian-BoldItalic.otf") format("opentype");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
-    size-adjust: 105%;
 }
 
 @font-face {
-    font-family: "Libertinus Mono";
-    src: url("fonts/LibertinusMono-Regular.otf") format("opentype");
+    font-family: "URW Classico";
+    src: url("fonts/URWClassico-Regular.ttf") format("truetype");
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "URW Classico";
+    src: url("fonts/URWClassico-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "URW Classico";
+    src: url("fonts/URWClassico-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "URW Classico";
+    src: url("fonts/URWClassico-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/MonaspaceXenon-Var.woff2") format("woff2");
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
     size-adjust: 85%;
