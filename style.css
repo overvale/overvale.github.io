@@ -14,7 +14,7 @@
     --layout-content-max-width: calc(100vw - 2rem);
     --layout-page-bottom-space: 10em;
 
-    color-scheme: light dark;
+    color-scheme: light;
     font: -apple-system-body;
     font-size: 17px;
     font-family: var(--serif);
