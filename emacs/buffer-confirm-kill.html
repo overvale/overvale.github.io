@@ -8,27 +8,22 @@
 <title>Confirm Killing Modified Buffers @overvale.com</title>
 </head>
 <body>
-<header><a href="/">Overvale</a></header>
-<main class="content-page emacs">
-<div class="page-layout">
-<aside class="sidebar-left">
-<nav class="tree-nav" aria-label="Site Navigation">
-<ul class="tree-root">
-  <li class="tree-group"><span class="tree-group-label">Writing</span>
-    <ul>
-      <li><a href="/writing/structured-to-innovate">DARPA, Skunk Works, &amp; Bell Labs: Structured to Innovate</a></li>
-      <li><a href="/writing/systems-engineering-nasa">Systems Engineering at NASA</a></li>
-      <li><a href="/writing/systems-engineering-vfx">Systems Engineering for Visual Effects</a></li>
-    </ul>
-  </li>
+<header>
+<div class="header-inner">
+<a class="site-title" href="/">Overvale</a>
+<nav class="header-nav" aria-label="Site Navigation">
+<ul>
+  <li><a href="/writing/">Writing</a></li>
   <li><a href="/notes/">Notes</a></li>
-  <li><a href="/emacs/" class="active">Emacs Notes</a></li>
+  <li><a href="/emacs/" class="active">Emacs</a></li>
   <li><a href="/links">Links</a></li>
 </ul>
 </nav>
-</aside>
+</div>
+</header>
 
-<article class="content-main">
+<main class="emacs">
+<article>
 <h1>Confirm Killing Modified Buffers</h1>
 
 <p class="date">2021-09-04</p>
@@ -66,28 +61,9 @@ This function is designed to be called from `kill-buffer-query-functions&#39;.&q
     (setq-local buffer-confirm-kill t)))</code></pre>
 <p>This new buffer is now protected from data-loss when the user attempts to either exit Emacs or kill the buffer.</p>
 
-<nav class="footer-nav tree-nav" aria-label="Site Navigation">
-<ul class="tree-root">
-  <li class="tree-group"><span class="tree-group-label">Writing</span>
-    <ul>
-      <li><a href="/writing/structured-to-innovate">DARPA, Skunk Works, &amp; Bell Labs: Structured to Innovate</a></li>
-      <li><a href="/writing/systems-engineering-nasa">Systems Engineering at NASA</a></li>
-      <li><a href="/writing/systems-engineering-vfx">Systems Engineering for Visual Effects</a></li>
-    </ul>
-  </li>
-  <li><a href="/notes/">Notes</a></li>
-  <li><a href="/emacs/" class="active">Emacs Notes</a></li>
-  <li><a href="/links">Links</a></li>
-</ul>
-</nav>
-
 <footer>
 </footer>
 </article>
-
-<aside class="sidebar-right">
-</aside>
-</div>
 </main>
 </body>
 </html>
