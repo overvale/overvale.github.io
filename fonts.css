@@ -63,8 +63,8 @@
 }
 
 @font-face {
-    font-family: "Monaspace Xenon";
-    src: url("fonts/MonaspaceXenon-Var.woff2") format("woff2");
+    font-family: "Monaspace Argon";
+    src: url("fonts/MonaspaceArgonVar.woff2") format("woff2");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
