@@ -301,3 +301,19 @@ div.link {
         line-height: 1.1;
     }
 }
+
+/* -- Print --------------------------------------------------- */
+
+@media print {
+    @page {
+        margin: 1in 1.5in;
+    }
+
+    :root {
+        font-size: 12pt;
+    }
+
+    header {
+        display: none;
+    }
+}
