@@ -1,33 +1,19 @@
 @font-face {
-    font-family: "Domitian";
-    src: url("fonts/Domitian-Roman.otf") format("opentype");
-    font-weight: 400;
+    font-family: "EB Garamond";
+    src: url("fonts/EBGaramond-VariableFont_wght.ttf") format("truetype-variations");
+    font-weight: 400 800;
     font-style: normal;
     font-display: swap;
+    size-adjust: 110%;
 }
 
 @font-face {
-    font-family: "Domitian";
-    src: url("fonts/Domitian-Italic.otf") format("opentype");
-    font-weight: 400;
+    font-family: "EB Garamond";
+    src: url("fonts/EBGaramond-Italic-VariableFont_wght.ttf") format("truetype-variations");
+    font-weight: 400 800;
     font-style: italic;
     font-display: swap;
-}
-
-@font-face {
-    font-family: "Domitian";
-    src: url("fonts/Domitian-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Domitian";
-    src: url("fonts/Domitian-BoldItalic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
+    size-adjust: 110%;
 }
 
 @font-face {
@@ -68,5 +54,5 @@
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
-    size-adjust: 85%;
+    size-adjust: 80%;
 }
