@@ -4,7 +4,7 @@
 /* -- Variables ----------------------------------------------- */
 
 :root {
-    --sans: "URW Classico", ui-sans-serif, sans-serif;
+    --sans: "Alegreya Sans", ui-sans-serif, sans-serif;
     --serif: "EB Garamond", ui-serif;
     --mono: "Monaspace Argon", ui-monospace, monospace;
 
@@ -47,7 +47,6 @@ header {
 .site-title {
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.075em;
 }
@@ -172,7 +171,7 @@ code {
 pre {
     overflow-x: auto;
     padding: 7px 10px;
-    line-height: 1.3;
+    line-height: 1.1;
 }
 
 pre code {
