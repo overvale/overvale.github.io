@@ -5,7 +5,7 @@
 <meta name="viewport" content="width = device-width" />
 <link rel="stylesheet" type="text/css" href="/style.css" />
 <script src="/theme.js"></script>
-<title>Kill Buffer DWIM @overvale.com</title>
+<title>Kill Buffer <span class="smallcaps">dwim</span> @overvale.com</title>
 </head>
 <body>
 <header>
@@ -24,12 +24,12 @@
 
 <main class="emacs">
 <article>
-<h1>Kill Buffer DWIM</h1>
+<h1>Kill Buffer <span class="smallcaps">dwim</span></h1>
 
 <p class="date">2021, Summer</p>
 
 <p>When you call <code>kill-buffer</code> Emacs prompts you for which buffer you’d like to kill. The default choice is the current buffer, which is good because 9 times out of 10 that’s the buffer I want to kill, but confirming that choice every time is tedious.</p>
-<p>Emacs has a wonderful convention of “do what I mean” (DWIM) commands, versions of commands which do one thing if a condition is met and another if it isn’t. My version of <code>kill-buffer</code> should kill the current buffer by default, and if it is prefixed by the universal argument I should be prompted for which buffer I’d like to kill. The best of both worlds I think.</p>
+<p>Emacs has a wonderful convention of “do what I mean” (<span class="smallcaps">dwim</span>) commands, versions of commands which do one thing if a condition is met and another if it isn’t. My version of <code>kill-buffer</code> should kill the current buffer by default, and if it is prefixed by the universal argument I should be prompted for which buffer I’d like to kill. The best of both worlds I think.</p>
 <pre class="elisp"><code>(defun kill-buffer-dwim (&amp;optional u-arg)
   &quot;Call kill-current-buffer, with C-u: call kill-buffer.&quot;
   (interactive &quot;P&quot;)

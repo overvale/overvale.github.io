@@ -57,7 +57,12 @@ main {
     padding: 0 1rem;
     font-variant-ligatures: common-ligatures no-discretionary-ligatures;
     font-variant-numeric: oldstyle-nums;
-    font-feature-settings: normal;
+    font-feature-settings: "ss08";
+}
+
+.smallcaps {
+    font-variant-caps: small-caps;
+    letter-spacing: -0.05em;
 }
 
 /* -- Navigation ---------------------------------------------- */
