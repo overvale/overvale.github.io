@@ -47,8 +47,9 @@ header {
 .site-title {
     text-decoration: none;
     font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.075em;
+    font-variant-caps: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
 }
 
 main {
