@@ -9,16 +9,16 @@
     --serif: "Splentinex", ui-serif;
     --mono: "Monaspace Argon", ui-monospace, monospace;
 
-    --layout-content-width: 38rem;
+    --layout-content-width: 65ch;
     --layout-content-max-width: calc(100vw - 2rem);
     --layout-page-bottom-space: 10em;
 
     color-scheme: light;
     font: -apple-system-body;
-    font-size: 19px;
+    font-size: 18px;
     font-family: var(--serif);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* -- Layout -------------------------------------------------- */
@@ -102,26 +102,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.25;
     letter-spacing: -0.025em;
-    margin: 8rem 0 4rem 0;
+    margin: 4rem 0 4rem 0;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     letter-spacing: -0.025em;
     margin: 6rem 0 3rem 0;
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     margin: 4rem 0 0 0;
 }
 
-p + p {
-    margin-top: 1.5rem;
+h2 + h3 {
+    margin-top: 3rem;
+}
+
+p {
+    margin-block-end: 1.4em;
 }
 
 b, strong {
@@ -141,7 +145,8 @@ a:hover {
 
 a.en {
     text-decoration: none;
-    font-size: 0.9rem;
+    font-family: var(--sans);
+    font-size: 0.8rem;
     padding: 0 0.1rem 0;
     margin: 0 0.1rem;
     border: 1px solid var(--color-ln);
@@ -182,7 +187,7 @@ pre code {
 blockquote {
     font-family: var(--serif);
     margin: 1rem;
-    padding: 1px 1.4rem;
+    padding-left: 1.4rem;
 }
 
 blockquote.callout {
