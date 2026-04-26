@@ -1,24 +1,6 @@
 @font-face {
-    font-family: "EB Garamond";
-    src: url("fonts/EBGaramond-VariableFont_wght.ttf?v=ss08") format("truetype-variations");
-    font-weight: 400 800;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 110%;
-}
-
-@font-face {
-    font-family: "EB Garamond";
-    src: url("fonts/EBGaramond-Italic-VariableFont_wght.ttf?v=ss08") format("truetype-variations");
-    font-weight: 400 800;
-    font-style: italic;
-    font-display: swap;
-    size-adjust: 110%;
-}
-
-@font-face {
-    font-family: "Alegreya Sans";
-    src: url("fonts/AlegreyaSans-Regular.ttf") format("truetype");
+    font-family: "Splentinex";
+    src: url("fonts/Splentinex-Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -26,8 +8,8 @@
 }
 
 @font-face {
-    font-family: "Alegreya Sans";
-    src: url("fonts/AlegreyaSans-Italic.ttf") format("truetype");
+    font-family: "Splentinex";
+    src: url("fonts/Splentinex-Italic.otf") format("opentype");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -35,8 +17,8 @@
 }
 
 @font-face {
-    font-family: "Alegreya Sans";
-    src: url("fonts/AlegreyaSans-Bold.ttf") format("truetype");
+    font-family: "Splentinex";
+    src: url("fonts/Splentinex-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -44,12 +26,44 @@
 }
 
 @font-face {
-    font-family: "Alegreya Sans";
-    src: url("fonts/AlegreyaSans-BoldItalic.ttf") format("truetype");
+    font-family: "Splentinex";
+    src: url("fonts/Splentinex-BoldItalic.otf") format("opentype");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
     size-adjust: 105%;
+}
+
+@font-face {
+    font-family: "URWU001";
+    src: url("fonts/URWU001-Reg.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "URWU001";
+    src: url("fonts/URWU001-Ita.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "URWU001";
+    src: url("fonts/URWU001-Bol.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "URWU001";
+    src: url("fonts/URWU001-BolIta.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -58,5 +72,5 @@
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
-    size-adjust: 80%;
+    size-adjust: 85%;
 }

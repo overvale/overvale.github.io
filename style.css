@@ -4,8 +4,9 @@
 /* -- Variables ----------------------------------------------- */
 
 :root {
-    --sans: "Alegreya Sans", ui-sans-serif, sans-serif;
-    --serif: "EB Garamond", ui-serif;
+    --sans: "URWU001", ui-sans-serif, sans-serif;
+    --sans-c: "URWU001 Condensed", ui-sans-serif, sans-serif;
+    --serif: "Splentinex", ui-serif;
     --mono: "Monaspace Argon", ui-monospace, monospace;
 
     --layout-content-width: 38rem;
@@ -14,7 +15,7 @@
 
     color-scheme: light;
     font: -apple-system-body;
-    font-size: 18px;
+    font-size: 19px;
     font-family: var(--serif);
     font-weight: 400;
     line-height: 1.5;
@@ -46,9 +47,7 @@ header {
 
 .site-title {
     text-decoration: none;
-    font-size: 1.1rem;
-    font-variant-caps: small-caps;
-    text-transform: lowercase;
+    text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
@@ -62,9 +61,9 @@ main {
 }
 
 .smallcaps {
-    font-variant-caps: small-caps;
-    letter-spacing: -0.05em;
+    text-transform: uppercase;
 }
+
 
 /* -- Navigation ---------------------------------------------- */
 
@@ -94,23 +93,24 @@ main {
 /* -- Typography ---------------------------------------------- */
 
 h1#hello-im-oliver-taylor {
-    font-family: var(--sans);
     font-size: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-weight: 400;
 }
 
 h1 {
     font-size: 1.8rem;
     line-height: 1.25;
-    margin: 2rem 0 3rem 0;
+    letter-spacing: -0.025em;
+    margin: 8rem 0 4rem 0;
 }
 
 h2 {
     font-size: 1.4rem;
+    letter-spacing: -0.025em;
     margin: 6rem 0 3rem 0;
 }
 
@@ -120,17 +120,12 @@ h3 {
     margin: 4rem 0 0 0;
 }
 
+p + p {
+    margin-top: 1.5rem;
+}
+
 b, strong {
     font-weight: 600;
-}
-
-hgroup {
-    margin-bottom: 1.5em;
-}
-
-hgroup p {
-    font-style: italic;
-    margin-top: -1em;
 }
 
 a {
@@ -169,7 +164,7 @@ img {
 code {
     font-family: var(--mono);
     font-size: 1rem;
-    line-height: 0.5; /* needed for libertinus mono */
+    line-height: 0.5; /* needed for mono font */
     font-weight: 350;
     color: var(--color-bl);
 }
@@ -177,7 +172,7 @@ code {
 pre {
     overflow-x: auto;
     padding: 7px 10px;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 pre code {
@@ -305,25 +300,5 @@ div.link {
 
     .header-nav ul {
         gap: 1rem;
-    }
-
-    h1, h2 {
-        line-height: 1.1;
-    }
-}
-
-/* -- Print --------------------------------------------------- */
-
-@media print {
-    @page {
-        margin: 1in 1.5in;
-    }
-
-    :root {
-        font-size: 12pt;
-    }
-
-    header {
-        display: none;
     }
 }
