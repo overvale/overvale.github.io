@@ -4,10 +4,11 @@
 /* -- Variables ----------------------------------------------- */
 
 :root {
-    --sans: "URWU001", ui-sans-serif, sans-serif;
-    --sans-c: "URWU001 Condensed", ui-sans-serif, sans-serif;
-    --serif: "Splentinex", ui-serif;
+    --sans: "Roboto Flex", ui-sans-serif, sans-serif;
+    --serif: "Source Serif 4", ui-serif;
     --mono: "Monaspace Argon", ui-monospace, monospace;
+
+    --roboto-vars: "wdth" 115, "YOPQ" 55;
 
     --layout-content-width: 65ch;
     --layout-content-max-width: calc(100vw - 2rem);
@@ -17,8 +18,8 @@
     font: -apple-system-body;
     font-size: 18px;
     font-family: var(--serif);
-    font-weight: 400;
-    line-height: 1.4;
+    font-weight: 450;
+    line-height: 1.5;
 }
 
 /* -- Layout -------------------------------------------------- */
@@ -28,11 +29,16 @@ body {
     position: relative;
     color: var(--color-tx);
     background-color: var(--color-bg);
+    /* This matches macOS and iOS rendering: */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 header {
     border-bottom: 1px solid var(--color-ui);
     font-family: var(--sans);
+    font-variation-settings: var(--roboto-vars);
+    font-weight: 425;
 }
 
 .header-inner {
@@ -47,18 +53,21 @@ header {
 
 .site-title {
     text-decoration: none;
+    font-weight: 600;
 }
 
 main {
     max-width: var(--layout-content-width);
     margin: 0 auto var(--layout-page-bottom-space);
     padding: 0 1rem;
-    font-variant-ligatures: common-ligatures no-discretionary-ligatures;
-    font-variant-numeric: oldstyle-nums;
-    font-feature-settings: "ss08";
 }
 
 .smallcaps {
+    font-variant-caps: all-small-caps;
+}
+
+h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
+    font-variant-caps: normal;
     text-transform: uppercase;
 }
 
@@ -96,20 +105,19 @@ h1#hello-im-oliver-taylor {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--sans);
-    font-weight: 400;
+    font-variation-settings: var(--roboto-vars);
+    font-weight: 500;
 }
 
 h1 {
     font-size: 1.6rem;
     line-height: 1.25;
-    letter-spacing: -0.025em;
     margin: 4rem 0 4rem 0;
 }
 
 h2 {
     font-size: 1.3rem;
-    letter-spacing: -0.025em;
-    margin: 6rem 0 3rem 0;
+    margin: 4rem 0;
 }
 
 h3 {
@@ -123,7 +131,7 @@ h2 + h3 {
 }
 
 p {
-    margin-block-end: 1.4em;
+    margin-block-end: 1.5em;
 }
 
 b, strong {
@@ -144,6 +152,7 @@ a:hover {
 a.en {
     text-decoration: none;
     font-family: var(--sans);
+    font-variation-settings: var(--roboto-vars);
     font-size: 0.8rem;
     padding: 0 0.1rem 0;
     margin: 0 0.1rem;
@@ -188,15 +197,22 @@ blockquote {
     padding-left: 1.4rem;
 }
 
-blockquote.callout {
-    border-left: none;
+.callout {
+    margin: 0 1.4rem 0 1.4rem;
     font-style: italic;
-    margin: 1em 3em;
+}
+
+.callout > :first-child {
+    text-indent: -1em;
+}
+.callout > :first-child::before {
+    content: "¶ \2008";
+    color: var(--color-re);
 }
 
 time.permalink {
     font-family: var(--mono);
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-tx-2);
 }
 
@@ -210,6 +226,7 @@ time.permalink a {
 
 .date {
     font-family: var(--sans);
+    font-variation-settings: var(--roboto-vars);
     color: var(--color-tx-3);
 }
 
@@ -253,7 +270,8 @@ figure.small {
 
 figcaption {
     font-family: var(--sans);
-    font-weight: 500;
+    font-variation-settings: var(--roboto-vars);
+    font-weight: 400;
     font-size: 0.85rem;
     text-align: center;
     padding: 0.6rem 0 0.4rem 0;
@@ -261,6 +279,7 @@ figcaption {
 
 .sans {
     font-family: var(--sans);
+    font-variation-settings: var(--roboto-vars);
 }
 
 /* -- Links Page ---------------------------------------------- */

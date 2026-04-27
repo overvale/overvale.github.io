@@ -1,69 +1,26 @@
 @font-face {
-    font-family: "Splentinex";
-    src: url("fonts/Splentinex-Regular.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 105%;
-}
-
-@font-face {
-    font-family: "Splentinex";
-    src: url("fonts/Splentinex-Italic.otf") format("opentype");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-    size-adjust: 105%;
-}
-
-@font-face {
-    font-family: "Splentinex";
-    src: url("fonts/Splentinex-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 105%;
-}
-
-@font-face {
-    font-family: "Splentinex";
-    src: url("fonts/Splentinex-BoldItalic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-    size-adjust: 105%;
-}
-
-@font-face {
-    font-family: "URWU001";
-    src: url("fonts/URWU001-Reg.ttf") format("truetype");
-    font-weight: 400;
+    font-family: "Source Serif 4";
+    src: url("fonts/SourceSerif4Variable-Roman.ttf") format("truetype");
+    font-weight: 200 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "URWU001";
-    src: url("fonts/URWU001-Ita.ttf") format("truetype");
-    font-weight: 400;
+    font-family: "Source Serif 4";
+    src: url("fonts/SourceSerif4Variable-Italic.ttf") format("truetype");
+    font-weight: 200 900;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "URWU001";
-    src: url("fonts/URWU001-Bol.ttf") format("truetype");
-    font-weight: 700;
+    font-family: "Roboto Flex";
+    src: url("fonts/RobotoFlex-Variable.ttf") format("truetype");
+    font-weight: 100 1000;
     font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: "URWU001";
-    src: url("fonts/URWU001-BolIta.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
+    size-adjust: 95%;
 }
 
 @font-face {
