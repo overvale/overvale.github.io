@@ -196,17 +196,17 @@ blockquote.callout {
     margin: 1em 3em;
 }
 
-time {
+time.permalink {
     font-family: var(--mono);
     font-weight: 500;
     color: var(--color-tx-2);
 }
 
-time:before {
+time.permalink:before {
     content: "∵ "
 }
 
-time a {
+time.permalink a {
     text-decoration: none;
 }
 
