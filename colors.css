@@ -38,7 +38,7 @@
     --color-tx-2: var(--color-base-600); /* Muted text */
     --color-tx:   var(--color-black);    /* Main text */
 
-    --color-ln: var(--color-cyan); /* links */
+    --color-ln: var(--color-red); /* links */
 
     --color-re: var(--color-red);
     --color-or: var(--color-orange);

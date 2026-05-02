@@ -227,8 +227,7 @@ code {
     font-family: var(--mono);
     font-size: 1rem;
     line-height: 0.5; /* needed for mono font */
-    font-weight: 350;
-    color: var(--color-bl);
+    color: var(--color-gr);
 }
 
 pre {
