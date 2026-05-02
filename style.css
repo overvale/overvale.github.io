@@ -261,8 +261,7 @@ blockquote {
 
 time.permalink {
     font-family: var(--mono);
-    font-weight: 400;
-    color: var(--color-tx-2);
+    color: var(--color-tx-3);
 }
 
 time.permalink:before {
@@ -317,8 +316,14 @@ figure.small {
     max-width: 60%;
 }
 
-#home figure.home-image {
+#home figure.home-image,
+figure.page-image {
     margin-top: 4rem;
+}
+
+figure.transparent-image {
+    border: none;
+    background-color: transparent;
 }
 
 figcaption {
@@ -342,6 +347,19 @@ h2#links {
     padding-top: 2rem;
     border-top: 1px solid var(--color-ui);
     margin-bottom: 1.5em;
+}
+
+#links h1 {
+    margin-bottom: 0;
+}
+
+#links figure.page-image {
+    margin-top: 0;
+}
+
+#links figure.page-image img {
+    max-height: 18rem;
+    width: auto;
 }
 
 div.link {
