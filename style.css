@@ -1,5 +1,5 @@
 @import url("./fonts.css");
-@import url("./colors.css");
+@import url("./nasa-colors.css");
 
 /* -- Variables ----------------------------------------------- */
 
@@ -14,6 +14,28 @@
     --layout-content-max-width: calc(100vw - 2rem);
     --layout-page-bottom-space: 10em;
 
+    --color-bg-1: var(--color-white);
+    --color-bg-2: var(--color-primary-alt-lightest);
+    --color-bg-3: var(--color-cool-blue-lightest);
+
+    --color-ui-1: var(--color-gray-cool-light);
+    --color-ui-2: var(--color-primary-alt-light);
+    --color-ui-3: var(--color-gold);
+
+    --color-tx-1: var(--color-base);
+    --color-tx-2: var(--color-gray);
+    --color-tx-3: var(--color-cool-blue-light);
+
+    --color-ln-1: var(--color-primary);
+
+    --color-red: var(--color-secondary);
+    --color-orange: var(--color-gold);
+    --color-yellow: var(--color-gold-lightest);
+    --color-cyan: var(--color-primary-alt);
+    --color-blue: var(--color-primary);
+    --color-purple: var(--color-visited);
+    --color-magenta: var(--color-secondary-light);
+
     color-scheme: light;
     font: -apple-system-body;
     font-size: 18px;
@@ -27,15 +49,16 @@
 body {
     margin: 0;
     position: relative;
-    color: var(--color-tx);
-    background-color: var(--color-bg);
+    color: var(--color-tx-1);
+    background-color: var(--color-bg-1);
     /* This matches macOS and iOS rendering: */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-    border-bottom: 1px solid var(--color-ui);
+    border-bottom: 1px solid var(--color-gray-warm-light);
+    background-color: var(--color-gray-lightest);
     font-family: var(--sans);
     font-variation-settings: var(--roboto-vars);
     font-weight: 425;
@@ -66,6 +89,7 @@ main {
     margin-left: -0.55rem;
     border-radius: 6px;
     font-family: var(--sans);
+    color: var(--color-primary-darkest);
     text-decoration: none;
     font-weight: 600;
     transition:
@@ -77,8 +101,8 @@ main {
 .site-title:focus-visible {
     background-color: var(--color-bg-2);
     box-shadow:
-        inset 0 0 0 1px color-mix(in oklch, var(--color-ui), transparent 45%),
-        0 1px 0 color-mix(in oklch, var(--color-ui-2), transparent 75%);
+        inset 0 0 0 1px color-mix(in oklch, var(--color-primary), transparent 55%),
+        0 1px 0 color-mix(in oklch, var(--color-primary-alt), transparent 80%);
 }
 
 .smallcaps {
@@ -115,7 +139,7 @@ h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
     min-height: 1.8rem;
     padding: 0 0.55rem;
     border-radius: 6px;
-    color: var(--color-tx-2);
+    color: var(--color-cool-blue);
     text-decoration: none;
     transition:
         color 140ms ease,
@@ -125,15 +149,15 @@ h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
 
 .header-nav a:hover,
 .header-nav a:focus-visible {
-    color: var(--color-tx);
+    color: var(--color-primary-darkest);
     background-color: var(--color-bg-2);
     box-shadow:
-        inset 0 0 0 1px color-mix(in oklch, var(--color-ui), transparent 45%),
-        0 1px 0 color-mix(in oklch, var(--color-ui-2), transparent 75%);
+        inset 0 0 0 1px color-mix(in oklch, var(--color-primary), transparent 55%),
+        0 1px 0 color-mix(in oklch, var(--color-primary-alt), transparent 80%);
 }
 
 .header-nav a.active {
-    color: var(--color-tx);
+    color: var(--color-primary-darkest);
 }
 
 .header-nav a.active::after {
@@ -144,7 +168,7 @@ h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
     bottom: 0.18rem;
     height: 2px;
     border-radius: 2px;
-    background-color: var(--color-ui-3);
+    background-color: var(--color-secondary);
 }
 
 /* -- Typography ---------------------------------------------- */
@@ -157,6 +181,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--sans);
     font-variation-settings: var(--roboto-vars);
     font-weight: 500;
+    color: var(--color-primary-darkest);
 }
 
 h1 {
@@ -190,12 +215,13 @@ b, strong {
 
 a {
     color: inherit;
-    text-decoration-color: var(--color-ln);
+    text-decoration-color: var(--color-ln-1);
     text-decoration-style: underline;
     text-underline-offset: 2px;
 }
 
 a:hover {
+    color: var(--color-primary-darkest);
     background-color: var(--color-bg-2);
 }
 
@@ -209,10 +235,10 @@ a.en {
     min-width: 1em;
     top: -2px;
     margin: 0 0.1em;
-    border: 1px solid var(--color-ui);
+    border: 1px solid var(--color-ui-1);
     background-color: var(--color-bg-2);
     border-radius: 3px;
-    color: var(--color-ln);
+    color: var(--color-ln-1);
     font-weight: 700;
     text-align: center;
 }
@@ -235,7 +261,7 @@ code {
     font-family: var(--mono);
     font-size: 1rem;
     line-height: 0.5; /* needed for mono font */
-    color: var(--color-gr);
+    color: var(--color-green);
 }
 
 pre {
@@ -264,7 +290,7 @@ blockquote {
 }
 .callout > :first-child::before {
     content: "¶ \2008";
-    color: var(--color-re);
+    color: var(--color-red);
 }
 
 time.permalink {
@@ -297,14 +323,14 @@ time.permalink a {
 hr {
     border: none;
     height: 1px;
-    background-color: var(--color-ui);
+    background-color: var(--color-ui-1);
     margin: 2em;
 }
 
 figure {
     margin: 1em auto;
     padding: 0;
-    border: 1px solid var(--color-ui);
+    border: 1px solid var(--color-ui-1);
     background-color: var(--color-bg-2);
     max-width: 100%;
     box-sizing: border-box;
@@ -353,7 +379,7 @@ figcaption {
 h2#links {
     margin-top: 4rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--color-ui);
+    border-top: 1px solid var(--color-ui-1);
     margin-bottom: 1.5em;
 }
 
@@ -373,15 +399,15 @@ h2#links {
 div.link {
     margin-bottom: 1.5em;
     padding-bottom: 1em;
-    border-bottom: 1px solid var(--color-ui);
+    border-bottom: 1px solid var(--color-ui-1);
 }
 
 
 /* -- Global -------------------------------------------------- */
 
 ::selection {
-    background-color: var(--color-bg-2);
-    color: var(--color-tx);
+    background-color: var(--color-gold-lightest);
+    color: var(--color-tx-1);
 }
 
 /* -- Responsive ---------------------------------------------- */
