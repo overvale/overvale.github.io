@@ -201,6 +201,11 @@ h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
     font-variant-caps: all-small-caps;
 }
 
+em .smallcaps {
+    font-size: 1.2em;
+    line-height: 0.75;
+}
+
 
 p {
     margin-block-end: 1.5em;
@@ -213,6 +218,10 @@ p {
 
 b, strong {
     font-weight: 600;
+}
+
+em {
+    font-weight: 500;
 }
 
 blockquote {
@@ -376,17 +385,18 @@ p.abstract .smallcaps {
 }
 
 article > .pdf-download a {
+    color: var(--color-primary-darkest);
     text-decoration: none;
+    font-size: 0.9em;
     padding: 0.1em 0.4em;
-    background-color: var(--color-gray-lightest);
+    background-color: transparent;
     border: 1px solid var(--color-gray-light);
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 article > .pdf-download a:hover {
     color: var(--color-primary-darkest);
-    background-color: transparent;
-    border-color: var(--color-cool-blue);
+    background-color: var(--color-gray-lightest);
 }
 
 
@@ -424,7 +434,7 @@ figure.transparent-image {
 figcaption {
     font-family: var(--sans);
     font-variation-settings: var(--roboto-vars);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 0.85rem;
     text-align: center;
     text-wrap: balance;
@@ -435,7 +445,7 @@ figcaption .smallcaps {
     /* correction for Roboto Flex's tiny small-caps */
     font-size: 1.15em;
     line-height: .5em;
-    font-weight: 500;
+    font-weight: 550;
 }
 
 /* -- Links Page ---------------------------------------------- */
@@ -470,6 +480,10 @@ div.link {
 /* -- Responsive ---------------------------------------------- */
 
 @media (max-width: 480px) {
+    :root {
+        font-size: 19px;
+    }
+
     .header-inner {
         height: auto;
         flex-direction: column;
