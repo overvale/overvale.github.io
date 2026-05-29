@@ -37,11 +37,9 @@ body {
 }
 
 header {
-    border-bottom: 1px solid var(--color-gray-lighter);
-    background-color: var(--color-gray-lightest);
+    background-color: var(--color-green-racing);
     font-family: var(--sans);
     font-variation-settings: var(--roboto-vars);
-    font-weight: 425;
 }
 
 main {
@@ -53,32 +51,13 @@ main {
 
 /* -- Header -------------------------------------------------- */
 
-
-header::before {
-    /* Rainbow bar at top of page */
-    content: "";
-    display: block;
-    height: 3px;
-    background: linear-gradient(
-        90deg,
-        var(--color-primary-darkest) 0 28%,
-        var(--color-primary) 28% 58%,
-        var(--color-secondary) 58% 64%,
-        var(--color-gold) 64% 72%,
-        var(--color-primary-alt) 72% 100%
-    );
-}
-
 .header-inner {
-    /* layout of navigation links */
     font-family: var(--serif); /* used to calcualte width */
     max-width: var(--layout-content-width);
     margin: 0 auto;
-    min-height: 2.6rem;
-    padding: 1.35rem 1rem 0.15rem 1rem;
+    padding: 1.25rem 1rem;
     display: flex;
     align-items: baseline;
-    gap: 2.2rem;
 }
 
 /* ---- Site Title ----- */
@@ -86,19 +65,16 @@ header::before {
 .site-title {
     display: inline-flex;
     align-items: center;
-    min-height: 1.8rem;
-    margin-left: -0.55rem;
     font-family: var(--sans);
-    color: var(--color-primary-darkest);
+    color: var(--color-gray-lightest);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 650;
 }
 
 .site-title:hover,
 .site-title:focus-visible {
-    color: var(--color-primary);
+    color: var(--color-gray-lightest);
     background-color: transparent;
-    border-bottom: 2px solid var(--color-primary);
 }
 
 /* ---- Header Navigation ----- */
@@ -106,6 +82,7 @@ header::before {
 .header-nav {
     font-family: var(--sans);
     font-variation-settings: var(--roboto-vars);
+    font-weight: 500;
     margin-left: auto;
     display: flex;
 }
@@ -124,20 +101,19 @@ header::before {
     align-items: center;
     min-height: 1.8rem;
     padding: 0;
-    color: var(--color-cool-blue);
+    color: var(--color-gray-lightest);
     text-decoration: none;
 }
 
 .header-nav a:hover,
 .header-nav a:focus-visible {
-    color: var(--color-primary-darkest);
+    color: var(--color-gray-lightest);
     background-color: transparent;
-    border-bottom: 1px solid var(--color-cool-blue);
 }
 
 .header-nav a.active {
-    color: var(--color-primary-darkest);
-    border-bottom: 2px solid var(--color-secondary);
+    color: var(--color-gray-lightest);
+    border-bottom: 2px solid var(--color-gold-lighter);
 }
 
 /* -- Content Elements ---------------------------------------------- */
@@ -155,20 +131,6 @@ h1 {
     font-size: 1.6rem;
     line-height: 1.25;
     margin: 4rem 0 1.35rem 0;
-}
-
-h1::after {
-    content: "";
-    display: block;
-    width: 5.4rem;
-    height: 3px;
-    margin-top: 0.95rem;
-    background: linear-gradient(
-        90deg,
-        var(--color-secondary) 0 34%,
-        var(--color-gold) 34% 66%,
-        var(--color-primary-alt) 66% 100%
-    );
 }
 
 h2 {
@@ -228,13 +190,13 @@ blockquote {
     font-size: .95rem;
     margin: 0rem;
     padding-left: 1.4rem;
-    border-left: 2px solid var(--color-gray-warm-light);
-    color: var(--color-primary-darker);
+    border-left: 1px solid var(--color-gray-warm-light);
+    color: var(--color-primary-darkest);
 }
 
 a {
     color: inherit;
-    text-decoration-color: var(--color-gold);
+    text-decoration-color: var(--color-secondary-light);
     text-decoration-style: underline;
     text-decoration-thickness: 0.06em;
     text-underline-offset: 2px;
@@ -285,6 +247,11 @@ hr {
 .callout {
     margin: 0 1.4rem;
     font-style: italic;
+}
+
+.callout .smallcaps {
+    font-size: 1.2em;
+    line-height: 0.75;
 }
 
 .callout > :first-child {
