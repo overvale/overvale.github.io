@@ -438,7 +438,7 @@ div.link {
 /* -- Global -------------------------------------------------- */
 
 ::selection {
-    background-color: var(--color-gold-lightest);
+    background-color: var(--color-cool-blue-lightest);
     color: var(--color-base);
 }
 
