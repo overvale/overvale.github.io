@@ -5,7 +5,7 @@
 
 :root {
     --sans: "Mona Sans", ui-sans-serif, sans-serif;
-    --serif: "Source Serif 4", ui-serif;
+    --serif: "EB Garamond", ui-serif;
     --mono: "Monaspace Argon", ui-monospace, monospace;
 
     --mona-vars: "wdth" 95;
@@ -27,7 +27,7 @@
 
     color-scheme: light;
     font: -apple-system-body;
-    font-size: 18px;
+    font-size: 19px;
     font-family: var(--serif);
     font-weight: 450;
     line-height: 1.5;
@@ -200,22 +200,12 @@ h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
     font-variant-caps: all-small-caps;
 }
 
-em .smallcaps {
-    font-size: 1.2em;
-    line-height: 0.75;
-}
-
-
 p {
     margin-block-end: 1.5em;
 }
 
 b, strong {
     font-weight: 600;
-}
-
-em {
-    font-weight: 500;
 }
 
 blockquote {
@@ -280,11 +270,6 @@ hr {
 .callout {
     margin: 0 1.4rem;
     font-style: italic;
-}
-
-.callout .smallcaps {
-    font-size: 1.2em;
-    line-height: 0.75;
 }
 
 .callout > :first-child {
