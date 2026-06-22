@@ -466,7 +466,7 @@ div.link {
 
 @media (max-width: 480px) {
     :root {
-        font-size: 19px;
+        font-size: 21px;
     }
 
     .header-inner {
@@ -478,7 +478,7 @@ div.link {
     }
 
     .header-nav {
-        margin-left: -0.55rem;
+        margin-left: 0;
     }
 
     .header-nav ul {
