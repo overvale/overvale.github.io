@@ -474,7 +474,7 @@ div.link {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.1rem;
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1rem;
     }
 
     .header-nav {
