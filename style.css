@@ -5,7 +5,7 @@
 
 :root {
     --sans: "Mona Sans", ui-sans-serif, sans-serif;
-    --serif: "EB Garamond", ui-serif;
+    --serif: "Libre Baskerville", ui-serif;
     --mono: "Monaspace Argon", ui-monospace, monospace;
 
     --mona-vars: "wdth" 95;
@@ -191,13 +191,15 @@ h2 + h3 {
     margin-top: 2.4rem;
 }
 
-h1 .smallcaps, h2 .smallcaps, h3 .smallcaps {
-    font-variant-caps: normal;
+.smallcaps {
     text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 550;
 }
 
-.smallcaps {
-    font-variant-caps: all-small-caps;
+h1 .smallcaps, h2 .smallcaps, h3 .smallcaps, h4 .smallcaps {
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 p {
@@ -362,13 +364,6 @@ article > .byline::before {
     color: var(--color-cool-blue);
 }
 
-p.abstract .smallcaps {
-    /* correction for the sans small-caps */
-    font-size: 1.2em;
-    line-height: .5em;
-    font-weight: 500;
-}
-
 article > .pdf-download a {
     color: var(--color-primary-darkest);
     text-decoration: none;
@@ -424,13 +419,6 @@ figcaption {
     text-align: center;
     text-wrap: balance;
     padding: 0.6rem 0.5rem 0.4rem;
-}
-
-figcaption .smallcaps {
-    /* correction for the sans small-caps */
-    font-size: 1.15em;
-    line-height: .5em;
-    font-weight: 550;
 }
 
 /* -- Links Page ---------------------------------------------- */
