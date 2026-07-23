@@ -5,8 +5,8 @@
 
 :root {
     --sans: "Mona Sans", ui-sans-serif, sans-serif;
-    --serif: "Libre Baskerville", ui-serif;
-    --mono: "Monaspace Argon", ui-monospace, monospace;
+    --serif: "Alfred Serif Text", "Libre Baskerville", ui-serif;
+    --mono: "IBM Plex Mono", "Monaspace Argon", ui-monospace, monospace;
 
     --mona-vars: "wdth" 95;
 
@@ -24,13 +24,14 @@
     --site-title-weight: 560;
     --nav-link-weight: 450;
     --mona-full-width-vars: "wdth" 100;
+    --color-page-background: #f7f7f4;
 
     color-scheme: light;
     font: -apple-system-body;
-    font-size: 19px;
+    font-size: 18px;
     font-family: var(--serif);
     font-weight: 450;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 /* -- Layout -------------------------------------------------- */
@@ -39,7 +40,7 @@ body {
     margin: 0;
     position: relative;
     color: var(--color-base);
-    background-color: var(--color-white);
+    background-color: var(--color-page-background);
     text-wrap: pretty;
     /* This matches macOS and iOS rendering: */
     -webkit-font-smoothing: antialiased;
@@ -154,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--sans);
     font-variation-settings: var(--mona-vars);
     font-weight: 500;
-    color: var(--color-primary-darkest);
+    color: var(--color-base);
     text-wrap: balance;
 }
 
@@ -172,11 +173,13 @@ h1 {
 
 h2 {
     font-size: 1.3rem;
+    font-variation-settings: var(--mona-full-width-vars);
+    font-weight: 600;
     position: relative;
     margin: 4.75rem 0 1.45rem 0;
     padding-top: 0.55rem;
     padding-bottom: 0.55rem;
-    border-top: 1px solid var(--color-gray-cool-light);
+    border-top: 2px solid var(--color-gray-dark);
 }
 
 h3 {
@@ -184,7 +187,6 @@ h3 {
     font-weight: 600;
     position: relative;
     margin: 3.25rem 0 1.1rem 0;
-    color: var(--color-cool-blue);
 }
 
 h2 + h3 {
@@ -193,8 +195,7 @@ h2 + h3 {
 
 .smallcaps {
     text-transform: uppercase;
-    font-size: 0.8em;
-    font-weight: 550;
+    font-size: 0.9em;
 }
 
 h1 .smallcaps, h2 .smallcaps, h3 .smallcaps, h4 .smallcaps {
@@ -295,7 +296,7 @@ code {
 
 pre {
     overflow-x: auto;
-    line-height: 1.1;
+    line-height: 1.2;
     margin: 0 0 1.4rem 0;
     padding-left: 1.4rem;
     border-left: 2px solid var(--color-gray-warm-light);
@@ -386,7 +387,7 @@ figure {
     margin: 1em auto;
     padding: 0;
     border: 1px solid var(--color-gray-lighter);
-    background-color: var(--color-gray-lightest);
+    background-color: transparent;
     max-width: 100%;
     box-sizing: border-box;
     width: fit-content;
@@ -406,6 +407,17 @@ figure.page-image {
     margin-top: 4rem;
 }
 
+main img {
+    filter: grayscale(1);
+    mix-blend-mode: multiply;
+    transition: filter 180ms ease;
+}
+
+main img:hover {
+    filter: none;
+    mix-blend-mode: normal;
+}
+
 figure.transparent-image {
     border: none;
     background-color: transparent;
@@ -419,6 +431,8 @@ figcaption {
     text-align: center;
     text-wrap: balance;
     padding: 0.6rem 0.5rem 0.4rem;
+    border-top: 1px solid var(--color-gray-lighter);
+    background-color: var(--color-gray-lightest);
 }
 
 /* -- Links Page ---------------------------------------------- */

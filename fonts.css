@@ -1,4 +1,36 @@
 @font-face {
+    font-family: "Alfred Serif Text";
+    src: url("fonts/AlfredSerifText-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alfred Serif Text";
+    src: url("fonts/AlfredSerifText-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alfred Serif Text";
+    src: url("fonts/AlfredSerifText-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alfred Serif Text";
+    src: url("fonts/AlfredSerifText-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Libre Baskerville";
     src: url("fonts/LibreBaskerville[wght].woff2") format("woff2");
     font-weight: 400 700;
@@ -23,6 +55,42 @@
     font-style: normal;
     font-display: swap;
     size-adjust: 95%;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    size-adjust: 90%;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    size-adjust: 90%;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    size-adjust: 90%;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    size-adjust: 90%;
 }
 
 @font-face {
