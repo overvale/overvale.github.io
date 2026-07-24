@@ -312,6 +312,7 @@ pre code {
 
 time.permalink {
     font-family: var(--mono);
+    font-size: 0.95rem;
     color: var(--color-gray);
 }
 
