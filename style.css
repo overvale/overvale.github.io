@@ -5,8 +5,8 @@
 
 :root {
     --sans: "Mona Sans", ui-sans-serif, sans-serif;
-    --serif: "Overvale Serif", "Libre Baskerville", ui-serif;
-    --mono: "IBM Plex Mono", "Monaspace Argon", ui-monospace, monospace;
+    --serif: "Overvale Serif", ui-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
 
     --mona-vars: "wdth" 95;
 

@@ -31,24 +31,6 @@
 }
 
 @font-face {
-    font-family: "Libre Baskerville";
-    src: url("fonts/LibreBaskerville[wght].woff2") format("woff2");
-    font-weight: 400 700;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 85%;
-}
-
-@font-face {
-    font-family: "Libre Baskerville";
-    src: url("fonts/LibreBaskerville-Italic[wght].woff2") format("woff2");
-    font-weight: 400 700;
-    font-style: italic;
-    font-display: swap;
-    size-adjust: 85%;
-}
-
-@font-face {
     font-family: "Mona Sans";
     src: url("fonts/MonaSansVF[wdth,opsz,wght].woff2") format("woff2");
     font-weight: 200 900;
@@ -91,13 +73,4 @@
     font-style: italic;
     font-display: swap;
     size-adjust: 90%;
-}
-
-@font-face {
-    font-family: "Monaspace Argon";
-    src: url("fonts/MonaspaceArgonVar.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-    size-adjust: 80%;
 }
