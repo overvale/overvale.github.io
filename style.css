@@ -4,11 +4,10 @@
 /* -- Variables ----------------------------------------------- */
 
 :root {
-    --sans: "Mona Sans", ui-sans-serif, sans-serif;
-    --serif: "Overvale Serif", ui-serif;
-    --mono: "IBM Plex Mono", ui-monospace, monospace;
+    --sans: "Valley Sans", ui-sans-serif, sans-serif;
+    --serif: "Source Serif 4", ui-serif, serif;
+    --mono: "Geist Mono", ui-monospace, monospace;
 
-    --mona-vars: "wdth" 95;
 
     --layout-content-width: 65ch;
     --layout-content-max-width: calc(100vw - 2rem);
@@ -23,7 +22,6 @@
     --nav-line-height: 1.35;
     --site-title-weight: 560;
     --nav-link-weight: 450;
-    --mona-full-width-vars: "wdth" 100;
     --color-page-background: #f7f7f4;
 
     color-scheme: light;
@@ -71,7 +69,6 @@ main {
 .site-title,
 .header-nav {
     font-family: var(--sans);
-    font-variation-settings: var(--mona-full-width-vars);
     font-size: var(--nav-font-size);
     line-height: var(--nav-line-height);
 }
@@ -153,8 +150,7 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--sans);
-    font-variation-settings: var(--mona-vars);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-base);
     text-wrap: balance;
 }
@@ -173,8 +169,6 @@ h1 {
 
 h2 {
     font-size: 1.3rem;
-    font-variation-settings: var(--mona-full-width-vars);
-    font-weight: 600;
     position: relative;
     margin: 4.75rem 0 1.45rem 0;
     padding-top: 0.55rem;
@@ -184,7 +178,7 @@ h2 {
 
 h3 {
     font-size: 1.05rem;
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
     margin: 3.25rem 0 1.1rem 0;
 }
@@ -211,6 +205,10 @@ b, strong {
     font-weight: 600;
 }
 
+i, em {
+    font-weight: 500;
+}
+
 blockquote {
     font-size: .95rem;
     margin: 0rem;
@@ -235,7 +233,6 @@ a:hover {
 a.en {
     text-decoration: none;
     font-family: var(--sans);
-    font-variation-settings: var(--mona-vars);
     font-size: 0.75em;
     display: inline-block;
     position: relative;
@@ -344,7 +341,6 @@ article > .abstract,
 article > .pdf-download {
     color: var(--color-cool-blue);
     font-family: var(--sans);
-    font-variation-settings: var(--mona-vars);
     font-size: 0.9rem;
 }
 
@@ -426,7 +422,6 @@ figure.transparent-image {
 
 figcaption {
     font-family: var(--sans);
-    font-variation-settings: var(--mona-vars);
     font-weight: 450;
     font-size: 0.85rem;
     text-align: center;
