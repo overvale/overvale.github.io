@@ -4,7 +4,7 @@
 /* -- Variables ----------------------------------------------- */
 
 :root {
-    --sans: "Valley Sans", ui-sans-serif, sans-serif;
+    --sans: "Special Gothic", ui-sans-serif, sans-serif;
     --serif: "Source Serif 4", ui-serif, serif;
     --mono: "Geist Mono", ui-monospace, monospace;
 
@@ -23,6 +23,7 @@
     --site-title-weight: 560;
     --nav-link-weight: 450;
     --color-page-background: #f7f7f4;
+    --color-page-background-darker: #efefeb;
 
     color-scheme: light;
     font: -apple-system-body;
@@ -80,6 +81,7 @@ main {
     color: inherit;
     text-decoration: none;
     font-weight: var(--site-title-weight);
+    font-stretch: 110%;
     text-wrap: balance;
 }
 
@@ -87,6 +89,7 @@ main {
 
 .header-nav {
     font-weight: var(--nav-link-weight);
+    font-stretch: 107%;
     margin-top: 1.4rem;
 }
 
@@ -157,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: var(--heading-font-size);
+    font-stretch: 95%;
     line-height: var(--heading-line-height);
     margin: var(--heading-top-offset) 0 1.35rem 0;
 }
@@ -170,7 +174,7 @@ h1 {
 h2 {
     font-size: 1.3rem;
     position: relative;
-    margin: 4.75rem 0 1.45rem 0;
+    margin: 6rem 0 3rem 0;
     padding-top: 0.55rem;
     padding-bottom: 0.55rem;
     border-top: 2px solid var(--color-gray-dark);
@@ -178,9 +182,9 @@ h2 {
 
 h3 {
     font-size: 1.05rem;
-    font-weight: 700;
+    font-stretch: 105%;
     position: relative;
-    margin: 3.25rem 0 1.1rem 0;
+    margin: 6rem 0 1.1rem 0;
 }
 
 h2 + h3 {
@@ -202,7 +206,7 @@ p {
 }
 
 b, strong {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 i, em {
@@ -212,22 +216,23 @@ i, em {
 blockquote {
     font-size: .95rem;
     margin: 0rem;
-    padding-left: 1.4rem;
-    border-left: 1px solid var(--color-gray-warm-light);
-    color: var(--color-primary-darkest);
+    padding: 1px 1.4rem;
+    color: var(--color-primary-darker);
+    background: var(--color-page-background-darker);
+    border-radius: 9px;
 }
 
 a {
     color: inherit;
-    text-decoration-color: var(--color-secondary-light);
+    text-decoration-color: var(--color-secondary);
     text-decoration-style: underline;
     text-decoration-thickness: 0.06em;
     text-underline-offset: 2px;
 }
 
 a:hover {
-    background-color: transparent;
-    text-decoration-color: var(--color-secondary);
+    background-color: var(--color-gold-lightest);
+    text-decoration-color: var(--color-secondary-darkest);
 }
 
 a.en {
@@ -287,7 +292,7 @@ code {
     font-family: var(--mono);
     font-size: 1rem;
     line-height: 0.5; /* needed for mono font */
-    color: var(--color-primary-darker);
+    color: var(--color-green-racing);
     border-radius: 3px;
 }
 
@@ -295,9 +300,10 @@ pre {
     overflow-x: auto;
     line-height: 1.2;
     margin: 0 0 1.4rem 0;
-    padding-left: 1.4rem;
-    border-left: 2px solid var(--color-gray-warm-light);
-    color: var(--color-primary-darker);
+    padding: 1.4rem;
+    color: var(--color-green-racing);
+    background: var(--color-page-background-darker);
+    border-radius: 9px;
 
 }
 
@@ -308,13 +314,14 @@ pre code {
 /* ---- Links Dates ---- */
 
 time.permalink {
-    font-family: var(--mono);
-    font-size: 0.95rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
     color: var(--color-gray);
 }
 
 time.permalink:before {
-    content: "➤ "
+    content: "➤";
+    margin-right: 0.5rem;
 }
 
 time.permalink a {

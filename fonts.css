@@ -15,6 +15,15 @@
 }
 
 @font-face {
+    font-family: "Special Gothic";
+    src: url("fonts/SpecialGothic-Variable.ttf") format("truetype");
+    font-weight: 400 700;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Valley Sans";
     src: url("fonts/ValleySans[wght].ttf") format("truetype");
     font-weight: 100 900;
